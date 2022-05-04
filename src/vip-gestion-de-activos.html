@@ -1,0 +1,312 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/output.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+
+    <style>
+        @font-face {
+            font-family: "Avenir";
+            src: url("../assets/fonts/Avenir.ttc");
+        }
+
+        @font-face {
+            font-family: "Avenir bold";
+            src: url("../assets/fonts/AvenirNextLTPro-Heavy.ttf");
+        }
+
+        @font-face {
+            font-family: "Avenir regular";
+            src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
+        }
+
+        @font-face {
+            font-family: "Renogare";
+            src: url("../assets/fonts/Renogare-Regular.otf");
+        }
+
+        @font-face {
+            font-family: "Avenir next";
+            src: url("../assets/fonts/AvenirNextFont.ttf");
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body{
+            font-family: 'Avenir'
+        }
+
+        h2{
+            font-family: 'Avenir bold'
+        }
+
+        .title{
+            font-family: Renogare;
+        }
+
+        .section-1{
+            background-image: url('../assets/Diap 1/fondo.png');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .active{
+            background-color: rgb(1, 46, 113);
+        }
+
+        body, ul, li {
+            font-size:14px; 
+            line-height:21px;
+            text-align:left;
+        }
+ 
+        #menu {
+            list-style: none;
+            width: 100%;
+        }
+ 
+        #menu li {
+            float:left;
+            text-align:center;
+            padding: 4px 10px 4px 10px;
+            margin-right:30px;
+            border:none;
+            font-family: 'Avenir regular';
+        }
+ 
+        /* Drop Down */
+        .drop_menu {
+            margin: 4px auto;
+            position: absolute;
+            top: -999em;
+            left: 0;
+            text-align: left;
+            padding: 10px 5px 10px 5px;
+            border-top: none;
+            width: 100vw;
+        }
+ 
+        #menu li:hover .drop_menu {
+            top: auto;
+            margin-top: 10px;
+        }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="header w-full flex justify-between items-center fixed z-50" style="padding: 15px;">
+            <img class="top-0 right-0 w-20 invisible" src="../assets/Diap 1/logo.png" alt="">
+            <ul id="menu" class="flex justify-center items-center">
+                <li><a class="px-8 py-5 text-white" href="#inicio">Inicio</a>            
+                </li>
+                <li><a class="px-8 py-5 text-white" href="#comunidad">Comunidad VIP CAP</a>              
+                </li>
+                <li><a class="px-8 py-5 text-white" href="#productos">Productos</a><!-- Begin 5 columns Item -->
+                    <div class="drop_menu bg-white">
+                       <div class="grid grid-cols-12 gap-4 w-full">
+                           <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                                <a href="#producto1" class=" flex justify-center items-center flex-col">
+                                    <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono1.png" alt="">
+                                    <h3 class="font-bold text-2xl title">VIP Allianz</h3>
+                                    <p>Planes personalizados de ahorro</p>
+                                </a>
+                           </div>
+                           <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                                <a href="#producto2" class=" flex justify-center items-center flex-col">
+                                    <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 2.png" alt="">
+                                    <h3 class="font-bold text-2xl title">VIP Gestión</h3>
+                                    <p>Haz crecer tu capital.</p>
+                                </a>
+                            </div>
+                            <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                                <a href="#producto3" class=" flex justify-center items-center flex-col">
+                                    <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 3.png" alt="">
+                                    <h3 class="font-bold text-2xl title">VIP Microlending</h3>
+                                    <p>Recursos para créditos personales y PyMEs.</p>
+                                </a>
+                            </div>
+                            <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                                <a href="#producto4" class=" flex justify-center items-center flex-col">
+                                    <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 4.png" alt="">
+                                    <h3 class="font-bold text-2xl title">VIP Consultants</h3>
+                                    <p>Asesoría Legal y Fiscal.</p>
+                                </a>
+                            </div>
+                       </div>
+                    </div>
+                </li>
+                <li><a class="px-8 py-5 text-white" href="#contacto">Contacto</a>              
+                </li>
+            </ul>
+            <a href="#inicio">
+                <img class="top-0 right-0 mr-5" style="width: 95px;" src="../assets/Diap 1/logo.png" alt="">
+            </a>
+        </nav>
+    </header>
+    <div class="h-screen section-2 bg-yellow-500">
+        <div class="grid grid-cols-12 gap-4 h-screen">
+            <div class="col-span-5 flex justify-center items-end relative">
+                <img class="w-2/3" src="../assets/02/foto celular.png" alt="">
+                <button class="absolute bg-blue-600 px-8 py-2 text-white rounded-full ml-96 mb-40 text-lg">Quiero invertir</button>
+            </div>
+            <div class="col-span-7 flex justify-center items-center relative">
+                <div style="width: 80%;" class="">
+                    <div class="text-left">
+                        <h2 class="text-white text-7xl font-bold">¿Quieres invertir<br>
+                            pero no sabes por <br>
+                            dónde empezar?</h2>
+                    </div>
+    
+                    <div class="mt-10">
+                        <p class="text-white text-2xl font-bold">Somos expertos en inversiones y queremos ayudarte a crecer tu
+                            capital, mediante un método que no demande tanto tiempo, pero
+                            que si genere ganancias. Empieza hoy.</p>
+                    </div>
+                </div>
+
+                <img src="/assets/02/vip gestión de activos decorativo.png" class="absolute bottom-0 right-0 mb-10 mr-10 w-40" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="h-screen section-2 bg-white">
+        <div class="grid grid-cols-12 gap-4 h-screen relative">
+            <div class="col-span-6 flex justify-center items-center relative">
+                <div style="width: 80%;" class="">
+                    <div class="text-left">
+                        <img src="/assets/01//VIP allianz.png" alt="">
+                    </div>
+    
+                    <div class="mt-10">
+                        <p class="text-2xl font-bold text-blue-500"><span class="text-blue-700 font-bold">OptiMaxx Plus</span> es un plan de ahorro individual con
+                            aportaciones programadas. En donde los planes se pueden
+                            estructurar de acuerdo a tu elección.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-6 flex justify-left items-center relative">
+                <img class="top-0 left-0 absolute w-7/12 mt-20" src="/assets/01/foto dinero.png" alt="">
+                <div class="bg-yellow-500" style="width: 80%; height: 500px; margin-left: 20%;"></div>
+                <img src="/assets/01/icono blanco.png" class="absolute" style="margin-left: 35%;" alt="">
+            </div>
+            
+            
+        </div>
+    </div>
+    <div class="h-screen section-2 bg-white relative">
+        <div class="mt-40">
+            <h2 class="text-7xl text-center text-blue-800 font-bold">OptiMaxx Plus tiene para</h2>
+            <h2 class="text-7xl text-center text-blue-800">ti grandes beneficios.</h2>
+        </div>
+        <div class="grid grid-cols-12 gap-4 mt-24">
+            <div class="col-span-3 text-center flex justify-center items-center flex-col">
+                <img src="/assets/01/rayita decorativa amarilla.png" alt="">
+                <div class="mt-5">
+                    <p class="text-blue-500 text-xl">Aportaciones son <br>
+                        mensuales.</p>
+                </div>
+            </div>
+            <div class="col-span-3 text-center flex justify-center items-center flex-col">
+                <img src="/assets/01/rayita decorativa amarilla.png" alt="">
+                <div class="mt-5">
+                    <p class="text-blue-500 text-xl">Te permite construir tu plan <br>
+                        con base en el periodo de <br>
+                        tiempo que tú requieras.</p>
+                </div>
+            </div>
+            <div class="col-span-3 text-center flex justify-center items-center flex-col">
+                <img src="/assets/01/rayita decorativa amarilla.png" alt="">
+                <div class="mt-5">
+                    <p class="text-blue-500 text-xl">Te da un bono de fidelidad <br>
+                        por tu compromiso, <br>
+                        constancia y disciplina.</p>
+                </div>
+            </div>
+            <div class="col-span-3 text-center flex justify-center items-center flex-col">
+                <img src="/assets/01/rayita decorativa amarilla.png" alt="">
+                <div class="mt-5">
+                    <p class="text-blue-500 text-xl">Beneficios fiscales para <br>
+                        personas físicas.</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-32">
+            <h2 class="text-5xl text-center text-blue-600 font-bold">¿Quieres recibir un cálculo</h2>
+            <h2 class="text-5xl text-center text-blue-600 font-bold">adecuado para ti?</h2>
+
+            <button class="bg-yellow-500 px-8 py-2 text-white rounded-full text-lg mt-10">Da clic aquí para dejar tu información</button>
+        </div>
+
+        <img src="/assets/01/marca de agua vip allianz.png" class="absolute mb-5 ml-5 bottom-0 left-0" alt="">
+        <img src="/assets/01/allianz logo.png" class="absolute mb-5 mr-5 bottom-0 right-0" alt="">
+    </div>
+    <div class="h-screen section-2 bg-white relative pt-40">
+        <div class="ml-40">
+            <h2 class="text-8xl text-left text-yellow-500">Inviertes de</h2>
+            <h2 class="text-8xl text-left text-yellow-500">manera segura.</h2>
+        </div>
+        <div class="grid grid-cols-12 gap-4 mt-24">
+            <div class="col-span-4 text-center flex justify-center items-center flex-col">
+                <img src="/assets/01/icono 1.png" class="w-32" alt="">
+                <div class="mt-5 flex justify-center items-center">
+                    <p class="text-blue-500 text-lg text-justify w-7/12">Te permite construir un
+                        patrimonio para tu futuro.
+                        Empieza hoy.</p>
+                </div>
+            </div>
+            <div class="col-span-4 text-center flex justify-center items-center flex-col">
+                <img src="/assets/01/icono 2.png" class="w-32" alt="">
+                <div class="mt-5 flex justify-center items-center">
+                    <p class="text-blue-500 text-lg text-justify w-7/12">Atención 100% personalizada, tienes
+                        el respaldo de estar con un socio
+                        confiable y calificado, el cual te
+                        brindará la seguridad que necesitas,
+                        así como la información detallada de
+                        los rendimientos de tu plan..</p>
+                </div>
+            </div>
+            <div class="col-span-4 text-center flex justify-center items-center flex-col">
+                <img src="/assets/01/icono 3.png" class="w-32" alt="">
+                <div class="mt-5 flex justify-center items-center">
+                    <p class="text-blue-500 text-lg text-justify w-7/12">Puedes aplicar para llevarte un
+                        bono de fidelidad de hasta el
+                        100% de tus aportaciones en el
+                        primer año, todo esto como
+                        beneficio de tu disciplina y
+                        compromiso para ahorrar.</p>
+                </div>
+            </div>
+        </div>
+
+        <img src="/assets/01/vip allianz decoración 2.png" class="absolute top-0 left-0 mt-10 ml-10" alt="">
+    </div>
+    <footer>
+        <div class="grid grid-cols-12 gap-4 bg-blue-900 py-10 px-40">
+            <div class="col-span-4">
+                <img class="w-1/3" src="/assets/Diap 1/logo.png" alt="">
+            </div>
+            <div class="col-span-4 flex justify-center items-center">
+                <p class="text-white">Únete a nuestro equipo de trabajo</p>
+                <button class="px-5 py-1 bg-blue-500 rounded-full text-white ml-5">Aplicar</button>
+            </div>
+            <div class="col-span-4"></div>
+        </div>
+    </footer>
+    <script>
+        $(window).on("scroll", function() {
+            console.log('ola');
+            if($(window).scrollTop() > 100) {
+                $(".header").addClass("active");
+            } else {
+                //remove the background property so it comes transparent again (defined in your css)
+            $(".header").removeClass("active");
+            }
+        });
+    </script>
+</body>
+</html>
