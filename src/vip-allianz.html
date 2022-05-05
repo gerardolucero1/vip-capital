@@ -293,7 +293,10 @@
                                     <p class="text-white text-xl">Inversión VIP CAP</p>
                                 </div>
                             </div>
-                            <!-- <button class="text-yellow-500" v-on:click="total">Binnie</button> -->
+                            <div class="flex justify-center items-center mt-5">
+                                <button class="bg-yellow-500 text-white px-5 py-2 rounded-full" v-on:click="generateChart">Calcular graficamente</button>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -383,7 +386,7 @@
             },
 
             created(){
-                for (let index = 1; index < 50; index++) {
+                for (let index = 1; index < 51; index++) {
                     this.labels.push(index)
                 }
             },
@@ -392,28 +395,41 @@
                 this.generateChart()
             },
 
-            watch: {
-                // amount1(){
-                //     this.generateChart()
-                // },
+            // watch: {
+            //     amount1(){
+            //         setTimeout(() => {
+            //             this.generateChart()
+            //         }, 1000);
+            //     },
 
-                // amount2(){
-                //     this.generateChart()
-                // }
-            },
+            //     amount2(){
+            //         setTimeout(() => {
+            //             this.generateChart()
+            //         }, 1000);
+            //     }
+            // },
 
             computed: {
                 total(){
+                    this.values = []
                     let total = parseInt(this.amount1)
                     let porcentaje = 0.16
                     total >= 1000000 ? porcentaje = 0.18 : porcentaje = 0.16
                     let intereses = 0
                     let ciclos = (parseInt(this.amount2) * 12) / 6
+
+                    let tick = 2
                     
                     for (let index = 0; index < ciclos; index++) {
                         intereses = ((total * porcentaje) / 12) * 6
                         total = total + intereses
-                        this.values.push(Math.trunc(total))
+                        
+
+                        if(tick % 2){
+                            this.values.push(Math.trunc(total))
+                        }
+
+                        tick = tick + 1
                     }
 
                     return Math.trunc(total)
@@ -422,6 +438,12 @@
 
             methods: {
                 generateChart(){
+                    this.labels = []
+
+                    for (let index = 1; index <= this.amount2; index++) {
+                        this.labels.push(index + ' Años')
+                    }
+
                     const labels = this.labels;
 
                     const data = {
@@ -456,7 +478,7 @@
                                         font: {
                                             size: 14,
                                         },
-                                        stepSize: 1,
+                                        stepSize: 10000,
                                         beginAtZero: false
                                     }
                                 },
