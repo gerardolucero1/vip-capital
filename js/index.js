@@ -13,6 +13,7 @@ Vue.createApp({
             contact: {
                 name: '',
                 telephone: '',
+                city: '',
                 email: '',
                 optionSelect: '',
                 amount1: '',

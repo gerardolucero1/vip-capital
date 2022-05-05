@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./dist/output.css" rel="stylesheet">
+    <link href="../dist/output.css" rel="stylesheet">
 
     <script src="https://unpkg.com/vue@3"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
@@ -184,12 +184,7 @@
                     <div>
                         <p class="text-white text-4xl font-bold text-right">Quiénes somos</p>
                         <div style="width: 400px;">
-                            <p class="text-white text-xl text-justify" style="text-align: justify;">Somos una empresa especializada en
-                                asesoría para ofrecer soluciones
-                                financieras y accesibles al público en
-                                general, fomentando y promoviendo
-                                la cultura financiera al alcance de
-                                todos.</p>
+                            <p class="text-white text-xl text-justify" style="text-align: justify;">Somos una empresa de asesoría especializada en ofrecer soluciones financieras  accesibles al público en general, fomentando y promoviendo la cultura financiera al alcance de todos.</p>
                         </div>
                     </div>
                 </div>
@@ -221,13 +216,13 @@
                             <p class="font-bold text-lg">VIP <br>
                                 Allianz</p>
                                 <p class="text-yellow-500">Planes personalizados
-                                    de ahorro</p>
+                                    de ahorro.</p>
                         </div>
                         <div class="col-span-3 flex justify-center items-center flex-col text-center text-white">
                             <img class="w-32" src="../assets/Diap 3/icono 2.png" alt="">
                             <p class="font-bold text-lg">VIP <br>
                                 Gestión de activos</p>
-                                <p class="text-yellow-500">Haz crecer tu capital.</p>
+                                <p class="text-yellow-500">Hacemos crecer tu capital.</p>
                         </div>
                         <div class="col-span-3 flex justify-center items-center flex-col text-center text-white">
                             <img class="w-32" src="../assets/Diap 3/icono 3.png" alt="">
@@ -240,7 +235,7 @@
                             <img class="w-32" src="../assets/Diap 3/icono 4.png" alt="">
                             <p class="font-bold text-lg">VIP <br>
                                 Consultants</p>
-                                <p class="text-yellow-500">Asesoría Legal y Fiscal.</p>
+                                <p class="text-yellow-500">Experiencia en estrategias fiscales y asesoría legal.</p>
                         </div>
                     </div>
                 </div>
@@ -263,11 +258,9 @@
                         <img class="w-56 mt-5" src="../assets/Diap 4/allianz.png" alt="">
                     </div>
                     <div class="p-20" style="width: 850px;">
-                        <p class="text-2xl text-justify mb-10">Te brindamos la visibilidad que necesitas para vivir en armonía
-                            después de tu retiro, por ello te proponemos un plan de
-                            ahorro</p>
+                        <p class="text-2xl text-justify mb-10">Te brindamos la visibilidad que necesitas para vivir el estilo de vida que deseas, por ello te proponemos el mejor plan de ahorro que genere rendimientos para tu crecimiento y bienestar financiero.</p>
     
-                            <a href="./vip-allianz.html" class="rounded-full px-5 py-2 bg-yellow-500 text-white mt-20 block">Más información</a>
+                            <a href="./vip-allianz.html" class="rounded-full px-5 py-2 bg-yellow-500 text-white mt-20">Más información</a>
                     </div>
                     <img class="absolute bottom-0 right-0 w-5/6" src="../assets/Diap 4/sello transparencia.png" alt="">
                 </div>
@@ -292,7 +285,7 @@
                     <div class="p-20" style="width: 850px;">
                         <p class="text-justify text-2xl mb-10">Somos expertos en gestionar el manejo de activos financieros
                             enfocados en obtener grandes beneficios con nuestro portafolio
-                            diversificado en activos de capital</p>
+                            diversificado en activos de capital.</p>
     
                             <a href="./vip-gestion-de-activos.html" class="rounded-full px-5 py-2 bg-yellow-500 text-white mt-10">Más información</a>
                     </div>
@@ -317,10 +310,7 @@
                         <p class="text-5xl font-bold title" style="color: #002C75;">VIP <br> Micro- <br> lending</p>
                     </div>
                     <div class="p-20" style="width: 850px;">
-                        <p class="text-justify text-2xl mb-10">Te ayudamos a lograr tus metas y objetivos para tu proyecto,
-                            contamos con recursos para los créditos personales o créditos
-                            a micros, pequeñas y medianas empresas que tienen el
-                            potencia</p>
+                        <p class="text-justify text-2xl mb-10">Te ayudamos a lograr tus metas y objetivos para tu proyecto, apoyándote con los recursos mediante un crédito personal o crédito a micros, pequeñas y medianas empresas que buscan el crecimiento y desarrollo de su negocio.</p>
     
                             <a href="./vip-microlending.html" class="rounded-full px-5 py-2 bg-yellow-500 text-white mt-10">Más información</a>
                     </div>
@@ -345,8 +335,7 @@
                         <p class="text-5xl font-bold title" style="color: #002C75;">VIP <br> Consultants</p>
                     </div>
                     <div class="p-20" style="width: 850px;">
-                        <p class="text-justify text-2xl mb-10">Tenemos las mejores estrategias para el asesoramiento
-                            legal y fiscal de servicios financieros entre México y EEUU.</p>
+                        <p class="text-justify text-2xl mb-10">Otorgamos asesoría para atender asuntos en los que las autoridades administrativas y fiscales determinen obligaciones a cargo de los contribuyentes.</p>
     
                             <a href="./vip-consultas.html" class="rounded-full px-5 py-2 bg-yellow-500 text-white mt-10">Más información</a>
                     </div>
@@ -369,23 +358,27 @@
                                 <label for="telephone" class="text-yellow-500">* Número de teléfono</label>
                                 <input type="text" v-model="contact.telephone" name="telephone" class="p-1 rounded-lg bg-transparent border-2 border-white">
                             </div>
+                            <div class="flex flex-col text-white mt-2">
+                                <label for="city" class="text-yellow-500">Ciudad de residencia</label>
+                                <input type="text" v-model="contact.city" name="city" class="p-1 rounded-lg bg-transparent border-2 border-white">
+                            </div>
                             <div class="flex flex-col mt-2">
                                 <label for="type" class="text-yellow-500">Tipo de producto</label>
                                 <select name="type" v-model="contact.optionSelect" class="p-1 rounded-lg border-2 text-white bg-transparent border-white">
-                                    <option class="text-black" value="VIP Allianz: planes personalizados de ahorro">VIP Allianz: planes personalizados de ahorro</option>
+                                    <option class="text-black" value="VIP Allianz: Planes personalizados de ahorro">VIP Allianz: Planes personalizados de ahorro</option>
                                     <option class="text-black" value="VIP Gestión de activos: Haz crecer tu capital">VIP Gestión de activos: Haz crecer tu capital</option>
-                                    <option class="text-black" value="VIP Microlending: recursos para créditos personales y pymes">VIP Microlending: recursos para créditos personales y pymes</option>
-                                    <option class="text-black" value="VIP Consultants: asesoría legal y fiscal ">VIP Consultants: asesoría legal y fiscal </option>
+                                    <option class="text-black" value="VIP Microlending: Recursos para créditos personales y pymes">VIP Microlending: Recursos para créditos personales y pymes</option>
+                                    <option class="text-black" value="VIP Consultants: Asesoría legal y fiscal ">VIP Consultants: Asesoría legal y fiscal </option>
                                 </select>
                             </div>
                             <div class="grid grid-cols-12 gap-4 mt-2">
                                 <div class="col-span-6 flex flex-col text-white mt-2">
                                     <label for="amount1" class="text-yellow-500">Monto inicial</label>
-                                    <input type="number" v-model="contact.amount1" name="amount1" class="p-1 rounded-lg bg-transparent border-2 border-white">
+                                    <input type="number" step="500" v-model="contact.amount1" name="amount1" class="p-1 rounded-lg bg-transparent border-2 border-white">
                                 </div>
                                 <div class="col-span-6 flex flex-col text-white mt-2">
                                     <label for="amount2" class="text-yellow-500">Monto mensual</label>
-                                    <input type="number" v-model="contact.amount2" name="amount2" class="p-1 rounded-lg bg-transparent border-2 border-white">
+                                    <input type="number" step="500" v-model="contact.amount2" name="amount2" class="p-1 rounded-lg bg-transparent border-2 border-white">
                                 </div>
                             </div>
                             <div class="flex flex-col text-white mt-2">
@@ -406,7 +399,7 @@
             </div>
         </div>
     </div>
-    <script src="./js/index.js"></script>
+    <script src="../js/index.js"></script>
 
 </body>
 </html>

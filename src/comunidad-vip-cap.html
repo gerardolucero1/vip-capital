@@ -1,0 +1,287 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/output.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>
+        @font-face {
+            font-family: "Avenir";
+            src: url("../assets/fonts/Avenir.ttc");
+        }
+
+        @font-face {
+            font-family: "Avenir bold";
+            src: url("../assets/fonts/AvenirNextLTPro-Heavy.ttf");
+        }
+
+        @font-face {
+            font-family: "Avenir regular";
+            src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
+        }
+
+        @font-face {
+            font-family: "Renogare";
+            src: url("../assets/fonts/Renogare-Regular.otf");
+        }
+
+        @font-face {
+            font-family: "Avenir next";
+            src: url("../assets/fonts/AvenirNextFont.ttf");
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body{
+            font-family: 'Avenir'
+        }
+
+        h2{
+            font-family: 'Avenir bold'
+        }
+
+        .title{
+            font-family: Renogare;
+        }
+
+        .section-1{
+            background-image: url('../assets/Diap 1/fondo.png');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .active{
+            background-color: rgb(1, 46, 113);
+        }
+
+        body, ul, li {
+            font-size:14px; 
+            line-height:21px;
+            text-align:left;
+        }
+ 
+        #menu {
+            list-style: none;
+            width: 100%;
+        }
+ 
+        #menu li {
+            float:left;
+            text-align:center;
+            padding: 4px 10px 4px 10px;
+            margin-right:30px;
+            border:none;
+            font-family: 'Avenir regular';
+        }
+ 
+        /* Drop Down */
+        .drop_menu {
+            margin: 4px auto;
+            position: absolute;
+            top: -999em;
+            left: 0;
+            text-align: left;
+            padding: 10px 5px 10px 5px;
+            border-top: none;
+            width: 100vw;
+        }
+ 
+        #menu li:hover .drop_menu {
+            top: auto;
+            margin-top: 10px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <nav class="header w-full flex justify-between items-center fixed z-50" style="padding: 15px;">
+                <img class="top-0 right-0 w-20 invisible" src="../assets/Diap 1/logo.png" alt="">
+                <ul id="menu" class="flex justify-center items-center">
+                    <li><a class="px-8 py-5 text-white" href="./index.html">Inicio</a>            
+                    </li>
+                    <li><a class="px-8 py-5 text-white" href="./index.html#comunidad">Comunidad VIP CAP</a>              
+                    </li>
+                    <li><a class="px-8 py-5 text-white" href="#productos">Productos</a><!-- Begin 5 columns Item -->
+                        <div class="drop_menu bg-white">
+                           <div class="grid grid-cols-12 gap-4 w-full">
+                               <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                                    <a href="./vip-allianz.html" class=" flex justify-center items-center flex-col">
+                                        <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono1.png" alt="">
+                                        <h3 class="font-bold text-2xl title">VIP Allianz</h3>
+                                        <p>Planes personalizados de ahorro</p>
+                                    </a>
+                               </div>
+                               <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                                    <a href="./vip-gestion-de-activos.html" class=" flex justify-center items-center flex-col">
+                                        <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 2.png" alt="">
+                                        <h3 class="font-bold text-2xl title">VIP Gestión</h3>
+                                        <p>Haz crecer tu capital.</p>
+                                    </a>
+                                </div>
+                                <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                                    <a href="./vip-microlending.html" class=" flex justify-center items-center flex-col">
+                                        <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 3.png" alt="">
+                                        <h3 class="font-bold text-2xl title">VIP Microlending</h3>
+                                        <p>Recursos para créditos personales y PyMEs.</p>
+                                    </a>
+                                </div>
+                                <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                                    <a href="./vip-consultas.html" class=" flex justify-center items-center flex-col">
+                                        <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 4.png" alt="">
+                                        <h3 class="font-bold text-2xl title">VIP Consultants</h3>
+                                        <p>Asesoría Legal y Fiscal.</p>
+                                    </a>
+                                </div>
+                           </div>
+                        </div>
+                    </li>
+                    <li><a class="px-8 py-5 text-white" href="./index.html#contacto">Contacto</a>              
+                    </li>
+                </ul>
+                <a href="./index.html">
+                    <img class="top-0 right-0 mr-5" style="width: 95px;" src="../assets/Diap 1/logo.png" alt="">
+                </a>
+            </nav>
+        </header>
+        <div id="comunidad" class="h-screen section-2 bg-blue-600">
+            <div class="grid grid-cols-12 gap-4 h-screen">
+                <div class="col-span-7 flex justify-center items-center flex-col mt-32">
+                    <div>
+                        <h2 class="text-white text-8xl font-bold text-left">Hacemos <br>
+                            crecer tu <br>
+                            patrimonio.</h2>
+                    </div>
+                </div>
+                <div class="col-span-5 flex justify-center items-center flex-col mt-32">
+                    <div>
+                        <p class="text-white text-4xl font-bold text-right">Quiénes somos</p>
+                        <div style="width: 400px;">
+                            <p class="text-white text-xl text-justify" style="text-align: justify;">Somos una empresa de asesoría especializada en ofrecer soluciones financieras  accesibles al público en general, fomentando y promoviendo la cultura financiera al alcance de todos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 flex justify-center items-center">
+                    <img class="w-52" src="../assets/Diap 2/chihuahua.png" alt="">
+                    <p class="text-white text-lg mr-2">Chihuahua</p>
+                    <img class="w-52" src="../assets/Diap 2/merida.png" alt="">
+                    <p class="text-white text-lg mr-2">Mérida</p>
+                    <img class="w-52" src="../assets/Diap 2/mty.png" alt="">
+                    <p class="text-white text-lg mr-2">Monterrey</p>
+                    <img class="w-52" src="../assets/Diap 2/guadalajara.png" alt="">
+                    <p class="text-white text-lg mr-2">Guadalajara</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-2 bg-blue-600">
+            <div class="grid grid-cols-12 gap-4">
+                <div class="col-span-5 flex justify-center items-center flex-col mt-32">
+                    <div class="p-10 pl-20">
+                        <img class="w-10/12" src="../assets/Comunidad/Foto piensa en tu futuro.png" alt="">
+                    </div>
+                </div>
+                <div class="col-span-7 flex justify-center items-center flex-col mt-32">
+                    <div class="w-10/12">
+                        <h2 class="text-white text-8xl font-bold text-left">Piensa en
+                            tu futuro;</h2>
+                    </div>
+
+                    <div class="w-10/12 mt-10">
+                        <h2 class="text-blue-800 text-7xl font-bold text-left">haz crecer tu patrimonio
+                            con nosotros.</h2>
+                    </div>
+
+                    <div class="w-10/12 mt-10">
+                        <p class="text-white text-2xl">Nos encargamos de trabajar tu capital con asesoría personalizada ofreciendo soluciones financieras accesibles para brindarte  la tranquilidad y estabilidad sobre tus ganancias.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-2 bg-yellow-500 pb-32">
+            <div class="grid grid-cols-12 gap-4">
+                <div class="col-span-6 mt-32 border border-black p-10 flex justify-end items-center rounded-tr-full rounded-br-full">
+                    <img class="w-1/2" src="../assets/Comunidad/foto compu.png" alt="">
+                </div>
+                <div class="col-span-6 flex justify-center items-center flex-col mt-32 px-20">
+                    <p class="text-white text-8xl font-bold">Nuestro objetivo
+                        principal</p>
+
+                    <p class="text-2xl text-justify text-white mt-10">Es fomentar el bienestar de las personas enfocados en su crecimiento financiero, brindándoles ganancias para tener un patrimonio confiable y disfrutarlo al máximo.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-12 gap-4">
+                <div class="col-span-6 flex justify-center items-center flex-col mt-32 px-20">
+                    <p class="text-white text-8xl font-bold">Nuestro
+                        enfoque</p>
+
+                    <p class="text-2xl text-justify text-white mt-10">Es ser el mejor gestor de activos a nivel nacional con la finalidad de mejorar tu patrimonio ofreciendo los mejores resultados y así otorgar la tranquilidad y seguridad de que tu capital se encuentra trabajando de una manera inteligente y eficaz.</p>
+                </div>
+                
+                <div class="col-span-6 mt-32 border border-black p-10 flex justify-start items-center rounded-tl-full rounded-bl-full">
+                    <img class="w-1/2" src="../assets/Comunidad/Foto nuestro enfoque.png" alt="">
+                </div>
+                
+            </div>
+        </div>
+        <div class="section-2 bg-white pb-20">
+            <div class="grid grid-cols-12 gap-4">
+                <div class="col-span-6 mt-32 p-20">
+                    <h2 class="text-8xl text-blue-600">Nuestra <br>
+                        visión</h2>
+
+                    <h2 class="text-6xl text-yellow-500 mt-10">es tener una <br>
+                        amplia perspectiva</h2>
+                </div>
+                <div class="col-span-6 flex justify-center items-center flex-col mt-32 px-20">
+                    <p class="text-blue-500 text-2xl">Cuya intención es hacer crecer el desarrollo de tu
+                        patrimonio, por ello queremos ser a mediano plazo <span class="text-blue-800 font-bold">el
+                            gestor de activos más dinámico</span> y el mejor líder a nivel
+                        nacional para respaldar y apoyar la gestión del
+                        crecimiento de tu futuro, fomentando la educación
+                        financiera de nuestro país mediante la colocación de
+                        planes de retiro y planes de ahorro de Allianz.</p>
+                    <p class="text-blue-500 text-2xl mt-10">A largo plazo seremos un gestor de activos y holding de
+                        clase mundial con enfoque principal en inversiones en
+                        empresas de tecnologías disruptivas como son
+                        Blockchain, inteligencia artificial, robótica, vehículos
+                        inteligentes, generación y almacenamiento de energía,
+                        entre otras.</p>
+                </div>
+            </div>
+            <div class="flex justify-center items-center mt-20 flex-col">
+                <img class="w-40" src="../assets/Comunidad/icono ubicación.png" alt="">
+
+                <h2 class="text-8xl text-blue-800 mt-20">Una oficina cerca de ti...</h2>
+            </div>
+        </div>
+        <div class="h-screen section-2 bg-yellow-500 flex justify-center items-center">
+            <h2 class="text-8xl text-white">Hacemos crecer <br>
+                tu capital de forma <br>
+                segura</h2>
+        </div>
+        <footer>
+            <div class="grid grid-cols-12 gap-4 bg-blue-900 py-10 px-40">
+                <div class="col-span-4">
+                    <img class="w-1/3" src="/assets/Diap 1/logo.png" alt="">
+                </div>
+                <div class="col-span-4 flex justify-center items-center">
+                    <p class="text-white">Únete a nuestro equipo de trabajo</p>
+                    <button class="px-5 py-1 bg-blue-500 rounded-full text-white ml-5">Aplicar</button>
+                </div>
+                <div class="col-span-4"></div>
+            </div>
+        </footer>
+    </div>
+    <script src="../js/index.js"></script>
+
+</body>
+</html>
