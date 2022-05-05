@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../dist/output.css" rel="stylesheet">
+    <link href="./dist/output.css" rel="stylesheet">
 
+    <script src="https://unpkg.com/vue@3"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <style>
         @font-face {
             font-family: "Avenir";
@@ -99,320 +101,312 @@
     </style>
 </head>
 <body>
-    <header>
-        <nav class="header w-full flex justify-between items-center fixed z-50" style="padding: 15px;">
-            <img class="top-0 right-0 w-20 invisible" src="../assets/Diap 1/logo.png" alt="">
-            <ul id="menu" class="flex justify-center items-center">
-                <li><a class="px-8 py-5 text-white" href="#inicio">Inicio</a>            
-                </li>
-                <li><a class="px-8 py-5 text-white" href="#comunidad">Comunidad VIP CAP</a>              
-                </li>
-                <li><a class="px-8 py-5 text-white" href="#productos">Productos</a><!-- Begin 5 columns Item -->
-                    <div class="drop_menu bg-white">
-                       <div class="grid grid-cols-12 gap-4 w-full">
-                           <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
-                                <a href="#producto1" class=" flex justify-center items-center flex-col">
-                                    <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono1.png" alt="">
-                                    <h3 class="font-bold text-2xl title">VIP Allianz</h3>
-                                    <p>Planes personalizados de ahorro</p>
-                                </a>
-                           </div>
-                           <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
-                                <a href="#producto2" class=" flex justify-center items-center flex-col">
-                                    <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 2.png" alt="">
-                                    <h3 class="font-bold text-2xl title">VIP Gestión</h3>
-                                    <p>Haz crecer tu capital.</p>
-                                </a>
+    <div id="app">
+        <header>
+            <nav class="header w-full flex justify-between items-center fixed z-50" style="padding: 15px;">
+                <img class="top-0 right-0 w-20 invisible" src="../assets/Diap 1/logo.png" alt="">
+                <ul id="menu" class="flex justify-center items-center">
+                    <li><a class="px-8 py-5 text-white" href="#inicio">Inicio</a>            
+                    </li>
+                    <li><a class="px-8 py-5 text-white" href="#comunidad">Comunidad VIP CAP</a>              
+                    </li>
+                    <li><a class="px-8 py-5 text-white" href="#productos">Productos</a><!-- Begin 5 columns Item -->
+                        <div class="drop_menu bg-white">
+                        <div class="grid grid-cols-12 gap-4 w-full">
+                            <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                                    <a href="#producto1" class=" flex justify-center items-center flex-col">
+                                        <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono1.png" alt="">
+                                        <h3 class="font-bold text-2xl title">VIP Allianz</h3>
+                                        <p>Planes personalizados de ahorro</p>
+                                    </a>
                             </div>
                             <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
-                                <a href="#producto3" class=" flex justify-center items-center flex-col">
-                                    <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 3.png" alt="">
-                                    <h3 class="font-bold text-2xl title">VIP Microlending</h3>
-                                    <p>Recursos para créditos personales y PyMEs.</p>
-                                </a>
-                            </div>
-                            <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
-                                <a href="#producto4" class=" flex justify-center items-center flex-col">
-                                    <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 4.png" alt="">
-                                    <h3 class="font-bold text-2xl title">VIP Consultants</h3>
-                                    <p>Asesoría Legal y Fiscal.</p>
-                                </a>
-                            </div>
-                       </div>
+                                    <a href="#producto2" class=" flex justify-center items-center flex-col">
+                                        <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 2.png" alt="">
+                                        <h3 class="font-bold text-2xl title">VIP Gestión de activos</h3>
+                                        <p>Haz crecer tu capital.</p>
+                                    </a>
+                                </div>
+                                <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                                    <a href="#producto3" class=" flex justify-center items-center flex-col">
+                                        <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 3.png" alt="">
+                                        <h3 class="font-bold text-2xl title">VIP Microlending</h3>
+                                        <p>Recursos para créditos personales y PyMEs.</p>
+                                    </a>
+                                </div>
+                                <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                                    <a href="#producto4" class=" flex justify-center items-center flex-col">
+                                        <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 4.png" alt="">
+                                        <h3 class="font-bold text-2xl title">VIP Consultants</h3>
+                                        <p>Asesoría Legal y Fiscal.</p>
+                                    </a>
+                                </div>
+                        </div>
+                        </div>
+                    </li>
+                    <li><a class="px-8 py-5 text-white" href="#contacto">Contacto</a>              
+                    </li>
+                </ul>
+                <a href="#inicio">
+                    <img class="top-0 right-0 mr-5" style="width: 95px;" src="../assets/Diap 1/logo.png" alt="">
+                </a>
+            </nav>
+        </header>
+        <div id="inicio" class="h-screen section-1 bg-red-500 relative">
+            <div class="grid grid-cols-12 gap-4 h-screen">
+                <div class="col-span-6 flex justify-center items-center flex-col">
+                    <div>
+                        <h2 class="text-white text-8xl font-bold text-left">Le damos <br>
+                            valor a <br>
+                            tu futuro</h2>
+        
+                            <p class="text-white text-left mt-10 text-xl">Es momento de que juntos <br>
+                                hagamos crecer tu patrimonio <br>
+                                de manera fácil y segura.</p>
+        
+                            <button class="rounded-full px-5 py-2 bg-yellow-500 text-white mt-10">Más información</button>
                     </div>
-                </li>
-                <li><a class="px-8 py-5 text-white" href="#contacto">Contacto</a>              
-                </li>
-            </ul>
-            <a href="#inicio">
-                <img class="top-0 right-0 mr-5" style="width: 95px;" src="../assets/Diap 1/logo.png" alt="">
-            </a>
-        </nav>
-    </header>
-    <div id="inicio" class="h-screen section-1 bg-red-500 relative">
-        <div class="grid grid-cols-12 gap-4 h-screen">
-            <div class="col-span-6 flex justify-center items-center flex-col">
-                <div>
-                    <h2 class="text-white text-8xl font-bold text-left">Le damos <br>
-                        valor a <br>
-                        tu futuro</h2>
+                </div>
+                <div class="col-span-6"></div>
+            </div>
+            <img class="absolute top-0 left-0 w-1/4" style="margin-left: 40%; margin-top: 5%;" src="../assets/Diap 1/sello.png" alt="">
+        </div>
+        <div id="comunidad" class="h-screen section-2 bg-blue-600">
+            <div class="grid grid-cols-12 gap-4 h-screen">
+                <div class="col-span-7 flex justify-center items-center flex-col mt-32">
+                    <div>
+                        <h2 class="text-white text-8xl font-bold text-left">Hacemos <br>
+                            crecer tu <br>
+                            patrimonio.</h2>
+                    </div>
+                </div>
+                <div class="col-span-5 flex justify-center items-center flex-col mt-32">
+                    <div>
+                        <p class="text-white text-4xl font-bold text-right">Quiénes somos</p>
+                        <div style="width: 400px;">
+                            <p class="text-white text-xl text-justify" style="text-align: justify;">Somos una empresa especializada en
+                                asesoría para ofrecer soluciones
+                                financieras y accesibles al público en
+                                general, fomentando y promoviendo
+                                la cultura financiera al alcance de
+                                todos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 flex justify-center items-center">
+                    <img class="w-52" src="../assets/Diap 2/chihuahua.png" alt="">
+                    <p class="text-white text-lg mr-2">Chihuahua</p>
+                    <img class="w-52" src="../assets/Diap 2/merida.png" alt="">
+                    <p class="text-white text-lg mr-2">Mérida</p>
+                    <img class="w-52" src="../assets/Diap 2/mty.png" alt="">
+                    <p class="text-white text-lg mr-2">Monterrey</p>
+                    <img class="w-52" src="../assets/Diap 2/guadalajara.png" alt="">
+                    <p class="text-white text-lg mr-2">Guadalajara</p>
+                </div>
+            </div>
+        </div>
+        <div id="productos" class="h-screen section-2 bg-blue-600">
+            <div class="grid grid-cols-12 gap-4 h-screen">
+                <div class="col-span-5 flex justify-center items-end">
+                    <img class="w-2/3" src="../assets/Diap 3/foto.png" alt="">
+                </div>
+                <div class="col-span-7 mt-40">
+                    <div>
+                        <h2 class="text-white text-8xl font-bold text-left">Nuestros <br>
+                            productos.</h2>
+                    </div>
+                    <div class="grid grid-cols-12 gap-10 mt-10">
+                        <div class="col-span-3 flex justify-center items-center flex-col text-center text-white">
+                            <img class="w-32" src="../assets/Diap 3/icono1.png" alt="">
+                            <p class="font-bold text-lg">VIP <br>
+                                Allianz</p>
+                                <p class="text-yellow-500">Planes personalizados
+                                    de ahorro</p>
+                        </div>
+                        <div class="col-span-3 flex justify-center items-center flex-col text-center text-white">
+                            <img class="w-32" src="../assets/Diap 3/icono 2.png" alt="">
+                            <p class="font-bold text-lg">VIP <br>
+                                Gestión de activos</p>
+                                <p class="text-yellow-500">Haz crecer tu capital.</p>
+                        </div>
+                        <div class="col-span-3 flex justify-center items-center flex-col text-center text-white">
+                            <img class="w-32" src="../assets/Diap 3/icono 3.png" alt="">
+                            <p class="font-bold text-lg">VIP <br>
+                                Microlending</p>
+                                <p class="text-yellow-500">Recursos para créditos
+                                    personales y PyMEs.</p>
+                        </div>
+                        <div class="col-span-3 flex justify-center items-center flex-col text-center text-white">
+                            <img class="w-32" src="../assets/Diap 3/icono 4.png" alt="">
+                            <p class="font-bold text-lg">VIP <br>
+                                Consultants</p>
+                                <p class="text-yellow-500">Asesoría Legal y Fiscal.</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div id="producto1" class="h-screen section-2 bg-white">
+            <div class="grid grid-cols-12 gap-4 h-screen">
+                <div class="col-span-5 flex justify-start items-center relative">
+                    <img class="absolute w-32 ml-6" src="../assets/Diap 4/icono.png" alt="">
+                    <div class="w-full h-full px-20">
+                        <div class="w-full h-full">
+                            <img class="object-cover object-center w-full h-full" src="../assets/Diap 4/foto.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-7 mt-40 -ml-32 z-20 relative">
+                    <div class="flex justify-start items-center">
+                        <h2 class="text-9xl font-bold text-blue-700 title" style="margin-left: -5px; opacity: 0.9;">01.</h2>
+                        <img class="w-56 mt-5" src="../assets/Diap 4/allianz.png" alt="">
+                    </div>
+                    <div class="p-20" style="width: 850px;">
+                        <p class="text-2xl text-justify mb-10">Te brindamos la visibilidad que necesitas para vivir en armonía
+                            después de tu retiro, por ello te proponemos un plan de
+                            ahorro</p>
     
-                        <p class="text-white text-left mt-10 text-xl">Es momento de que juntos <br>
-                            hagamos crecer tu patrimonio <br>
-                            de manera fácil y segura</p>
+                            <a href="./vip-allianz.html" class="rounded-full px-5 py-2 bg-yellow-500 text-white mt-20 block">Más información</a>
+                    </div>
+                    <img class="absolute bottom-0 right-0 w-5/6" src="../assets/Diap 4/sello transparencia.png" alt="">
+                </div>
+                
+            </div>
+        </div>
+        <div id="producto2" class="h-screen section-2 bg-white">
+            <div class="grid grid-cols-12 gap-4 h-screen">
+                <div class="col-span-5 flex justify-start items-end relative">
+                    <img class="absolute w-32 ml-6 mb-20" src="../assets/Diap 5/icono.png" alt="">
+                    <div class="w-full h-full px-20">
+                        <div class="w-full h-full">
+                            <img class="object-cover object-center w-full h-full" src="../assets/Diap 5/foto.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-7 mt-40 -ml-32 z-20 relative">
+                    <div class="flex justify-start items-center">
+                        <h2 class="text-9xl font-bold text-yellow-500 title" style="margin-left: -5px; opacity: 0.9;">02.</h2>
+                        <p class="text-5xl font-bold title" style="color: #002C75;">VIP <br> Gestión de <br> Activos</p>
+                    </div>
+                    <div class="p-20" style="width: 850px;">
+                        <p class="text-justify text-2xl mb-10">Somos expertos en gestionar el manejo de activos financieros
+                            enfocados en obtener grandes beneficios con nuestro portafolio
+                            diversificado en activos de capital</p>
     
-                        <button class="rounded-full px-5 py-2 bg-yellow-500 text-white mt-10">Más información</button>
-                </div>
-            </div>
-            <div class="col-span-6"></div>
-        </div>
-        <img class="absolute top-0 left-0 w-1/4" style="margin-left: 40%; margin-top: 5%;" src="../assets/Diap 1/sello.png" alt="">
-    </div>
-    <div id="comunidad" class="h-screen section-2 bg-blue-600">
-        <div class="grid grid-cols-12 gap-4 h-screen">
-            <div class="col-span-7 flex justify-center items-center flex-col mt-32">
-                <div>
-                    <h2 class="text-white text-8xl font-bold text-left">Hacemos <br>
-                        crecer tu <br>
-                        patrimonio.</h2>
-                </div>
-            </div>
-            <div class="col-span-5 flex justify-center items-center flex-col mt-32">
-                <div>
-                    <p class="text-white text-4xl font-bold text-right">Quienes somos</p>
-                    <div style="width: 400px;">
-                        <p class="text-white text-xl text-justify" style="text-align: justify;">Somos una empresa especializada en
-                            asesoría para ofrecer soluciones
-                            financieras y accesibles al público en
-                            general, fomentando y promoviendo
-                            la cultura financiera al alcance de
-                            todo</p>
+                            <a href="./vip-gestion-de-activos.html" class="rounded-full px-5 py-2 bg-yellow-500 text-white mt-10">Más información</a>
                     </div>
+                    <img class="absolute bottom-0 right-0 w-5/6" src="../assets/Diap 4/sello transparencia.png" alt="">
                 </div>
-            </div>
-            <div class="col-span-12 flex justify-center items-center">
-                <img class="w-52" src="../assets/Diap 2/chihuahua.png" alt="">
-                <p class="text-white text-lg mr-2">Chihuahua</p>
-                <img class="w-52" src="../assets/Diap 2/merida.png" alt="">
-                <p class="text-white text-lg mr-2">Mérida</p>
-                <img class="w-52" src="../assets/Diap 2/mty.png" alt="">
-                <p class="text-white text-lg mr-2">Monterrey</p>
-                <img class="w-52" src="../assets/Diap 2/guadalajara.png" alt="">
-                <p class="text-white text-lg mr-2">Guadalajara</p>
+                
             </div>
         </div>
-    </div>
-    <div id="productos" class="h-screen section-2 bg-blue-600">
-        <div class="grid grid-cols-12 gap-4 h-screen">
-            <div class="col-span-5 flex justify-center items-end">
-                <img class="w-2/3" src="../assets/Diap 3/foto.png" alt="">
-            </div>
-            <div class="col-span-7 mt-40">
-                <div>
-                    <h2 class="text-white text-8xl font-bold text-left">Nuestros <br>
-                        productos.</h2>
-                </div>
-                <div class="grid grid-cols-12 gap-10 mt-10">
-                    <div class="col-span-3 flex justify-center items-center flex-col text-center text-white">
-                        <img class="w-32" src="../assets/Diap 3/icono1.png" alt="">
-                        <p class="font-bold text-lg">VIP <br>
-                            Allianz</p>
-                            <p class="text-yellow-500">Planes personalizados
-                                de ahorro</p>
-                    </div>
-                    <div class="col-span-3 flex justify-center items-center flex-col text-center text-white">
-                        <img class="w-32" src="../assets/Diap 3/icono 2.png" alt="">
-                        <p class="font-bold text-lg">VIP <br>
-                            Gestión</p>
-                            <p class="text-yellow-500">Haz crecer tu capital.</p>
-                    </div>
-                    <div class="col-span-3 flex justify-center items-center flex-col text-center text-white">
-                        <img class="w-32" src="../assets/Diap 3/icono 3.png" alt="">
-                        <p class="font-bold text-lg">VIP <br>
-                            Microlending</p>
-                            <p class="text-yellow-500">Recursos para créditos
-                                personales y PyMEs.</p>
-                    </div>
-                    <div class="col-span-3 flex justify-center items-center flex-col text-center text-white">
-                        <img class="w-32" src="../assets/Diap 3/icono 4.png" alt="">
-                        <p class="font-bold text-lg">VIP <br>
-                            Consultants</p>
-                            <p class="text-yellow-500">Asesoría Legal y Fiscal.</p>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-    <div id="producto1" class="h-screen section-2 bg-white">
-        <div class="grid grid-cols-12 gap-4 h-screen">
-            <div class="col-span-5 flex justify-start items-center relative">
-                <img class="absolute w-32 ml-6" src="../assets/Diap 4/icono.png" alt="">
-                <div class="w-full h-full px-20">
-                    <div class="w-full h-full">
-                        <img class="object-cover object-center w-full h-full" src="../assets/Diap 4/foto.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-span-7 mt-40 -ml-32 z-20 relative">
-                <div class="flex justify-start items-center">
-                    <h2 class="text-9xl font-bold text-blue-700 title" style="margin-left: -5px; opacity: 0.9;">01.</h2>
-                    <img class="w-56 mt-5" src="../assets/Diap 4/allianz.png" alt="">
-                </div>
-                <div class="p-20" style="width: 850px;">
-                    <p class="text-2xl text-justify mb-10">Te brindamos la visibilidad que necesitas para vivir en armonía
-                        después de tu retiro, por ello te proponemos un plan de
-                        ahorro</p>
-
-                        <a href="./vip-allianz.html" class="rounded-full px-5 py-2 bg-yellow-500 text-white mt-20 block">Más información</a>
-                </div>
-                <img class="absolute bottom-0 right-0 w-5/6" src="../assets/Diap 4/sello transparencia.png" alt="">
-            </div>
-            
-        </div>
-    </div>
-    <div id="producto2" class="h-screen section-2 bg-white">
-        <div class="grid grid-cols-12 gap-4 h-screen">
-            <div class="col-span-5 flex justify-start items-end relative">
-                <img class="absolute w-32 ml-6 mb-20" src="../assets/Diap 5/icono.png" alt="">
-                <div class="w-full h-full px-20">
-                    <div class="w-full h-full">
-                        <img class="object-cover object-center w-full h-full" src="../assets/Diap 5/foto.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-span-7 mt-40 -ml-32 z-20 relative">
-                <div class="flex justify-start items-center">
-                    <h2 class="text-9xl font-bold text-yellow-500 title" style="margin-left: -5px; opacity: 0.9;">02.</h2>
-                    <p class="text-5xl font-bold title" style="color: #002C75;">VIP <br> Gestión de <br> Activos</p>
-                </div>
-                <div class="p-20" style="width: 850px;">
-                    <p class="text-justify text-2xl mb-10">Somos expertos en gestionar el manejo de activos financieros
-                        enfocados en obtener grandes beneficios con nuestro portafolio
-                        diversificado en activos de capital</p>
-
-                        <a href="./vip-gestion-de-activos.html" class="rounded-full px-5 py-2 bg-yellow-500 text-white mt-10">Más información</a>
-                </div>
-                <img class="absolute bottom-0 right-0 w-5/6" src="../assets/Diap 4/sello transparencia.png" alt="">
-            </div>
-            
-        </div>
-    </div>
-    <div id="producto3" class="h-screen section-2 bg-white">
-        <div class="grid grid-cols-12 gap-4 h-screen">
-            <div class="col-span-5 flex justify-start items-start relative">
-                <img class="absolute w-32 ml-6 mt-32" src="../assets/Diap 6/icono.png" alt="">
-                <div class="w-full h-full px-20">
-                    <div class="w-full h-full">
-                        <img class="object-cover object-center w-full h-full" src="../assets/Diap 6/foto.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-span-7 mt-40 -ml-32 z-20 relative">
-                <div class="flex justify-start items-center">
-                    <h2 class="text-9xl font-bold text-blue-700 title" style="margin-left: -5px; opacity: 0.9;">03.</h2>
-                    <p class="text-5xl font-bold title" style="color: #002C75;">VIP <br> Micro- <br> lending</p>
-                </div>
-                <div class="p-20" style="width: 850px;">
-                    <p class="text-justify text-2xl mb-10">Te ayudamos a lograr tus metas y objetivos para tu proyecto,
-                        contamos con recursos para los créditos personales o créditos
-                        a micros, pequeñas y medianas empresas que tienen el
-                        potencia</p>
-
-                        <a href="./vip-microlending.html" class="rounded-full px-5 py-2 bg-yellow-500 text-white mt-10">Más información</a>
-                </div>
-                <img class="absolute bottom-0 right-0 w-5/6" src="../assets/Diap 4/sello transparencia.png" alt="">
-            </div>
-            
-        </div>
-    </div>
-    <div id="producto4" class="h-screen section-2 bg-white">
-        <div class="grid grid-cols-12 gap-4 h-screen">
-            <div class="col-span-5 flex justify-start items-end relative">
-                <img class="absolute w-32 ml-6 mb-32" src="../assets/Diap 7/icono.png" alt="">
-                <div class="w-full h-full px-20">
-                    <div class="w-full h-full">
-                        <img class="object-cover object-center w-full h-full" src="../assets/Diap 7/foto.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-span-7 mt-40 -ml-32 z-20 relative">
-                <div class="flex justify-start items-center">
-                    <h2 class="text-9xl font-bold text-yellow-500 title" style="margin-left: -5px; opacity: 0.9;">04.</h2>
-                    <p class="text-5xl font-bold title" style="color: #002C75;">VIP <br> Consultants</p>
-                </div>
-                <div class="p-20" style="width: 850px;">
-                    <p class="text-justify text-2xl mb-10">Tenemos las mejores estrategias para el asesoramiento
-                        legal y fiscal de servicios financieros entre México y EEUU.</p>
-
-                        <a href="./vip-consultas.html" class="rounded-full px-5 py-2 bg-yellow-500 text-white mt-10">Más información</a>
-                </div>
-                <img class="absolute bottom-0 right-0 w-5/6" src="../assets/Diap 4/sello transparencia.png" alt="">
-            </div>
-            
-        </div>
-    </div>
-    <div id="contacto" class="h-screen section-2 bg-blue-800">
-        <div class="grid grid-cols-12 gap-4 h-screen">
-            <div class="col-span-5 flex justify-start items-center relative">
-                <div class="p-10">
-                    <h2 class="text-white text-8xl font-bold text-left">Contáctanos</h2>
-                    <form action="" class="mt-5">
-                        <div class="flex flex-col text-white mt-2">
-                            <label for="name" class="text-yellow-500">* Nombre completo</label>
-                            <input type="text" name="name" class="p-1 rounded-lg bg-transparent border-2 border-white">
+        <div id="producto3" class="h-screen section-2 bg-white">
+            <div class="grid grid-cols-12 gap-4 h-screen">
+                <div class="col-span-5 flex justify-start items-start relative">
+                    <img class="absolute w-32 ml-6 mt-32" src="../assets/Diap 6/icono.png" alt="">
+                    <div class="w-full h-full px-20">
+                        <div class="w-full h-full">
+                            <img class="object-cover object-center w-full h-full" src="../assets/Diap 6/foto.png" alt="">
                         </div>
-                        <div class="flex flex-col text-white mt-2">
-                            <label for="telephone" class="text-yellow-500">Número de teléfono</label>
-                            <input type="text" name="telephone" class="p-1 rounded-lg bg-transparent border-2 border-white">
+                    </div>
+                </div>
+                <div class="col-span-7 mt-40 -ml-32 z-20 relative">
+                    <div class="flex justify-start items-center">
+                        <h2 class="text-9xl font-bold text-blue-700 title" style="margin-left: -5px; opacity: 0.9;">03.</h2>
+                        <p class="text-5xl font-bold title" style="color: #002C75;">VIP <br> Micro- <br> lending</p>
+                    </div>
+                    <div class="p-20" style="width: 850px;">
+                        <p class="text-justify text-2xl mb-10">Te ayudamos a lograr tus metas y objetivos para tu proyecto,
+                            contamos con recursos para los créditos personales o créditos
+                            a micros, pequeñas y medianas empresas que tienen el
+                            potencia</p>
+    
+                            <a href="./vip-microlending.html" class="rounded-full px-5 py-2 bg-yellow-500 text-white mt-10">Más información</a>
+                    </div>
+                    <img class="absolute bottom-0 right-0 w-5/6" src="../assets/Diap 4/sello transparencia.png" alt="">
+                </div>
+                
+            </div>
+        </div>
+        <div id="producto4" class="h-screen section-2 bg-white">
+            <div class="grid grid-cols-12 gap-4 h-screen">
+                <div class="col-span-5 flex justify-start items-end relative">
+                    <img class="absolute w-32 ml-6 mb-32" src="../assets/Diap 7/icono.png" alt="">
+                    <div class="w-full h-full px-20">
+                        <div class="w-full h-full">
+                            <img class="object-cover object-center w-full h-full" src="../assets/Diap 7/foto.png" alt="">
                         </div>
-                        <div class="flex flex-col mt-2">
-                            <label for="type" class="text-yellow-500">Tipo de producto</label>
-                            <select name="type" class="p-1 rounded-lg border-2 text-white bg-transparent border-white">
-                                <option class="text-black" value="VIP Allianz: planes personalizados de ahorro">VIP Allianz: planes personalizados de ahorro</option>
-                                <option class="text-black" value="VIP Gestión de activos: Haz crecer tu capital">VIP Gestión de activos: Haz crecer tu capital</option>
-                                <option class="text-black" value="VIP Microlending: recursos para créditos personales y pymes">VIP Microlending: recursos para créditos personales y pymes</option>
-                                <option class="text-black" value="VIP Consultants: asesoría legal y fiscal ">VIP Consultants: asesoría legal y fiscal </option>
-                            </select>
-                        </div>
-                        <div class="grid grid-cols-12 gap-4 mt-2">
-                            <div class="col-span-6 flex flex-col text-white mt-2">
-                                <label for="amount1" class="text-yellow-500">Monto inicial</label>
-                                <input type="number" name="amount1" class="p-1 rounded-lg bg-transparent border-2 border-white">
+                    </div>
+                </div>
+                <div class="col-span-7 mt-40 -ml-32 z-20 relative">
+                    <div class="flex justify-start items-center">
+                        <h2 class="text-9xl font-bold text-yellow-500 title" style="margin-left: -5px; opacity: 0.9;">04.</h2>
+                        <p class="text-5xl font-bold title" style="color: #002C75;">VIP <br> Consultants</p>
+                    </div>
+                    <div class="p-20" style="width: 850px;">
+                        <p class="text-justify text-2xl mb-10">Tenemos las mejores estrategias para el asesoramiento
+                            legal y fiscal de servicios financieros entre México y EEUU.</p>
+    
+                            <a href="./vip-consultas.html" class="rounded-full px-5 py-2 bg-yellow-500 text-white mt-10">Más información</a>
+                    </div>
+                    <img class="absolute bottom-0 right-0 w-5/6" src="../assets/Diap 4/sello transparencia.png" alt="">
+                </div>
+                
+            </div>
+        </div>
+        <div id="contacto" class="h-screen section-2 bg-blue-800">
+            <div class="grid grid-cols-12 gap-4 h-screen">
+                <div class="col-span-5 flex justify-start items-center relative">
+                    <div class="p-10">
+                        <h2 class="text-white text-8xl font-bold text-left">Contáctanos</h2>
+                        <form @submit.prevent="sendForm" class="mt-5">
+                            <div class="flex flex-col text-white mt-2">
+                                <label for="name" class="text-yellow-500">* Nombre completo</label>
+                                <input type="text" v-model="contact.name" name="name" class="p-1 rounded-lg bg-transparent border-2 border-white">
                             </div>
-                            <div class="col-span-6 flex flex-col text-white mt-2">
-                                <label for="amount2" class="text-yellow-500">Monto mensual</label>
-                                <input type="number" name="amount2" class="p-1 rounded-lg bg-transparent border-2 border-white">
+                            <div class="flex flex-col text-white mt-2">
+                                <label for="telephone" class="text-yellow-500">* Número de teléfono</label>
+                                <input type="text" v-model="contact.telephone" name="telephone" class="p-1 rounded-lg bg-transparent border-2 border-white">
                             </div>
-                        </div>
-                        <div class="flex flex-col text-white mt-2">
-                            <label for="email" class="text-yellow-500">Enviar información por correo electrónico a:</label>
-                            <input type="email" name="email" class="p-1 rounded-lg bg-transparent border-2 border-white">
-                        </div>
-                        <p class="text-white mt-2">* Informacion necesaria</p>
-                        <div class="text-right">
-                            <button type="submit" class="rounded-full px-5 py-2 bg-yellow-500 text-white">Enviar información</button>
-                        </div>
-                    </form>
+                            <div class="flex flex-col mt-2">
+                                <label for="type" class="text-yellow-500">Tipo de producto</label>
+                                <select name="type" v-model="contact.optionSelect" class="p-1 rounded-lg border-2 text-white bg-transparent border-white">
+                                    <option class="text-black" value="VIP Allianz: planes personalizados de ahorro">VIP Allianz: planes personalizados de ahorro</option>
+                                    <option class="text-black" value="VIP Gestión de activos: Haz crecer tu capital">VIP Gestión de activos: Haz crecer tu capital</option>
+                                    <option class="text-black" value="VIP Microlending: recursos para créditos personales y pymes">VIP Microlending: recursos para créditos personales y pymes</option>
+                                    <option class="text-black" value="VIP Consultants: asesoría legal y fiscal ">VIP Consultants: asesoría legal y fiscal </option>
+                                </select>
+                            </div>
+                            <div class="grid grid-cols-12 gap-4 mt-2">
+                                <div class="col-span-6 flex flex-col text-white mt-2">
+                                    <label for="amount1" class="text-yellow-500">Monto inicial</label>
+                                    <input type="number" v-model="contact.amount1" name="amount1" class="p-1 rounded-lg bg-transparent border-2 border-white">
+                                </div>
+                                <div class="col-span-6 flex flex-col text-white mt-2">
+                                    <label for="amount2" class="text-yellow-500">Monto mensual</label>
+                                    <input type="number" v-model="contact.amount2" name="amount2" class="p-1 rounded-lg bg-transparent border-2 border-white">
+                                </div>
+                            </div>
+                            <div class="flex flex-col text-white mt-2">
+                                <label for="email" class="text-yellow-500">* Enviar información por correo electrónico a:</label>
+                                <input type="email" v-model="contact.email" name="email" class="p-1 rounded-lg bg-transparent border-2 border-white">
+                            </div>
+                            <p class="text-white mt-2">* Informacion necesaria</p>
+                            <div class="text-right">
+                                <button type="submit" class="rounded-full px-5 py-2 bg-yellow-500 text-white">Enviar información</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
+                <div class="col-span-7 mt-40 -ml-32 z-20 relative">
+                    <img class="absolute bottom-0 right-0 w-5/6" src="../assets/Diap 8/sello.png" alt="">
+                </div>
+                
             </div>
-            <div class="col-span-7 mt-40 -ml-32 z-20 relative">
-                <img class="absolute bottom-0 right-0 w-5/6" src="../assets/Diap 8/sello.png" alt="">
-            </div>
-            
         </div>
     </div>
+    <script src="./js/index.js"></script>
 
-    <script>
-        $(window).on("scroll", function() {
-            console.log('ola');
-            if($(window).scrollTop() > 100) {
-                $(".header").addClass("active");
-            } else {
-                //remove the background property so it comes transparent again (defined in your css)
-            $(".header").removeClass("active");
-            }
-        });
-    </script>
 </body>
 </html>
