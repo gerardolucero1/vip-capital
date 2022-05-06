@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../dist/output.css" rel="stylesheet">
+    <link href="output.css" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/vue@3"></script>
@@ -253,8 +253,10 @@
         </div>
         <div class="section-2 bg-blue-800 relative">
             <div class="grid grid-cols-12 gap-4">
-                <div class="col-span-6 pt-52 px-10">
+                <div class="col-span-6 pt-52 px-10 relative">
                     <canvas id="myChart"></canvas>
+                    <div class="bg-blue-800 absolute rounded-full top-0 left-0 z-0" style="width: 600px; height: 600px; margin-top: 38%; margin-left: 14.5%; border: 2px solid #1E40AF;">
+                    </div>
                 </div>
                 <div class="col-span-6 pt-40">
                     <h2 class="text-8xl text-left text-white">Calcula tu</h2>
@@ -432,63 +434,100 @@
 
             methods: {
                 generateChart(){
-                    this.labels = []
-
-                    for (let index = 1; index <= this.amount2; index++) {
-                        this.labels.push(index + ' Años')
-                    }
-
-                    const labels = this.labels;
-
                     const data = {
-                        labels: labels,
-                        
-                        datasets: [{
-                            label: 'Inversión VIP CAP',
-                            backgroundColor: 'rgb(255, 255, 255)',
-                            borderColor: 'rgb(255, 255, 255)',
-                            data: this.values,
-                        }]
+                        labels: ['Años de inversion'],
+                        datasets: [
+                            {
+                                label: 'Dataset 1',
+                                data: [parseInt(this.amount2), 50],
+                                backgroundColor: ['rgb(255, 255, 255)', '#1E40AF'],
+                            }
+                        ]
                     };
 
                     const config = {
-                        type: 'line',
+                        type: 'pie',
                         data: data,
                         options: {
+                            responsive: true,
                             plugins: {
                                 legend: {
+                                    position: 'top',
                                     labels: {
                                         color: "white",
                                         font: {
                                             size: 18
                                         }
                                     }
-                                }
-                            },
-                            scales: {
-                                y: { 
-                                    ticks: {
-                                        color: "white",
-                                        font: {
-                                            size: 14,
-                                        },
-                                        stepSize: 10000,
-                                        beginAtZero: false
-                                    }
                                 },
-                                x: {
-                                    ticks: {
-                                        color: "white",
-                                        font: {
-                                            size: 14
-                                        },
-                                        stepSize: 1,
-                                        beginAtZero: false
-                                    }
+                                title: {
+                                    display: true,
+                                    text: 'Inversión VIP CAP',
+                                    color: "white",
+                                    font: {
+                                            size: 18
+                                        }
                                 }
-                                }
+                            }
                         },
                     };
+                    // this.labels = []
+
+                    // for (let index = 1; index <= this.amount2; index++) {
+                    //     this.labels.push(index + ' Años')
+                    // }
+
+                    // const labels = this.labels;
+
+                    // const data = {
+                    //     labels: labels,
+                        
+                    //     datasets: [{
+                    //         label: 'Inversión VIP CAP',
+                    //         backgroundColor: 'rgb(255, 255, 255)',
+                    //         borderColor: 'rgb(255, 255, 255)',
+                    //         data: this.values,
+                    //     }]
+                    // };
+
+                    // const config = {
+                    //     type: 'line',
+                    //     data: data,
+                    //     options: {
+                    //         plugins: {
+                    //             legend: {
+                    //                 labels: {
+                    //                     color: "white",
+                    //                     font: {
+                    //                         size: 18
+                    //                     }
+                    //                 }
+                    //             }
+                    //         },
+                    //         scales: {
+                    //             y: { 
+                    //                 ticks: {
+                    //                     color: "white",
+                    //                     font: {
+                    //                         size: 14,
+                    //                     },
+                    //                     stepSize: 10000,
+                    //                     beginAtZero: false
+                    //                 }
+                    //             },
+                    //             x: {
+                    //                 ticks: {
+                    //                     color: "white",
+                    //                     font: {
+                    //                         size: 14
+                    //                     },
+                    //                     stepSize: 1,
+                    //                     beginAtZero: false
+                    //                 }
+                    //             }
+                    //             }
+                    //     },
+                    // };
 
                     const ctx = document.getElementById(`myChart`);
                     if (this.myChart) {

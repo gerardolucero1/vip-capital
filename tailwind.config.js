@@ -1,5 +1,8 @@
 module.exports = {
-    content: ["./src/**/*.{html,js}"],
+    content: [
+      "./index.html",
+      "./vip-allianz.html",
+    ],
     theme: {
       extend: {},
     },
