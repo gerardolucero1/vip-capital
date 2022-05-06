@@ -52,6 +52,7 @@ $data = json_decode(file_get_contents("php://input"));
             <p><b>Nombre:</b><br/>$data->name</p>
             <p><b>Email:</b><br/>$data->email</p>
             <p><b>Telefono:</b><br/>$data->telephone</p>
+            <p><b>Ciudad:</b><br/>$data->city</p>
             <p><b>Monto Inicial:</b><br/>$data->amount1</p>
             <p><b>Monto Mensual:</b><br/>$data->amount2</p>
             <p><b>Opcion:</b><br/>$data->optionSelect</p>
