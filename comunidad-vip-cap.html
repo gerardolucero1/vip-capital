@@ -18,22 +18,22 @@
 
         @font-face {
             font-family: "Avenir bold";
-            src: url("../assets/fonts/AvenirNextLTPro-Heavy.ttf");
+            src: url("./assets/fonts/AvenirNextLTPro-Heavy.ttf");
         }
 
         @font-face {
             font-family: "Avenir regular";
-            src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
+            src: url("./assets/fonts/AvenirNextLTPro-Regular.otf");
         }
 
         @font-face {
             font-family: "Renogare";
-            src: url("../assets/fonts/Renogare-Regular.otf");
+            src: url("./assets/fonts/Renogare-Regular.otf");
         }
 
         @font-face {
             font-family: "Avenir next";
-            src: url("../assets/fonts/AvenirNextFont.ttf");
+            src: url("./assets/fonts/AvenirNextFont.ttf");
         }
 
         html{
@@ -105,6 +105,38 @@
             background-size: cover;
             background-repeat: no-repeat;
         }
+
+        .title{
+            font-family: Renogare;
+        }
+
+        .txt-bold{
+            font-family: 'Avenir bold';
+        }
+
+        .txt{
+            font-family: Avenir;
+        }
+
+        .bg-blue-1{
+            background-color: #004ff6;
+        }
+
+        .blue-1{
+            color: #004ff6;
+        }
+
+        .blue-2{
+            color: #0550f6;
+        }
+
+        .blue-3{
+            color: rgb(1, 46, 113);
+        }
+
+        .yellow-1{
+            color: #f8ac00;
+        }
     
     </style>
 </head>
@@ -120,20 +152,21 @@
                     </li>
                     <li><a class="px-8 py-5 text-white" href="#productos">Productos</a><!-- Begin 5 columns Item -->
                         <div class="drop_menu bg-white">
-                           <div class="grid grid-cols-12 gap-4 w-full">
-                               <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                        <div class="grid grid-cols-12 gap-4 w-full">
+                            <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
                                     <a href="./vip-allianz.html" class=" flex justify-center items-center flex-col">
                                         <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono1.png" alt="">
                                         <h3 class="font-bold text-2xl title">VIP Allianz</h3>
-                                        <p>Planes personalizados de ahorro</p>
+                                        <p>Planes personalizados
+                                            de ahorro e fondos de
+                                            inversión.</p>
                                     </a>
-                               </div>
-                               <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                            </div>
+                            <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
                                     <a href="./vip-gestion-de-activos.html" class=" flex justify-center items-center flex-col">
                                         <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 2.png" alt="">
-                                        <h3 class="font-bold text-2xl title text-center">VIP TRADING
-                                            Forex, Crypto e Índices.</h3>
-                                        <p>Haz crecer tu capital.</p>
+                                        <h3 class="font-bold text-2xl title text-center">VIP Trading
+                                            En Forex, Crypto, índices y NFTs.</h3>
                                     </a>
                                 </div>
                                 <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
@@ -147,10 +180,13 @@
                                     <a href="./vip-consultas.html" class=" flex justify-center items-center flex-col">
                                         <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 4.png" alt="">
                                         <h3 class="font-bold text-2xl title">VIP Consultants</h3>
-                                        <p>Asesoría Legal y Fiscal.</p>
+                                        <p>Experiencia en
+                                            estrategias fiscales y
+                                            asesoría legal. Seguros
+                                            y fianzas..</p>
                                     </a>
                                 </div>
-                           </div>
+                        </div>
                         </div>
                     </li>
                     <li><a class="px-8 py-5 text-white" href="./index.html#contacto">Contacto</a>              
@@ -274,7 +310,7 @@
             <div class="flex justify-center items-center mt-20 flex-col">
                 <img class="w-20" src="../assets/Comunidad/icono ubicacion.png" alt="">
 
-                <h2 class="text-8xl text-blue-800 mt-20">Una oficina cerca de ti...</h2>
+                <h2 class="text-8xl text-blue-800 mt-20 txt-bold blue-3">Una oficina cerca de ti...</h2>
             </div>
 
             <div class="flex justify-center items-start mt-10 relative">
