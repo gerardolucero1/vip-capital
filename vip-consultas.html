@@ -141,7 +141,7 @@
 </head>
 <body>
     <header>
-        <nav class="header w-full flex justify-between items-center fixed z-50" style="padding: 15px;">
+        <nav class="header w-full flex justify-between items-center fixed z-50 active" style="padding: 15px;">
             <img class="top-0 right-0 w-20 invisible" src="../assets/Diap 1/logo.png" alt="">
             <ul id="menu" class="flex justify-center items-center">
                 <li><a class="px-8 py-5 text-white" href="./index.html">Inicio</a>            
@@ -190,12 +190,12 @@
                 <li><a class="px-8 py-5 text-white" href="./index.html#contacto">Contacto</a>              
                 </li>
             </ul>
-            <a href="./index.html">
+            <a href="./index.html" class="absolute top-0 right-0 mt-2" style="margin-right: 8%;">
                 <img class="top-0 right-0 mr-5" style="width: 95px;" src="../assets/Diap 1/logo.png" alt="">
             </a>
         </nav>
     </header>
-    <div class="h-screen section-2 bg-yellow-500">
+    <div class="h-screen section-2 bg-yellow-500 relative">
         <div class="grid grid-cols-12 gap-4 h-screen">
             <div class="col-span-5 flex justify-center items-end relative">
                 <img style="width: 80%; margin-left: 10%;" src="./assets/04/foto.png" alt="">
@@ -215,10 +215,9 @@
                         <p class="text-white text-2xl font-bold">Contamos con una amplia experiencia en la defensa legal y fiscal de distintos tipos de contribuyentes y gobernados.</p>
                     </div>
                 </div>
-
-                <img src="/assets/04/04. vip consultants 2decorativo.png" style="margin-right: 5%;" class="absolute bottom-0 right-0 mb-10 w-40" alt="">
             </div>
         </div>
+        <img src="/assets/04/04. vip consultants 2decorativo.png" style="margin-right: 5%; width: 150px;" class="absolute bottom-0 right-0 mb-10 w-40" alt="">
     </div>
     <div class="h-screen section-2 bg-white">
         <div class="grid grid-cols-12 gap-4 h-screen relative">
@@ -244,7 +243,7 @@
     </div>
     <div class="section-2 bg-white relative flex flex-col justify-center items-center">
 
-        <img src="/assets/04/04. vip consultants decorativo.png" style="margin-right: 5%;" class="absolute top-0 right-0 mt-10 w-40" alt="">
+        <img src="/assets/04/04. vip consultants decorativo.png" style="margin-right: 5%; width: 150px;" class="absolute top-0 right-0 mt-10 w-40" alt="">
 
         <div class="flex justify-start items-center flex-col">
             <div class="z-20 pt-40" style="width: 80%;">
@@ -304,16 +303,5 @@
             </div>
         </div>
     </footer>
-    <script>
-        $(window).on("scroll", function() {
-            console.log('ola');
-            if($(window).scrollTop() > 100) {
-                $(".header").addClass("active");
-            } else {
-                //remove the background property so it comes transparent again (defined in your css)
-            $(".header").removeClass("active");
-            }
-        });
-    </script>
 </body>
 </html>
