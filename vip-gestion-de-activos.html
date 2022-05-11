@@ -126,6 +126,15 @@
         .yellow-1{
             color: #f8ac00;
         }
+
+        @font-face {
+            font-family: "Avenir chida";
+            src: url("./assets/fonts/AvenirNextCyr-Heavy.ttf");
+        }
+
+        .title-2{
+            font-family: 'Avenir chida';
+        }
     
     </style>
 </head>
@@ -146,7 +155,7 @@
                                     <a href="./vip-allianz.html" class=" flex justify-center items-center flex-col">
                                         <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono1.png" alt="">
                                         <h3 class="font-bold text-2xl title">VIP Allianz</h3>
-                                        <p>Planes personalizados
+                                        <p class="text-center">Planes personalizados
                                             de ahorro e fondos de
                                             inversión.</p>
                                     </a>
@@ -154,22 +163,22 @@
                             <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
                                     <a href="./vip-gestion-de-activos.html" class=" flex justify-center items-center flex-col">
                                         <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 2.png" alt="">
-                                        <h3 class="font-bold text-2xl title text-center">VIP Trading
-                                            En Forex, Crypto, índices y NFTs.</h3>
+                                        <h3 class="font-bold text-2xl title text-center">VIP Trading</h3>
+                                            <p class="text-center">En Forex, Crypto, índices y NFTs.</p>
                                     </a>
                                 </div>
                                 <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
                                     <a href="./vip-microlending.html" class=" flex justify-center items-center flex-col">
                                         <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 3.png" alt="">
                                         <h3 class="font-bold text-2xl title">VIP Microlending</h3>
-                                        <p>Recursos para créditos personales y PyMEs.</p>
+                                        <p class="text-center">Recursos para créditos personales y PyMEs.</p>
                                     </a>
                                 </div>
                                 <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
                                     <a href="./vip-consultas.html" class=" flex justify-center items-center flex-col">
                                         <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 4.png" alt="">
                                         <h3 class="font-bold text-2xl title">VIP Consultants</h3>
-                                        <p>Experiencia en
+                                        <p class="text-center">Experiencia en
                                             estrategias fiscales y
                                             asesoría legal. Seguros
                                             y fianzas..</p>
@@ -192,10 +201,10 @@
                     <img class="w-2/3" src="../assets/02/foto celular.png" alt="">
                     <a href="./index.html#contacto" class="absolute bg-blue-600 px-8 py-2 text-white rounded-full ml-96 mb-40 text-lg">Quiero invertir</a>
                 </div>
-                <div class="col-span-7 flex justify-center items-center relative">
+                <div class="col-span-7 flex justify-start items-center relative">
                     <div style="width: 80%;" class="">
                         <div class="text-left">
-                            <p class="text-white text-7xl txt-bold">¿Quieres invertir<br>
+                            <p class="text-white text-7xl title-2">¿Quieres invertir<br>
                                 pero no sabes por <br>
                                 dónde empezar?</p>
                         </div>
@@ -207,7 +216,7 @@
                         </div>
                     </div>
 
-                    <img src="/assets/02/vip gestion de activos decorativo.png" class="absolute bottom-0 right-0 mb-10 mr-10 w-40" alt="">
+                    <img src="/assets/02/vip gestion de activos decorativo.png" style="margin-right: 5%;" class="absolute bottom-0 right-0 mb-10 w-40" alt="">
                 </div>
             </div>
         </div>
@@ -242,7 +251,7 @@
         </div>
         <div class="section-2 h-screen bg-white relative flex flex-col justify-center items-center">
             <div class="z-20">
-                <h2 class="text-7xl text-center text-blue-800 font-bold txt-bold blue-3">Queremos brindarte seguridad y confianza</h2>
+                <h2 class="text-7xl text-center text-blue-800 font-bold title-2 blue-3">Queremos brindarte seguridad y confianza</h2>
             </div>
             <div class="grid grid-cols-12 gap-4 mt-24">
                 <div class="col-span-4 text-center flex justify-center items-center flex-col">
@@ -268,31 +277,37 @@
         </div>
         <div class="h-screen section-2 bg-white relative pt-40">
             <div class="ml-40">
-                <h2 class="text-8xl text-left text-yellow-500 txt-bold">Inviertes de</h2>
-                <h2 class="text-8xl text-left text-yellow-500 txt-bold">manera segura.</h2>
+                <h2 class="text-8xl text-left text-yellow-500 title-2">Inviertes de</h2>
+                <h2 class="text-8xl text-left text-yellow-500 title-2">manera segura.</h2>
             </div>
             <div class="grid grid-cols-12 gap-4 mt-24">
-                <div class="col-span-4 text-center flex justify-center items-center flex-col">
-                    <img src="/assets/02/icono 1.png" class="w-32" alt="">
+                <div class="col-span-4 text-center flex justify-start items-center flex-col">
+                    <div style="width: 150px; height: 150px;" class="flex justify-center items-center">
+                        <img src="/assets/02/icono 1.png" class="w-10/12" alt="">
+                    </div>
                     <div class="mt-5 flex justify-center items-center">
                         <p class="text-blue-500 text-lg text-justify w-7/12">Nuestra asesoría es personalizada y siempre nos enfocamos en tu crecimiento.</p>
                     </div>
                 </div>
-                <div class="col-span-4 text-center flex justify-center items-center flex-col">
-                    <img src="/assets/02/icono 2.png" class="w-32" alt="">
+                <div class="col-span-4 text-center flex justify-start items-center flex-col">
+                    <div style="width: 150px; height: 150px;" class="flex justify-center items-center">
+                        <img src="/assets/02/icono 2.png" class="w-10/12" alt="">
+                    </div>
                     <div class="mt-5 flex justify-center items-center">
                         <p class="text-blue-500 text-lg text-justify w-7/12">Contamos con las estrategias adecuadas para conseguir el mejor rendimiento y los mejores beneficios.</p>
                     </div>
                 </div>
-                <div class="col-span-4 text-center flex justify-center items-center flex-col">
-                    <img src="/assets/02/icono 3.png" class="w-32" alt="">
+                <div class="col-span-4 text-center flex justify-start items-center flex-col">
+                    <div style="width: 150px; height: 150px;" class="flex justify-center items-center">
+                        <img src="/assets/02/icono 3.png" class="w-10/12" alt="">
+                    </div>
                     <div class="mt-5 flex justify-center items-center">
                         <p class="text-blue-500 text-lg text-justify w-7/12">Trabajamos con un portafolio diversificado en activos de capital.</p>
                     </div>
                 </div>
             </div>
 
-            <img src="/assets/02/02. Vip gestion de activos.png" class="absolute top-0 right-0 mt-10 mr-10 w-40" alt="">
+            <img src="/assets/Diap 5/trading.png" class="absolute top-0 right-0 mt-10 mr-10 w-40" alt="">
             <img src="/assets/01/rayita decorativa amarilla.png" class="absolute top-0 right-0" alt="" style="margin-right: 5%; margin-top: 6rem;">
 
         </div>
@@ -360,7 +375,7 @@
                     <p class="text-white">Únete a nuestro equipo de trabajo</p>
                     <button class="px-5 py-1 bg-blue-500 rounded-full text-white ml-5">Aplicar</button>
                 </div>
-                <div class="col-span-4 flex justify-center items-center flex-col">
+                <div class="col-span-4 flex justify-center items-end flex-col">
                     
                     <div class="text-right text-md">
                         <div class="text-white">

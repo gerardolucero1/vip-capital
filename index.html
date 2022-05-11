@@ -6,6 +6,7 @@
     <link href="./dist/output.css" rel="stylesheet">
 
     <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
@@ -34,6 +35,10 @@
             font-family: "Avenir next";
             src: url("../assets/fonts/AvenirNextFont.ttf");
         }
+        @font-face {
+            font-family: "Avenir chida";
+            src: url("./assets/fonts/AvenirNextCyr-Heavy.ttf");
+        }
 
         html{
             scroll-behavior: smooth;
@@ -49,6 +54,10 @@
 
         .title{
             font-family: Renogare;
+        }
+
+        .title-2{
+            font-family: 'Avenir chida';
         }
 
         .section-1{
@@ -96,6 +105,34 @@
         #menu li:hover .drop_menu {
             top: auto;
             margin-top: 10px;
+        }
+
+        .title{
+            font-family: Renogare;
+        }
+
+        .txt-bold{
+            font-family: 'Avenir bold';
+        }
+
+        .txt{
+            font-family: Avenir;
+        }
+
+        .blue-1{
+            color: #004ff6;
+        }
+
+        .blue-2{
+            color: #0550f6;
+        }
+
+        .blue-3{
+            color: rgb(1, 46, 113);
+        }
+
+        .yellow-1{
+            color: #f8ac00;
         }
     
     </style>
@@ -166,7 +203,7 @@ y fianzas.</p>
                 <div class="grid grid-cols-12 gap-4 h-screen">
                     <div class="col-span-6 flex justify-center items-center flex-col">
                         <div>
-                            <h2 class="text-white text-8xl font-bold text-left">Le damos <br>
+                            <h2 class="text-white text-8xl font-bold text-left title-2">Le damos <br>
                                 valor a <br>
                                 tu futuro</h2>
             
@@ -174,27 +211,27 @@ y fianzas.</p>
                                     hagamos crecer tu patrimonio <br>
                                     de manera fácil y segura.</p>
             
-                                <button class="rounded-full px-5 py-2 bg-yellow-500 text-white mt-10">Más información</button>
+                                <button class="rounded-full text-lg px-20 py-2 bg-yellow-500 text-white mt-10">Más información</button>
                         </div>
                     </div>
                     <div class="col-span-6"></div>
                 </div>
                 <img class="absolute top-0 left-0 w-1/4" style="margin-left: 40%; margin-top: 5%;" src="../assets/Diap 1/sello.png" alt="">
-                <img class="absolute top-0 left-0 w-1/4" style="margin-left: 70%; margin-top: 15%;" src="../assets/Diap 1/sell2.png" alt="">
+                <img class="absolute top-0 left-0" style="margin-left: 78%; margin-top: 36%; width: 15%;" src="../assets/Diap 1/sell2.png" alt="">
             </div>
             <div id="comunidad" class="h-screen section-2 bg-blue-600">
                 <div class="grid grid-cols-12 gap-4 h-screen">
                     <div class="col-span-7 flex justify-center items-center flex-col mt-32">
                         <div>
-                            <h2 class="text-white text-8xl font-bold text-left">Hacemos <br>
+                            <h2 class="text-white text-8xl font-bold text-left title-2">Hacemos <br>
                                 crecer tu <br>
                                 patrimonio.</h2>
                         </div>
                     </div>
                     <div class="col-span-5 flex justify-center items-center flex-col mt-32">
                         <div>
-                            <p class="text-white text-4xl font-bold text-right">Quiénes somos</p>
-                            <div style="width: 400px;">
+                            <p class="text-white text-4xl font-bold text-right px-10">Quiénes somos</p>
+                            <div class="px-10">
                                 <p class="text-white text-xl text-justify" style="text-align: justify;">Somos una empresa de asesoría especializada en ofrecer soluciones financieras  accesibles al público en general, fomentando y promoviendo la cultura financiera al alcance de todos.</p>
                             </div>
                         </div>
@@ -216,7 +253,10 @@ y fianzas.</p>
                             <img class="w-52" src="../assets/Diap 2/guadalajara.png" alt="">
                             <p class="text-white text-lg mr-2">Guadalajara</p>
                         </div>
-                        
+                        <div class="flex justify-center items-center">
+                            <img class="w-52" src="../assets/Diap 2/tampico.png" alt="">
+                            <p class="text-white text-lg mr-2">Tampico</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -225,39 +265,41 @@ y fianzas.</p>
                     <div class="col-span-5 flex justify-center items-end">
                         <img class="w-2/3" src="../assets/Diap 3/foto.png" alt="">
                     </div>
-                    <div class="col-span-7 mt-40">
+                    <div class="col-span-7 mt-40 px-10">
                         <div>
-                            <h2 class="text-white text-8xl font-bold text-left">Nuestros <br>
+                            <h2 class="text-white text-8xl font-bold text-left title-2">Nuestros <br>
                                 productos.</h2>
                         </div>
-                        <div class="grid grid-cols-12 gap-10 mt-10">
-                            <a href="./vip-allianz.html" class="col-span-3 flex justify-center items-center flex-col text-center text-white">
-                                <img class="w-20" src="../assets/Diap 3/icono1.png" alt="">
-                                    <p class="font-bold text-lg">VIP <br>
-                                        Allianz</p>
-                                        <p class="text-yellow-500">Planes personalizados
-                                            de ahorro en fondos de
-                                            inversión.
-                                            </p>
+                        <div class="grid grid-cols-12 gap-4 mt-10">
+                            <a href="./vip-allianz.html" class="col-span-3 flex justify-start items-center flex-col text-center text-white">
+                                <img style="width: 60%;" src="../assets/Diap 3/icono1.png" alt="">
+                                    <div>
+                                        <p class="font-bold text-xl">VIP <br>
+                                            Allianz</p>
+                                            <p class="text-yellow-500">Planes personalizados
+                                                de ahorro en fondos de
+                                                inversión.
+                                                </p>
+                                    </div>
                             </a>
-                            <a href="./vip-gestion-de-activos.html" class="col-span-3 flex justify-center items-center flex-col text-center text-white">
-                                <img class="w-20" src="../assets/Diap 3/icono 2.png" alt="">
-                                <p class="font-bold text-lg">VIP <br>
+                            <a href="./vip-gestion-de-activos.html" class="col-span-3 flex justify-start items-center flex-col text-center text-white">
+                                <img style="width: 60%;" src="../assets/Diap 3/icono 2.png" alt="">
+                                <p class="font-bold text-xl">VIP <br>
                                     Gestión de activos</p>
                                     <p class="text-yellow-500">VIP Trading
                                         En Forex, Crypto,
                                         índices y NFTs.</p>
                                 </a>
-                            <a href="./vip-microlending.html" class="col-span-3 flex justify-center items-center flex-col text-center text-white">
-                                <img class="w-20" src="../assets/Diap 3/icono 3.png" alt="">
-                                <p class="font-bold text-lg">VIP <br>
+                            <a href="./vip-microlending.html" class="col-span-3 flex justify-start items-center flex-col text-center text-white">
+                                <img style="width: 60%;" src="../assets/Diap 3/icono 3.png" alt="">
+                                <p class="font-bold text-xl">VIP <br>
                                     Microlending</p>
                                     <p class="text-yellow-500">Recursos para créditos
                                         personales y PyMEs.</p>
                                     </a>
-                            <a href="./vip-consultas.html" class="col-span-3 flex justify-center items-center flex-col text-center text-white">
-                                <img class="w-20" src="../assets/Diap 3/icono 4.png" alt="">
-                                <p class="font-bold text-lg">VIP <br>
+                            <a href="./vip-consultas.html" class="col-span-3 flex justify-start items-center flex-col text-center text-white">
+                                <img style="width: 60%;" src="../assets/Diap 3/icono 4.png" alt="">
+                                <p class="font-bold text-xl">VIP <br>
                                     Consultants</p>
                                     <p class="text-yellow-500">Experiencia en
                                         estrategias fiscales y
@@ -273,6 +315,7 @@ y fianzas.</p>
                 <div class="grid grid-cols-12 gap-4 h-screen">
                     <div class="col-span-5 flex justify-start items-center relative">
                         <img class="absolute w-32 ml-6" src="../assets/Diap 4/icono.png" alt="">
+                        <img class="absolute bottom-0" style="margin-left: 8%; margin-bottom: 5%;" src="../assets/1.png" alt="">
                         <div class="w-full h-full px-20">
                             <div class="w-full h-full">
                                 <img class="object-cover object-center w-full h-full" src="../assets/Diap 4/foto.png" alt="">
@@ -281,13 +324,12 @@ y fianzas.</p>
                     </div>
                     <div class="col-span-7 mt-40 -ml-32 z-20 relative">
                         <div class="flex justify-start items-center">
-                            <h2 class="text-9xl font-bold text-blue-700 title" style="margin-left: -5px; opacity: 0.9;">01.</h2>
-                            <img class="w-56 mt-5" src="../assets/Diap 4/allianz.png" alt="">
+                            <img class="mt-5" style="width: 35%;" src="../assets/Diap 4/allianz2.png" alt="">
                         </div>
-                        <div class="p-20" style="width: 850px;">
-                            <p class="text-2xl text-justify mb-10" style="margin-bottom: 20px;">Te brindamos la visibilidad que necesitas para vivir el estilo de vida que deseas, por ello te proponemos el mejor plan de ahorro que genere rendimientos para tu crecimiento y bienestar financiero.</p>
+                        <div class="px-20 py-10" style="width: 850px;">
+                            <p class="text-2xl text-justify mb-10 blue-3">Te brindamos la visibilidad que necesitas para vivir el estilo de vida que deseas, por ello te proponemos el mejor plan de ahorro que genere rendimientos para tu crecimiento y bienestar financiero.</p>
         
-                            <a href="./vip-allianz.html" class="rounded-full px-5 py-2 bg-yellow-500 text-white mt-20">Más información</a>
+                            <a href="./vip-allianz.html" class="rounded-full text-lg px-20 py-2 bg-yellow-500 text-white mt-20">Más información</a>
                         </div>
                         <img class="absolute bottom-0 right-0 w-5/6" src="../assets/Diap 4/sello transparencia.png" alt="">
                     </div>
@@ -297,7 +339,8 @@ y fianzas.</p>
             <div id="producto2" class="h-screen section-2 bg-white">
                 <div class="grid grid-cols-12 gap-4 h-screen">
                     <div class="col-span-5 flex justify-start items-end relative">
-                        <img class="absolute w-32 ml-6 mb-20" src="../assets/Diap 5/icono.png" alt="">
+                        <img class="absolute w-32 ml-6" style="margin-bottom: 40%;" src="../assets/Diap 5/icono.png" alt="">
+                        <img class="absolute bottom-0" style="margin-left: 8%; margin-bottom: 5%;" src="../assets/2.png" alt="">
                         <div class="w-full h-full px-20">
                             <div class="w-full h-full">
                                 <img class="object-cover object-center w-full h-full" src="../assets/Diap 5/foto.png" alt="">
@@ -306,19 +349,17 @@ y fianzas.</p>
                     </div>
                     <div class="col-span-7 mt-40 -ml-32 z-20 relative">
                         <div class="flex justify-start items-center">
-                            <h2 class="text-9xl font-bold text-yellow-500 title" style="margin-left: -5px; opacity: 0.9;">02.</h2>
-                            <p class="text-5xl font-bold title" style="color: #002C75;">VIP Trading <br>
-                                En Forex, Crypto, <br>
-                                índices y NFTs</p>
+                            <img class="mt-5" style="width: 35%;" src="../assets/Diap 5/trading.png" alt="">
                         </div>
-                        <div class="p-20" style="width: 850px;">
-                            <p class="text-justify text-2xl mb-10" style="margin-bottom: 20px;">Somos expertos en gestionar el manejo de activos financieros
+                        <div class="px-20 py-10" style="width: 850px; z-index: 1000;">
+                            <p class="text-justify text-2xl mb-10 blue-3 txt-bold">En Forex, Crypto, índices y NFTs</p>
+                            <p class="text-justify text-2xl mb-10 blue-3">Somos expertos en gestionar el manejo de activos financieros
                                 enfocados en obtener grandes beneficios con nuestro portafolio
                                 diversificado en activos de capital.</p>
         
-                                <a href="./vip-gestion-de-activos.html" class="rounded-full px-5 py-2 bg-yellow-500 text-white mt-10">Más información</a>
+                                <a href="./vip-gestion-de-activos.html" class="rounded-full text-lg px-20 py-2 bg-yellow-500 text-white mt-20">Más información</a>
                         </div>
-                        <img class="absolute bottom-0 right-0 w-5/6" src="../assets/Diap 4/sello transparencia.png" alt="">
+                        <img class="absolute bottom-0 right-0 w-5/6" style="z-index: 10;" src="../assets/Diap 4/sello transparencia.png" alt="">
                     </div>
                     
                 </div>
@@ -327,6 +368,7 @@ y fianzas.</p>
                 <div class="grid grid-cols-12 gap-4 h-screen">
                     <div class="col-span-5 flex justify-start items-start relative">
                         <img class="absolute w-32 ml-6 mt-32" src="../assets/Diap 6/icono.png" alt="">
+                        <img class="absolute bottom-0" style="margin-left: 8%; margin-bottom: 5%;" src="../assets/3.png" alt="">
                         <div class="w-full h-full px-20">
                             <div class="w-full h-full">
                                 <img class="object-cover object-center w-full h-full" src="../assets/Diap 6/foto.png" alt="">
@@ -335,13 +377,12 @@ y fianzas.</p>
                     </div>
                     <div class="col-span-7 mt-40 -ml-32 z-20 relative">
                         <div class="flex justify-start items-center">
-                            <h2 class="text-9xl font-bold text-blue-700 title" style="margin-left: -5px; opacity: 0.9;">03.</h2>
-                            <p class="text-5xl font-bold title" style="color: #002C75;">VIP <br> Micro- <br> lending</p>
+                            <img class="mt-5" style="width: 35%;" src="../assets/Diap 6/micro.png" alt="">
                         </div>
-                        <div class="p-20" style="width: 850px;">
-                            <p class="text-justify text-2xl mb-10" style="margin-bottom: 20px;">Te ayudamos a lograr tus metas y objetivos para tu proyecto, apoyándote con los recursos mediante un crédito personal o crédito a micros, pequeñas y medianas empresas que buscan el crecimiento y desarrollo de su negocio.</p>
+                        <div class="px-20 py-10" style="width: 850px;">
+                            <p class="text-justify text-2xl mb-10 blue-3">Te ayudamos a lograr tus metas y objetivos para tu proyecto, apoyándote con los recursos mediante un crédito personal o crédito a micros, pequeñas y medianas empresas que buscan el crecimiento y desarrollo de su negocio.</p>
         
-                                <a href="./vip-microlending.html" class="rounded-full px-5 py-2 bg-yellow-500 text-white mt-10">Más información</a>
+                                <a href="./vip-microlending.html" class="rounded-full text-lg px-20 py-2 bg-yellow-500 text-white mt-20">Más información</a>
                         </div>
                         <img class="absolute bottom-0 right-0 w-5/6" src="../assets/Diap 4/sello transparencia.png" alt="">
                     </div>
@@ -351,7 +392,8 @@ y fianzas.</p>
             <div id="producto4" class="h-screen section-2 bg-white">
                 <div class="grid grid-cols-12 gap-4 h-screen">
                     <div class="col-span-5 flex justify-start items-end relative">
-                        <img class="absolute w-32 ml-6 mb-32" src="../assets/Diap 7/icono.png" alt="">
+                        <img class="absolute w-32 ml-6" style="margin-bottom: 40%;" src="../assets/Diap 7/icono.png" alt="">
+                        <img class="absolute bottom-0" style="margin-left: 8%; margin-bottom: 5%;" src="../assets/4.png" alt="">
                         <div class="w-full h-full px-20">
                             <div class="w-full h-full">
                                 <img class="object-cover object-center w-full h-full" src="../assets/Diap 7/foto.png" alt="">
@@ -360,13 +402,12 @@ y fianzas.</p>
                     </div>
                     <div class="col-span-7 mt-40 -ml-32 z-20 relative">
                         <div class="flex justify-start items-center">
-                            <h2 class="text-9xl font-bold text-yellow-500 title" style="margin-left: -5px; opacity: 0.9;">04.</h2>
-                            <p class="text-5xl font-bold title" style="color: #002C75;">VIP <br> Consultants</p>
+                            <img class="mt-5" style="width: 35%;" src="../assets/Diap 7/cons.png" alt="">
                         </div>
-                        <div class="p-20" style="width: 850px;">
-                            <p class="text-justify text-2xl mb-10" style="margin-bottom: 20px;">Otorgamos asesoría para atender asuntos en los que las autoridades administrativas y fiscales determinen obligaciones a cargo de los contribuyentes.</p>
+                        <div class="px-20 py-10" style="width: 850px;">
+                            <p class="text-justify text-2xl mb-10 blue-3">Otorgamos asesoría para atender asuntos en los que las autoridades administrativas y fiscales determinen obligaciones a cargo de los contribuyentes.</p>
         
-                                <a href="./vip-consultas.html" class="rounded-full px-5 py-2 bg-yellow-500 text-white mt-10">Más información</a>
+                                <a href="./vip-consultas.html" class="rounded-full text-lg px-20 py-2 bg-yellow-500 text-white mt-20">Más información</a>
                         </div>
                         <img class="absolute bottom-0 right-0 w-5/6" src="../assets/Diap 4/sello transparencia.png" alt="">
                     </div>
@@ -376,7 +417,7 @@ y fianzas.</p>
             <div id="contacto" class="h-screen section-2 bg-blue-800">
                 <div class="grid grid-cols-12 gap-4 h-screen">
                     <div class="col-span-5 flex justify-start items-center relative">
-                        <div class="p-10">
+                        <div class="py-10" style="padding-left: 25%;">
                             <h2 class="text-white text-8xl font-bold text-left">Contáctanos</h2>
                             <form @submit.prevent="sendForm" class="mt-5">
                                 <div class="flex flex-col text-white mt-2">
@@ -427,6 +468,35 @@ y fianzas.</p>
                     
                 </div>
             </div>
+            <footer style="background-color: #011F5D;">
+                <div class="grid grid-cols-12 gap-4 py-10 px-40">
+                    <div class="col-span-4">
+                        <img class="w-1/3" src="/assets/Diap 1/logo.png" alt="">
+                    </div>
+                    <div class="col-span-4 flex justify-center items-center">
+                        <p class="text-white">Únete a nuestro equipo de trabajo</p>
+                        <button class="px-5 py-1 bg-blue-500 rounded-full text-white ml-5">Aplicar</button>
+                    </div>
+                    <div class="col-span-4 flex justify-center items-end flex-col">
+                        
+                        <div class="text-right text-md">
+                            <div class="text-white">
+                                <a href="https://www.facebook.com/vipcapitalmx" target="_blank" class="text-lg">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="https://instagram.com/vipcapitalmx?igshid=YTM0ZjI4ZDI=" target="_blank" class="ml-5 text-lg">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://api.whatsapp.com/send?phone=526142041558" target="_blank" class="ml-5 text-lg">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                            <p class="text-white">614 2 04 15 58</p>
+                            <p class="text-white">contacto@vipcapital.mx</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
 
         <!-- <div class="movil">
