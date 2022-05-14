@@ -47,7 +47,7 @@
             font-family: 'Avenir bold'
         }
 
-        
+
 
         .section-1{
             background-image: url('../assets/Diap 1/fondo.png');
@@ -60,16 +60,16 @@
         }
 
         body, ul, li {
-            font-size:14px; 
+            font-size:14px;
             line-height:21px;
             text-align:left;
         }
- 
+
         #menu {
             list-style: none;
             width: 100%;
         }
- 
+
         #menu li {
             float:left;
             text-align:center;
@@ -78,7 +78,7 @@
             border:none;
             font-family: 'Avenir regular';
         }
- 
+
         /* Drop Down */
         .drop_menu {
             margin: 4px auto;
@@ -90,7 +90,7 @@
             border-top: none;
             width: 100vw;
         }
- 
+
         #menu li:hover .drop_menu {
             top: auto;
             margin-top: 10px;
@@ -140,9 +140,9 @@
             <nav class="header w-full flex justify-between items-center fixed z-50" style="padding: 15px;">
                 <img class="top-0 right-0 w-20 invisible" src="../assets/Diap 1/logo.png" alt="">
                 <ul id="menu" class="flex justify-center items-center">
-                    <li><a class="px-8 py-5 text-white text-lg" href="./index.html">Inicio</a>            
+                    <li><a class="px-8 py-5 text-white text-lg" href="./index.html">Inicio</a>
                     </li>
-                    <li><a class="px-8 py-5 text-white text-lg" href="./comunidad-vip-cap.html">Comunidad VIP CAP</a>              
+                    <li><a class="px-8 py-5 text-white text-lg" href="./comunidad-vip-cap.html">Comunidad VIP CAP</a>
                     </li>
                     <li><a class="px-8 py-5 text-white text-lg" href="#productos">Productos</a><!-- Begin 5 columns Item -->
                         <div class="drop_menu bg-white">
@@ -183,7 +183,7 @@
                         </div>
                         </div>
                     </li>
-                    <li><a class="px-8 py-5 text-white text-lg" href="./index.html#contacto">Contacto</a>              
+                    <li><a class="px-8 py-5 text-white text-lg" href="./index.html#contacto">Contacto</a>
                     </li>
                 </ul>
                 <a href="./index.html" class="absolute top-0 right-0 mt-2" style="margin-right: 8%;">
@@ -206,7 +206,7 @@
                             <p class="text-white text-5xl font-bold">¿Qué pasará cuando llegue
                                 el momento de tu retiro?</p>
                         </div>
-        
+
                         <div class="mt-10">
                             <p class="text-white text-2xl font-bold">Nosotros tenemos la respuesta. Queremos ayudarte a
                                 que planifiques tu retiro con un plan de ahorro
@@ -223,8 +223,8 @@
                     <a href="./index.html#contacto" class="absolute bg-yellow-500 px-8 py-2 text-white rounded-full ml-96 mb-40 text-lg">Solicitar plan</a>
                     <a href="./index.html#contacto" style="margin-left: -70%;" class="absolute bg-yellow-500 px-8 py-2 text-white rounded-full -ml-96 mb-40 text-lg">Contactar asesor</a>
                 </div>
-                
-                
+
+
             </div>
         </div>
         <div class="h-screen section-2 bg-white">
@@ -239,7 +239,7 @@
                         <div class="text-left">
                             <img src="/assets/01//VIP allianz.png" alt="">
                         </div>
-        
+
                         <div class="mt-10">
                             <p class="text-xl font-bold text-blue-500 txt blue-2"><span class="text-blue-600 font-bold blue-1 txt-bold">OptiMaxx Plus</span> es un plan de ahorro individual con
                                 aportaciones programadas. En donde los planes se pueden
@@ -248,7 +248,7 @@
                     </div>
                 </div>
                 <img src="/assets/01/vip allianz decoracion 2.png" class="absolute bottom-0 left-0 ml-10 mb-10" alt="">
-                
+
             </div>
         </div>
         <div class="section-2 bg-white relative">
@@ -266,7 +266,7 @@
                 <div class="col-span-3 text-center flex justify-start items-center flex-col">
                     <img src="/assets/01/rayita decorativa amarilla.png" alt="">
                     <div class="mt-5">
-                        <p class="text-blue-500 text-xl blue-2">Te permite construir tu plan <br> con base al periodo de <br> tiempo que tú desees.</p>
+                        <p class="text-blue-500 text-xl blue-2">Te permite construir tu plan <br> con base al período de <br> tiempo que tú desees.</p>
                     </div>
                 </div>
                 <div class="col-span-3 text-center flex justify-start items-center flex-col">
@@ -298,7 +298,7 @@
             <div class="grid grid-cols-12 gap-4">
                 <div class="col-span-6 pt-52 px-10 relative">
                     <canvas id="myChart"></canvas>
-                    
+
                 </div>
                 <div class="col-span-6 pt-40">
                     <h2 class="text-8xl text-left text-white">Calcula tu</h2>
@@ -334,7 +334,7 @@
                             <div class="flex justify-center items-center mt-5">
                                 <button class="bg-yellow-500 text-white px-5 py-2 rounded-full" v-on:click="generateChart">Calcular graficamente</button>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -403,7 +403,7 @@
                     <a href="./index.html#contacto" class="px-5 py-1 bg-blue-500 rounded-full text-white ml-5">Aplicar</a>
                 </div>
                 <div class="col-span-4 flex justify-center items-end flex-col">
-                    
+
                     <div class="text-right text-md">
                         <div class="text-white">
                             <a href="https://www.facebook.com/vipcapitalmx" target="_blank" class="text-lg">
@@ -481,11 +481,11 @@
                     let ciclos = (parseInt(this.amount2) * 12) / 6
 
                     let tick = 2
-                    
+
                     for (let index = 0; index < ciclos; index++) {
                         intereses = ((total * porcentaje) / 12) * 6
                         total = total + intereses
-                        
+
 
                         if(tick % 2){
                             this.values.push(Math.trunc(total))
@@ -547,7 +547,7 @@
 
                     const data = {
                         labels: labels,
-                        
+
                         datasets: [{
                             label: 'Inversión VIP CAP',
                             borderColor: '#F59E0B',
@@ -576,7 +576,7 @@
                                 }
                             },
                             scales: {
-                                y: { 
+                                y: {
                                     ticks: {
                                         color: "white",
                                         font: {
@@ -604,7 +604,7 @@
                     if (this.myChart) {
                         this.myChart.destroy();
                     }
-                    
+
                     this.myChart = new Chart(ctx, config)
                 }
             }
