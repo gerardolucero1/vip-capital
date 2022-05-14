@@ -10,6 +10,7 @@ $(window).on("scroll", function() {
 Vue.createApp({
     data() {
         return {
+            menu: false,
             contact: {
                 name: '',
                 telephone: '',
@@ -24,6 +25,10 @@ Vue.createApp({
     },
 
     methods: {
+        openMenu(){
+            this.menu = !this.menu
+        },
+
         sendForm(){
             let URL = '../Controller.php'
             

@@ -151,236 +151,398 @@
 </head>
 <body>
     <div id="app">
-        <header>
-            <nav class="header w-full flex justify-between items-center fixed z-50" style="padding: 15px;">
-                <img class="top-0 right-0 w-20 invisible" src="../assets/Diap 1/logo.png" alt="">
-                <ul id="menu" class="flex justify-center items-center">
-                    <li><a class="px-8 py-5 text-white text-lg" href="./index.html">Inicio</a>
-                    </li>
-                    <li><a class="px-8 py-5 text-white text-lg" href="./comunidad-vip-cap.html">Comunidad VIP CAP</a>
-                    </li>
-                    <li><a class="px-8 py-5 text-white text-lg" href="#productos">Productos</a><!-- Begin 5 columns Item -->
-                        <div class="drop_menu bg-white">
-                        <div class="grid grid-cols-12 gap-4 w-full">
-                            <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
-                                    <a href="./vip-allianz.html" class=" flex justify-center items-center flex-col">
-                                        <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono1.png" alt="">
-                                        <h3 class="font-bold text-2xl title blue-3">VIP Allianz</h3>
-                                        <p class="text-center">Planes personalizados
-                                            de ahorro e fondos de
-                                            inversión.</p>
-                                    </a>
+        <div class="web hidden sm:hidden md:block">
+            <header>
+                <nav class="header w-full flex justify-between items-center fixed z-50" style="padding: 15px;">
+                    <img class="top-0 right-0 w-20 invisible" src="../assets/Diap 1/logo.png" alt="">
+                    <ul id="menu" class="flex justify-center items-center">
+                        <li><a class="px-8 py-5 text-white text-lg" href="./index.html">Inicio</a>
+                        </li>
+                        <li><a class="px-8 py-5 text-white text-lg" href="./comunidad-vip-cap.html">Comunidad VIP CAP</a>
+                        </li>
+                        <li><a class="px-8 py-5 text-white text-lg" href="#productos">Productos</a><!-- Begin 5 columns Item -->
+                            <div class="drop_menu bg-white">
+                            <div class="grid grid-cols-12 gap-4 w-full">
+                                <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                                        <a href="./vip-allianz.html" class=" flex justify-center items-center flex-col">
+                                            <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono1.png" alt="">
+                                            <h3 class="font-bold text-2xl title blue-3">VIP Allianz</h3>
+                                            <p class="text-center">Planes personalizados
+                                                de ahorro e fondos de
+                                                inversión.</p>
+                                        </a>
+                                </div>
+                                <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                                        <a href="./vip-gestion-de-activos.html" class=" flex justify-center items-center flex-col">
+                                            <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 2.png" alt="">
+                                            <h3 class="font-bold text-2xl title text-center blue-3">VIP Trading</h3>
+                                                <p class="text-center">En Forex, Crypto, índices y NFTs.</p>
+                                        </a>
+                                    </div>
+                                    <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                                        <a href="./vip-microlending.html" class=" flex justify-center items-center flex-col">
+                                            <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 3.png" alt="">
+                                            <h3 class="font-bold text-2xl title blue-3">VIP Microlending</h3>
+                                            <p class="text-center">Recursos para créditos personales y PyMEs.</p>
+                                        </a>
+                                    </div>
+                                    <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                                        <a href="./vip-consultas.html" class=" flex justify-center items-center flex-col">
+                                            <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 4.png" alt="">
+                                            <h3 class="font-bold text-2xl title blue-3">VIP Consultants</h3>
+                                            <p class="text-center">Experiencia en
+                                                estrategias fiscales y
+                                                asesoría legal. Seguros
+                                                y fianzas.</p>
+                                        </a>
+                                    </div>
                             </div>
-                            <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
-                                    <a href="./vip-gestion-de-activos.html" class=" flex justify-center items-center flex-col">
-                                        <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 2.png" alt="">
-                                        <h3 class="font-bold text-2xl title text-center blue-3">VIP Trading</h3>
-                                            <p class="text-center">En Forex, Crypto, índices y NFTs.</p>
-                                    </a>
-                                </div>
-                                <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
-                                    <a href="./vip-microlending.html" class=" flex justify-center items-center flex-col">
-                                        <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 3.png" alt="">
-                                        <h3 class="font-bold text-2xl title blue-3">VIP Microlending</h3>
-                                        <p class="text-center">Recursos para créditos personales y PyMEs.</p>
-                                    </a>
-                                </div>
-                                <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
-                                    <a href="./vip-consultas.html" class=" flex justify-center items-center flex-col">
-                                        <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 4.png" alt="">
-                                        <h3 class="font-bold text-2xl title blue-3">VIP Consultants</h3>
-                                        <p class="text-center">Experiencia en
-                                            estrategias fiscales y
-                                            asesoría legal. Seguros
-                                            y fianzas.</p>
-                                    </a>
-                                </div>
-                        </div>
-                        </div>
-                    </li>
-                    <li><a class="px-8 py-5 text-white text-lg" href="./index.html#contacto">Contacto</a>
-                    </li>
-                </ul>
-                <a href="./index.html" class="absolute top-0 right-0 mt-2" style="margin-right: 8%;">
-                    <img class="top-0 right-0 mr-5" style="width: 95px;" src="../assets/Diap 1/logo.png" alt="">
-                </a>
-            </nav>
-        </header>
-        <div id="comunidad" class="h-screen section-2 bg-blue-600">
-            <div class="grid grid-cols-12 gap-4 h-screen">
-                <div class="col-span-7 flex justify-center items-center flex-col mt-32">
-                    <div>
-                        <h2 class="text-white text-8xl font-bold text-left title-2">Hacemos <br>
-                            crecer tu <br>
-                            patrimonio.</h2>
-                    </div>
-                </div>
-                <div class="col-span-5 flex justify-center items-start flex-col mt-32">
-                    <div>
-                        <p class="text-white text-4xl font-bold text-right">Quiénes somos</p>
-                        <div style="width: 500px;">
-                            <p class="text-white text-xl text-justify" style="text-align: justify;">Somos una empresa de asesoría especializada en ofrecer soluciones financieras  accesibles al público en general, fomentando y promoviendo la cultura financiera al alcance de todos.</p>
+                            </div>
+                        </li>
+                        <li><a class="px-8 py-5 text-white text-lg" href="./index.html#contacto">Contacto</a>
+                        </li>
+                    </ul>
+                    <a href="./index.html" class="absolute top-0 right-0 mt-2" style="margin-right: 8%;">
+                        <img class="top-0 right-0 mr-5" style="width: 95px;" src="../assets/Diap 1/logo.png" alt="">
+                    </a>
+                </nav>
+            </header>
+            <div id="comunidad" class="h-screen section-2 bg-blue-600">
+                <div class="grid grid-cols-12 gap-4 h-screen">
+                    <div class="col-span-7 flex justify-center items-center flex-col mt-32">
+                        <div>
+                            <h2 class="text-white text-8xl font-bold text-left title-2">Hacemos <br>
+                                crecer tu <br>
+                                patrimonio.</h2>
                         </div>
                     </div>
-                </div>
-                <div class="col-span-12 flex justify-center items-center md:flex-col xl:flex-row">
-                    <div class="flex justify-center items-center">
-                        <img class="w-52" src="../assets/Diap 2/chihuahua.png" alt="">
-                        <p class="text-white text-lg mr-2">Chihuahua</p>
+                    <div class="col-span-5 flex justify-center items-start flex-col mt-32">
+                        <div>
+                            <p class="text-white text-4xl font-bold text-right">Quiénes somos</p>
+                            <div style="width: 500px;">
+                                <p class="text-white text-xl text-justify" style="text-align: justify;">Somos una empresa de asesoría especializada en ofrecer soluciones financieras  accesibles al público en general, fomentando y promoviendo la cultura financiera al alcance de todos.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex justify-center items-center">
-                        <img class="w-52" src="../assets/Diap 2/merida.png" alt="">
-                        <p class="text-white text-lg mr-2">Mérida</p>
-                    </div>
-                    <div class="flex justify-center items-center">
-                        <img class="w-52" src="../assets/Diap 2/mty.png" alt="">
-                        <p class="text-white text-lg mr-2">Monterrey</p>
-                    </div>
-                    <div class="flex justify-center items-center">
-                        <img class="w-52" src="../assets/Diap 2/guadalajara.png" alt="">
-                        <p class="text-white text-lg mr-2">Guadalajara</p>
-                    </div>
-                    <div class="flex justify-center items-center">
-                        <img class="w-52" src="../assets/Diap 2/tampico.png" alt="">
-                        <p class="text-white text-lg mr-2">Tampico</p>
+                    <div class="col-span-12 flex justify-center items-center md:flex-col xl:flex-row">
+                        <div class="flex justify-center items-center">
+                            <img class="w-52" src="../assets/Diap 2/chihuahua.png" alt="">
+                            <p class="text-white text-lg mr-2">Chihuahua</p>
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <img class="w-52" src="../assets/Diap 2/merida.png" alt="">
+                            <p class="text-white text-lg mr-2">Mérida</p>
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <img class="w-52" src="../assets/Diap 2/mty.png" alt="">
+                            <p class="text-white text-lg mr-2">Monterrey</p>
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <img class="w-52" src="../assets/Diap 2/guadalajara.png" alt="">
+                            <p class="text-white text-lg mr-2">Guadalajara</p>
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <img class="w-52" src="../assets/Diap 2/tampico.png" alt="">
+                            <p class="text-white text-lg mr-2">Tampico</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="section-2 bg-blue-600">
-            <div class="grid grid-cols-12 gap-4">
-                <div class="col-span-5 flex justify-center items-center flex-col mt-32">
-                    <div class="p-10">
-                        <img class="w-10/12" style="margin-left: 14%;" src="../assets/Comunidad/Foto piensa en tu futuro.png" alt="">
-                    </div>
-                </div>
-                <div class="col-span-7 flex justify-center items-center flex-col mt-32">
-                    <div class="w-10/12">
-                        <h2 class="text-white text-8xl font-bold text-left title-2">Piensa en
-                            tu futuro;</h2>
-                    </div>
-
-                    <div class="w-10/12 mt-10">
-                        <h2 class="text-blue-800 text-7xl font-bold text-left">haz crecer tu patrimonio
-                            con nosotros.</h2>
-                    </div>
-
-                    <div class="w-10/12 mt-10">
-                        <p class="text-white text-2xl">Nos encargamos de trabajar tu capital con asesoría personalizada ofreciendo soluciones financieras accesibles para brindarte  la tranquilidad y estabilidad sobre tus ganancias.</p>
-                        <div class="mt-10">
-                            <a href="./index.html#contacto" class="rounded-full text-lg px-20 py-2 bg-yellow-500 text-white mt-20">Más información</a>
+            <div class="section-2 bg-blue-600">
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-5 flex justify-center items-center flex-col mt-32">
+                        <div class="p-10">
+                            <img class="w-10/12" style="margin-left: 14%;" src="../assets/Comunidad/Foto piensa en tu futuro.png" alt="">
                         </div>
                     </div>
+                    <div class="col-span-7 flex justify-center items-center flex-col mt-32">
+                        <div class="w-10/12">
+                            <h2 class="text-white text-8xl font-bold text-left title-2">Piensa en
+                                tu futuro;</h2>
+                        </div>
 
+                        <div class="w-10/12 mt-10">
+                            <h2 class="text-blue-800 text-7xl font-bold text-left">haz crecer tu patrimonio
+                                con nosotros.</h2>
+                        </div>
+
+                        <div class="w-10/12 mt-10">
+                            <p class="text-white text-2xl">Nos encargamos de trabajar tu capital con asesoría personalizada ofreciendo soluciones financieras accesibles para brindarte  la tranquilidad y estabilidad sobre tus ganancias.</p>
+                            <div class="mt-10">
+                                <a href="./index.html#contacto" class="rounded-full text-lg px-20 py-2 bg-yellow-500 text-white mt-20">Más información</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="section-2 bg-yellow-500 pb-32" style="padding-bottom: 8rem;">
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-6 mt-32 border p-10 rounded-tr-full" style="border: 1px solid black; display: flex; justify-content: end; align-items: center; border-top-right-radius: 9999px; border-bottom-right-radius: 9999px;">
+                        <img style="width: 45%;" src="../assets/Comunidad/foto compu.png" alt="">
+                    </div>
+                    <div class="col-span-6 flex justify-center items-center flex-col mt-32 px-20">
+                        <p class="text-white text-8xl font-bold title-2">Nuestro objetivo
+                            principal</p>
+
+                        <p class="text-2xl text-justify text-white mt-10">Es fomentar el bienestar de las personas enfocados en su crecimiento financiero, brindándoles ganancias para tener un patrimonio confiable y disfrutarlo al máximo.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-6 flex justify-center items-center flex-col mt-32 px-20">
+                        <p class="text-white text-8xl font-bold title-2">Nuestro
+                            enfoque</p>
+
+                        <p class="text-2xl text-justify text-white mt-10">Es ser el mejor gestor de activos a nivel nacional con la finalidad de mejorar tu patrimonio ofreciendo los mejores resultados y así otorgar la tranquilidad y seguridad de que tu capital se encuentra trabajando de una manera inteligente y eficaz.</p>
+                    </div>
+
+                    <div class="col-span-6 mt-32 border border-black p-10 flex justify-start items-center rounded-tl-full rounded-bl-full" style="border: 1px solid black; display: flex; justify-content: start; align-items: center; border-top-left-radius: 9999px; border-bottom-left-radius: 9999px;">
+                        <img style="width: 45%;" src="../assets/Comunidad/Foto nuestro enfoque.png" alt="">
+                    </div>
 
                 </div>
             </div>
-        </div>
-        <div class="section-2 bg-yellow-500 pb-32" style="padding-bottom: 8rem;">
-            <div class="grid grid-cols-12 gap-4">
-                <div class="col-span-6 mt-32 border p-10 rounded-tr-full" style="border: 1px solid black; display: flex; justify-content: end; align-items: center; border-top-right-radius: 9999px; border-bottom-right-radius: 9999px;">
-                    <img style="width: 45%;" src="../assets/Comunidad/foto compu.png" alt="">
+            <div class="section-2 bg-white pb-20" style="padding-bottom: 5rem;">
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-6 mt-32" style="margin-left: 15%;">
+                        <h2 class="text-8xl text-blue-600 title-2">Nuestra <br>
+                            visión</h2>
+
+                        <h2 class="text-7xl text-yellow-500 mt-10 title-2">es tener una <br>
+                            amplia perspectiva</h2>
+                    </div>
+                    <div class="col-span-6 flex justify-center items-center flex-col mt-32 px-20">
+                        <p class="text-blue-500 text-2xl">Cuya intención es hacer crecer el desarrollo de tu
+                            patrimonio, por ello queremos ser a mediano plazo <span class="text-blue-800 font-bold">el
+                                gestor de activos más dinámico</span> y el mejor líder a nivel
+                            nacional para respaldar y apoyar la gestión del
+                            crecimiento de tu futuro, fomentando la educación
+                            financiera de nuestro país mediante la colocación de
+                            planes de retiro y planes de ahorro de Allianz.</p>
+                        <p class="text-blue-500 text-2xl mt-10">A largo plazo seremos un gestor de activos y holding de
+                            clase mundial con enfoque principal en inversiones en
+                            empresas de tecnologías disruptivas como son
+                            Blockchain, inteligencia artificial, robótica, vehículos
+                            inteligentes, generación y almacenamiento de energía,
+                            entre otras.</p>
+                    </div>
                 </div>
-                <div class="col-span-6 flex justify-center items-center flex-col mt-32 px-20">
-                    <p class="text-white text-8xl font-bold title-2">Nuestro objetivo
+                <div class="flex justify-center items-center mt-20 flex-col">
+                    <img class="w-20" src="../assets/Comunidad/icono ubicacion.png" alt="">
+
+                    <h2 class="text-8xl text-blue-800 mt-20 txt-bold blue-3 title-2">Una oficina cerca de ti...</h2>
+                </div>
+
+                <div class="flex justify-center items-start mt-10 relative">
+                    <img src="/assets/Comunidad/mapa2.png" style="width: 50%;" class="mb-40" alt="">
+                    <div style="width: 500px;">
+                        <p class="text-justify text-xl mt-20 blue-3">Como empresa mexicana, estamos presentes en 5
+                            ciudades que cubren zonas del norte, centro y sur del
+                            país, ubicados estratégicamente en las principales
+                            zonas de negocios de cada ciudad, para comodidad de
+                            nuestros clientes.</p>
+                    </div>
+
+                    <img src="/assets/Comunidad/sello.png" class="absolute bottom-0 right-0 w-1/3" alt="">
+                </div>
+            </div>
+            <div class="h-screen section-2 bg-yellow-500 flex justify-center items-center animated">
+                <h2 class="text-8xl text-white">Hacemos crecer <br>
+                    tu capital de forma <br>
+                    segura</h2>
+            </div>
+            <footer class="text-lg" style="background-color: #011F5D;">
+                <div class="grid grid-cols-12 gap-4 py-10 px-40">
+                    <div class="col-span-4">
+                        <img class="w-1/3" src="/assets/Diap 1/logo.png" alt="">
+                    </div>
+                    <div class="col-span-4 flex justify-center items-center">
+                        <p class="text-white">Únete a nuestro equipo de trabajo</p>
+                        <a href="./index.html#contacto" class="px-5 py-1 bg-blue-500 rounded-full text-white ml-5">Aplicar</a>
+                    </div>
+                    <div class="col-span-4 flex justify-center items-end flex-col">
+
+                        <div class="text-right text-md">
+                            <div class="text-white">
+                                <a href="https://www.facebook.com/vipcapitalmx" target="_blank" class="text-lg">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="https://instagram.com/vipcapitalmx?igshid=YTM0ZjI4ZDI=" target="_blank" class="ml-5 text-lg">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://api.whatsapp.com/send?phone=526142041558" target="_blank" class="ml-5 text-lg">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                            <p class="text-white">614 2 04 15 58</p>
+                            <p class="text-white">contacto@vipcapital.mx</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <div class="movil block sm:block md:hidden">
+            <header class="fixed h-20 w-full z-50 flex justify-between items-center px-5" style="background-color: #011F5D;">
+                <i @click="openMenu" class="fa-solid fa-bars text-white text-3xl"></i>
+                <img class="w-20" src="/assets/Diap 1/logo.png" alt="">
+
+                <nav :class="[menu == false ? 'hidden' : 'fixed']" class="h-screen top-0 left-0 z-50 w-3/4 flex justify-center items-start flex-col px-5" style="background-color: #011F5D;">
+                    <a class="text-white text-2xl my-2" href="./index.html#inicio-movil">Inicio</a>
+                    <a class="text-white text-2xl my-2" href="./comunidad-vip-cap.html">Comunidad VIP CAP</a>
+                    <a class="text-white text-2xl my-2" href="./vip-allianz.html">Vip Allianz</a>
+                    <a class="text-white text-2xl my-2" href="./vip-gestion-de-activos.html">Vip Trading</a>
+                    <a class="text-white text-2xl my-2" href="./vip-microlending.html">Vip Microlending</a>
+                    <a class="text-white text-2xl my-2" href="./vip-consultas.html">Vip Consultants</a>
+                    <a class="text-white text-2xl my-2" href="./index.html#contacto-movil">Contacto</a>
+
+                    <button @click="openMenu" class="absolute top-0 right-0 mt-5 mr-5 text-white">
+                        <i class="fa-solid fa-xmark text-4xl"></i>
+                    </button>
+                </nav>
+            </header>
+            <div id="comunidad-movil">
+                <div class="p-10 pt-24 min-h-screen relative bg-blue-600">
+                    <h2 class="title-2 text-5xl text-white">Hacemos <br>
+                        crecer tu <br>
+                        patrimonio.</h2>
+
+                    <p class="text-2xl mt-10 text-white font-bold">Quiénes somos</p>
+    
+                    <p class="text-lg text-white">Somos una empresa <br>
+                        especializada en asesoría para <br>
+                        ofrecer soluciones financieras y <br>
+                        accesibles al público en general, <br>
+                        fomentando y promoviendo la <br>
+                        cultura financiera al alcance de <br>
+                        todos.</p>
+    
+                    <div class="col-span-12 flex justify-center items-start flex-col mt-10">
+                        <div class="flex justify-center items-center">
+                            <img class="w-52" src="../assets/Diap 2/chihuahua.png" alt="">
+                            <p class="text-white text-lg mr-2">Chihuahua</p>
+                        </div>
+                        <div class="flex justify-center items-center mt-5">
+                            <img class="w-52" src="../assets/Diap 2/merida.png" alt="">
+                            <p class="text-white text-lg mr-2">Mérida</p>
+                        </div>
+                        <div class="flex justify-center items-center mt-5">
+                            <img class="w-52" src="../assets/Diap 2/mty.png" alt="">
+                            <p class="text-white text-lg mr-2">Monterrey</p>
+                        </div>
+                        <div class="flex justify-center items-center mt-5">
+                            <img class="w-52" src="../assets/Diap 2/guadalajara.png" alt="">
+                            <p class="text-white text-lg mr-2">Guadalajara</p>
+                        </div>
+                        <div class="flex justify-center items-center mt-5">
+                            <img class="w-52" src="../assets/Diap 2/tampico.png" alt="">
+                            <p class="text-white text-lg mr-2">Tampico</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-2 bg-blue-600">
+                <div class="p-10">
+                    <img class="w-full" src="../assets/Comunidad/Foto piensa en tu futuro.png" alt="">
+                    <h2 class="text-white text-5xl font-bold text-left title-2 -mt-20">Piensa en
+                    tu futuro;</h2>
+                    <h2 class="text-blue-800 text-4xl font-bold text-left mt-5">haz crecer tu patrimonio
+                        con nosotros.</h2>
+                    <p class="text-white text-2xl mt-5">Nos encargamos de trabajar tu capital con asesoría personalizada ofreciendo soluciones financieras accesibles para brindarte  la tranquilidad y estabilidad sobre tus ganancias.</p>
+                    <div class="mt-10">
+                        <a href="./index.html#contacto-movil" class="rounded-full text-lg px-20 py-2 bg-yellow-500 text-white mt-20">Más información</a>
+                    </div>
+                </div>
+            </div>
+            <div class="section-2 bg-yellow-500 pb-32" style="padding-bottom: 8rem;">
+                <div class="px-5">
+                    <p class="text-white text-5xl font-bold title-2 text-center">Nuestro objetivo
                         principal</p>
-
+    
                     <p class="text-2xl text-justify text-white mt-10">Es fomentar el bienestar de las personas enfocados en su crecimiento financiero, brindándoles ganancias para tener un patrimonio confiable y disfrutarlo al máximo.</p>
                 </div>
-            </div>
-
-            <div class="grid grid-cols-12 gap-4">
-                <div class="col-span-6 flex justify-center items-center flex-col mt-32 px-20">
-                    <p class="text-white text-8xl font-bold title-2">Nuestro
+                <div class="pr-5">
+                    <div class="mt-10 border p-5 rounded-tr-full" style="border: 1px solid black; display: flex; justify-content: end; align-items: center; border-top-right-radius: 9999px; border-bottom-right-radius: 9999px;">
+                        <img style="width: 60%;" src="../assets/Comunidad/foto compu.png" alt="">
+                    </div>
+                </div>
+                <div class="px-5 mt-10">
+                    <p class="text-white text-5xl font-bold title-2 text-center">Nuestro
                         enfoque</p>
 
                     <p class="text-2xl text-justify text-white mt-10">Es ser el mejor gestor de activos a nivel nacional con la finalidad de mejorar tu patrimonio ofreciendo los mejores resultados y así otorgar la tranquilidad y seguridad de que tu capital se encuentra trabajando de una manera inteligente y eficaz.</p>
                 </div>
 
-                <div class="col-span-6 mt-32 border border-black p-10 flex justify-start items-center rounded-tl-full rounded-bl-full" style="border: 1px solid black; display: flex; justify-content: start; align-items: center; border-top-left-radius: 9999px; border-bottom-left-radius: 9999px;">
-                    <img style="width: 45%;" src="../assets/Comunidad/Foto nuestro enfoque.png" alt="">
-                </div>
-
-            </div>
-        </div>
-        <div class="section-2 bg-white pb-20" style="padding-bottom: 5rem;">
-            <div class="grid grid-cols-12 gap-4">
-                <div class="col-span-6 mt-32" style="margin-left: 15%;">
-                    <h2 class="text-8xl text-blue-600 title-2">Nuestra <br>
-                        visión</h2>
-
-                    <h2 class="text-7xl text-yellow-500 mt-10 title-2">es tener una <br>
-                        amplia perspectiva</h2>
-                </div>
-                <div class="col-span-6 flex justify-center items-center flex-col mt-32 px-20">
-                    <p class="text-blue-500 text-2xl">Cuya intención es hacer crecer el desarrollo de tu
-                        patrimonio, por ello queremos ser a mediano plazo <span class="text-blue-800 font-bold">el
-                            gestor de activos más dinámico</span> y el mejor líder a nivel
-                        nacional para respaldar y apoyar la gestión del
-                        crecimiento de tu futuro, fomentando la educación
-                        financiera de nuestro país mediante la colocación de
-                        planes de retiro y planes de ahorro de Allianz.</p>
-                    <p class="text-blue-500 text-2xl mt-10">A largo plazo seremos un gestor de activos y holding de
-                        clase mundial con enfoque principal en inversiones en
-                        empresas de tecnologías disruptivas como son
-                        Blockchain, inteligencia artificial, robótica, vehículos
-                        inteligentes, generación y almacenamiento de energía,
-                        entre otras.</p>
-                </div>
-            </div>
-            <div class="flex justify-center items-center mt-20 flex-col">
-                <img class="w-20" src="../assets/Comunidad/icono ubicacion.png" alt="">
-
-                <h2 class="text-8xl text-blue-800 mt-20 txt-bold blue-3 title-2">Una oficina cerca de ti...</h2>
-            </div>
-
-            <div class="flex justify-center items-start mt-10 relative">
-                <img src="/assets/Comunidad/mapa2.png" style="width: 50%;" class="mb-40" alt="">
-                <div style="width: 500px;">
-                    <p class="text-justify text-xl mt-20 blue-3">Como empresa mexicana, estamos presentes en 5
-                        ciudades que cubren zonas del norte, centro y sur del
-                        país, ubicados estratégicamente en las principales
-                        zonas de negocios de cada ciudad, para comodidad de
-                        nuestros clientes.</p>
-                </div>
-
-                <img src="/assets/Comunidad/sello.png" class="absolute bottom-0 right-0 w-1/3" alt="">
-            </div>
-        </div>
-        <div class="h-screen section-2 bg-yellow-500 flex justify-center items-center animated">
-            <h2 class="text-8xl text-white">Hacemos crecer <br>
-                tu capital de forma <br>
-                segura</h2>
-        </div>
-        <footer class="text-lg" style="background-color: #011F5D;">
-            <div class="grid grid-cols-12 gap-4 py-10 px-40">
-                <div class="col-span-4">
-                    <img class="w-1/3" src="/assets/Diap 1/logo.png" alt="">
-                </div>
-                <div class="col-span-4 flex justify-center items-center">
-                    <p class="text-white">Únete a nuestro equipo de trabajo</p>
-                    <a href="./index.html#contacto" class="px-5 py-1 bg-blue-500 rounded-full text-white ml-5">Aplicar</a>
-                </div>
-                <div class="col-span-4 flex justify-center items-end flex-col">
-
-                    <div class="text-right text-md">
-                        <div class="text-white">
-                            <a href="https://www.facebook.com/vipcapitalmx" target="_blank" class="text-lg">
-                                <i class="fa-brands fa-facebook"></i>
-                            </a>
-                            <a href="https://instagram.com/vipcapitalmx?igshid=YTM0ZjI4ZDI=" target="_blank" class="ml-5 text-lg">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="https://api.whatsapp.com/send?phone=526142041558" target="_blank" class="ml-5 text-lg">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </a>
-                        </div>
-                        <p class="text-white">614 2 04 15 58</p>
-                        <p class="text-white">contacto@vipcapital.mx</p>
+                <div class="pl-5">
+                    <div class="mt-10 border border-black p-5 flex justify-start items-center rounded-tl-full rounded-bl-full" style="border: 1px solid black; display: flex; justify-content: start; align-items: center; border-top-left-radius: 9999px; border-bottom-left-radius: 9999px;">
+                        <img style="width: 60%;" src="../assets/Comunidad/Foto nuestro enfoque.png" alt="">
                     </div>
                 </div>
             </div>
-        </footer>
+            <div class="section-2 bg-white pb-20" style="padding-bottom: 5rem;">
+                <div class="px-5">
+                    <h2 class="text-7xl text-blue-600 title-2">Nuestra <br>
+                        visión</h2>
+
+                    <h2 class="text-4xl text-yellow-500 mt-5 title-2">es tener una <br>
+                        amplia perspectiva</h2>
+                </div>
+                <div class="flex justify-center items-center mt-10 flex-col">
+                    <img class="w-20" src="../assets/Comunidad/icono ubicacion.png" alt="">
+
+                    <h2 class="text-4xl text-blue-800 mt-5 txt-bold blue-3 title-2 text-center">Una oficina cerca de ti...</h2>
+                </div>
+
+                <div class="flex justify-center items-start mt-10 relative flex-col px-5">
+                    <img src="/assets/Comunidad/mapa2.png" alt="">
+                    <div>
+                        <p class="text-justify text-xl mt-5 blue-3">Como empresa mexicana, estamos presentes en 5
+                            ciudades que cubren zonas del norte, centro y sur del
+                            país, ubicados estratégicamente en las principales
+                            zonas de negocios de cada ciudad, para comodidad de
+                            nuestros clientes.</p>
+                    </div>
+
+                    <img src="/assets/Comunidad/sello.png" class="absolute bottom-0 right-0 w-72" alt="">
+                </div>
+            </div>
+            <div class="h-screen section-2 bg-yellow-500 flex justify-center items-center animated">
+                <h2 class="text-5xl text-white text-center">Hacemos crecer <br>
+                    tu capital de forma <br>
+                    segura</h2>
+            </div>
+            <footer class="text-md" style="background-color: #011F5D;">
+                <div class="flex justify-center items-center flex-col pt-5">
+                    <p class="text-white">Únete a nuestro equipo de trabajo</p>
+                    <a href="./index.html#contacto" class="px-5 py-1 mt-5 bg-blue-500 rounded-full text-white ml-5">Aplicar</a>
+                </div>
+                <div class="grid grid-cols-12 gap-4 px-5 py-5">
+                    <div class="col-span-6">
+                        <img class="w-28" src="/assets/Diap 1/logo.png" alt="">
+                    </div>
+                    <div class="col-span-6 flex justify-center items-end flex-col">
+
+                        <div class="text-right text-md">
+                            <div class="text-white">
+                                <a href="https://www.facebook.com/vipcapitalmx" target="_blank" class="text-lg">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="https://instagram.com/vipcapitalmx?igshid=YTM0ZjI4ZDI=" target="_blank" class="ml-5 text-lg">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://api.whatsapp.com/send?phone=526142041558" target="_blank" class="ml-5 text-lg">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                            <p class="text-white">614 2 04 15 58</p>
+                            <p class="text-white">contacto@vipcapital.mx</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
     </div>
     <script src="../js/index.js"></script>
 

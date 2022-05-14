@@ -138,12 +138,17 @@
     </style>
 
     <style>
-
+        #inicio-movil{
+            background-image: url('./assets/movil/inicio/Recurso\ 30.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
     </style>
 </head>
 <body>
     <div id="app">
-        <div class="web">
+        <div class="web hidden sm:hidden md:block">
             <header>
                 <nav class="header w-full flex justify-between items-center fixed z-50" style="padding: 15px;">
                     <img class="top-0 right-0 w-20 invisible" src="../assets/Diap 1/logo.png" alt="">
@@ -357,7 +362,7 @@ y fianzas.</p>
                 <div class="grid grid-cols-12 gap-4 h-screen">
                     <div class="col-span-5 flex justify-start items-end relative">
                         <img class="absolute w-32 ml-6 bottom-10" style="margin-bottom: 20rem;" src="./assets/Diap 5/icono.png" alt="">
-                        <img class="absolute bottom-0" style="margin-left: 8%; margin-bottom: 5%; width: 160px;" src="../assets/2.png" alt="">
+                        <img class="absolute bottom-0" style="margin-left: 8%; margin-bottom: 5%; width: 160px;" src="./assets/2.png" alt="">
                         <div class="w-full h-full px-20">
                             <div class="w-full h-full">
                                 <img class="object-cover object-center w-full h-full" src="../assets/Diap 5/foto.png" alt="">
@@ -519,11 +524,286 @@ y fianzas.</p>
             </footer>
         </div>
 
-        <!-- <div class="movil">
-            <p>Ola Mundo</p>
-        </div> -->
+        <div class="movil block sm:block md:hidden">
+            <header class="fixed h-20 w-full z-50 flex justify-between items-center px-5" style="background-color: #011F5D;">
+                <i @click="openMenu" class="fa-solid fa-bars text-white text-3xl"></i>
+                <img class="w-20" src="/assets/Diap 1/logo.png" alt="">
+
+                <nav :class="[menu == false ? 'hidden' : 'fixed']" class="h-screen top-0 left-0 z-50 w-3/4 flex justify-center items-start flex-col px-5" style="background-color: #011F5D;">
+                    <a class="text-white text-2xl my-2" href="./index.html#inicio-movil">Inicio</a>
+                    <a class="text-white text-2xl my-2" href="./comunidad-vip-cap.html">Comunidad VIP CAP</a>
+                    <a class="text-white text-2xl my-2" href="./vip-allianz.html">Vip Allianz</a>
+                    <a class="text-white text-2xl my-2" href="./vip-gestion-de-activos.html">Vip Trading</a>
+                    <a class="text-white text-2xl my-2" href="./vip-microlending.html">Vip Microlending</a>
+                    <a class="text-white text-2xl my-2" href="./vip-consultas.html">Vip Consultants</a>
+                    <a class="text-white text-2xl my-2" href="./index.html#contacto-movil">Contacto</a>
+
+                    <button @click="openMenu" class="absolute top-0 right-0 mt-5 mr-5 text-white">
+                        <i class="fa-solid fa-xmark text-4xl"></i>
+                    </button>
+                </nav>
+            </header>
+
+            <div id="inicio-movil">
+                <div class="p-10 pt-24 min-h-screen relative">
+                    <img class="absolute bottom-0 right-0 w-80 mb-5" src="./assets/movil/inicio/Recurso 28.png" alt="">
+                    <h2 class="title-2 text-5xl text-white">Le damos <br>
+
+                        valor a <br>
+                        tu futuro</h2>
+    
+                    <p class="text-lg mt-10 text-white">Es momento de que <br>
+                        juntos hagamos crecer <br>
+                        tu patrimonio de <br>
+                        manera fácil y segura.</p>
+    
+                    <a href="#contacto" class="rounded-full text-lg px-10 py-2 bg-yellow-400 text-white mt-10 inline-block">Más información</a>
+                </div>
+            </div>
+            <div id="comunidad-movil">
+                <div class="p-10 min-h-screen relative bg-blue-600">
+                    <h2 class="title-2 text-5xl text-white">Hacemos <br>
+                        crecer tu <br>
+                        patrimonio.</h2>
+
+                    <p class="text-2xl mt-10 text-white font-bold">Quiénes somos</p>
+    
+                    <p class="text-lg text-white">Somos una empresa <br>
+                        especializada en asesoría para <br>
+                        ofrecer soluciones financieras y <br>
+                        accesibles al público en general, <br>
+                        fomentando y promoviendo la <br>
+                        cultura financiera al alcance de <br>
+                        todos.</p>
+    
+                    <div class="col-span-12 flex justify-center items-start flex-col mt-10">
+                        <div class="flex justify-center items-center">
+                            <img class="w-52" src="../assets/Diap 2/chihuahua.png" alt="">
+                            <p class="text-white text-lg mr-2">Chihuahua</p>
+                        </div>
+                        <div class="flex justify-center items-center mt-5">
+                            <img class="w-52" src="../assets/Diap 2/merida.png" alt="">
+                            <p class="text-white text-lg mr-2">Mérida</p>
+                        </div>
+                        <div class="flex justify-center items-center mt-5">
+                            <img class="w-52" src="../assets/Diap 2/mty.png" alt="">
+                            <p class="text-white text-lg mr-2">Monterrey</p>
+                        </div>
+                        <div class="flex justify-center items-center mt-5">
+                            <img class="w-52" src="../assets/Diap 2/guadalajara.png" alt="">
+                            <p class="text-white text-lg mr-2">Guadalajara</p>
+                        </div>
+                        <div class="flex justify-center items-center mt-5">
+                            <img class="w-52" src="../assets/Diap 2/tampico.png" alt="">
+                            <p class="text-white text-lg mr-2">Tampico</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="productos-movil">
+                <div class="p-10 min-h-screen relative bg-blue-600">
+                    <h2 class="title-2 text-5xl text-white">Nuestros <br>
+
+                        productos</h2>
+
+                        <div class="grid grid-cols-12 gap-4 mt-10">
+                            <a href="./vip-allianz.html" class="col-span-6 flex justify-start items-center flex-col text-center text-white">
+                                <img style="width: 70%;" src="../assets/Diap 3/icono1.png" alt="">
+                                    <div>
+                                        <p class="font-bold text-xl">VIP <br>
+                                            Allianz</p>
+                                            <p class="text-yellow-500">Planes personalizados
+                                                de ahorro y fondos de
+                                                inversión.
+                                                </p>
+                                    </div>
+                            </a>
+                            <a href="./vip-gestion-de-activos.html" class="col-span-6 flex justify-start items-center flex-col text-center text-white">
+                                <img style="width: 70%;" src="../assets/Diap 3/icono 2.png" alt="">
+                                <p class="font-bold text-xl">VIP <br>
+                                    Trading</p>
+                                    <p class="text-yellow-500">En Forex, Crypto,
+                                        índices y NFTs.</p>
+                                </a>
+                            <a href="./vip-microlending.html" class="col-span-6 flex justify-start items-center flex-col text-center text-white">
+                                <img style="width: 70%;" src="../assets/Diap 3/icono 3.png" alt="">
+                                <p class="font-bold text-xl">VIP <br>
+                                    Microlending</p>
+                                    <p class="text-yellow-500">Recursos para créditos
+                                        personales y PyMEs.</p>
+                                    </a>
+                            <a href="./vip-consultas.html" class="col-span-6 flex justify-start items-center flex-col text-center text-white">
+                                <img style="width: 70%;" src="../assets/Diap 3/icono 4.png" alt="">
+                                <p class="font-bold text-xl">VIP <br>
+                                    Consultants</p>
+                                    <p class="text-yellow-500">Experiencia en
+                                        estrategias fiscales y
+                                        asesoría legal. Seguros
+                                        y fianzas.</p>
+                                </a>
+                        </div>
+                </div>
+            </div>
+            <div id="producto1-movil">
+                <div class="px-10 min-h-screen relative bg-white">
+                    <div class="relative">
+                        <img class="absolute top-0 right-0 w-40 mt-5" src="./assets/movil/inicio/Recurso 20.png" alt="">
+                        <img class="absolute bottom-0 left-0 w-36 -ml-2 mb-12" src="./assets/movil/inicio/Recurso 19.png" alt="">
+                        <img class="absolute top-0 left-0 -ml-5 mt-5" src="./assets/movil/inicio/Recurso 10.png" alt="">
+                        <img class="w-full" src="./assets/movil/inicio/Recurso 32.png" alt="">
+                    </div>
+                    <div class="mt-10">
+                        <img src="./assets/movil/inicio/Recurso 18.png" alt="">
+                        <p class="text-2xl blue-3 mt-10">Te brindamos la visibilidad que necesitas para vivir el estilo de vida que deseas, por ello te proponemos el mejor plan de ahorro que genere rendimientos para tu crecimiento y bienestar financiero.</p>
+
+                        <a href="./vip-allianz.html" class="rounded-full text-lg px-20 py-2 bg-yellow-500 text-white mt-10 relative inline-block">Más información</a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div id="producto2-movil">
+                <div class="px-10 min-h-screen relative bg-white mt-10">
+                    <div class="relative">
+                        <img class="absolute top-0 right-0 w-40 mt-5" src="./assets/2.png" alt="">
+                        <img class="absolute bottom-0 left-0 w-36 -ml-2 mb-12" src="./assets/movil/inicio/Recurso 15.png" alt="">
+                        <img class="absolute top-0 left-0 -ml-5 mt-5" src="./assets/movil/inicio/Recurso 6.png" alt="">
+                        <img class="w-full" src="./assets/movil/inicio/Recurso 31.png" alt="">
+                    </div>
+                    <div class="mt-10">
+                        <img src="./assets/Diap 5/trading.png" alt="">
+                        <p class="text-2xl blue-3 mt-10">Somos expertos en gestionar el manejo de activos financieros enfocados en obtener grandes beneficios con nuestro portafolio diversificado en activos de capital.
+
+                        </p>
+
+                        <a href="./vip-gestion-de-activos.html" class="rounded-full text-lg px-20 py-2 bg-yellow-500 text-white mt-10 relative inline-block">Más información</a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div id="producto3-movil">
+                <div class="px-10 min-h-screen relative bg-white mt-10">
+                    <div class="relative">
+                        <img class="absolute top-0 right-0 w-40 mt-5" src="./assets/movil/inicio/Recurso 12.png" alt="">
+                        <img class="absolute bottom-0 left-0 w-36 -ml-2 mb-12" src="./assets/movil/inicio/Recurso 11.png" alt="">
+                        <img class="absolute top-0 left-0 -ml-5 mt-5" src="./assets/movil/inicio/Recurso 10.png" alt="">
+                        <img class="w-full" src="./assets/movil/inicio/Recurso 16.png" alt="">
+                    </div>
+                    <div class="mt-10">
+                        <img src="./assets/movil/inicio/Recurso 9.png" alt="">
+                        <p class="text-2xl blue-3 mt-10">Te ayudamos a lograr tus metas y objetivos para tu proyecto, apoyándote con los recursos mediante un crédito personal o crédito a micros, pequeñas y medianas empresas que buscan el crecimiento y desarrollo de su negocio.
+
+                        </p>
+
+                        <a href="./vip-microlending.html" class="rounded-full text-lg px-20 py-2 bg-yellow-500 text-white mt-10 relative inline-block">Más información</a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div id="producto4-movil">
+                <div class="px-10 min-h-screen relative bg-white mt-10">
+                    <div class="relative">
+                        <img class="absolute top-0 right-0 w-40 mt-5" src="./assets/movil/inicio/Recurso 7.png" alt="">
+                        <img class="absolute bottom-0 left-0 w-36 -ml-2 mb-12" src="./assets/movil/inicio/Recurso 8.png" alt="">
+                        <img class="absolute top-0 left-0 -ml-5 mt-5" src="./assets/movil/inicio/Recurso 6.png" alt="">
+                        <img class="w-full" src="./assets/movil/inicio/Recurso 17.png" alt="">
+                    </div>
+                    <div class="mt-10">
+                        <img src="./assets/Diap 7/cons.png" alt="">
+                        <p class="text-2xl blue-3 mt-10">Otorgamos asesoría para atender asuntos en los que las autoridades administrativas y fiscales determinen obligaciones a cargo de los contribuyentes.
+
+                        </p>
+
+                        <a href="./vip-consultas.html" class="rounded-full text-lg px-20 py-2 bg-yellow-500 text-white mt-10 relative inline-block">Más información</a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div id="contacto-movil">
+                <div class="p-10 min-h-screen relative bg-blue-600 mt-10 overflow-hidden">
+                    <img class="absolute bottom-0 right-0 -mr-20 mb-20" src="./assets/movil/inicio/Recurso 2.png" alt="">
+                    <div class="py-10 relative">
+                        <h2 class="text-white text-5xl font-bold text-left">Contáctanos</h2>
+                        <form @submit.prevent="sendForm" class="mt-5">
+                            <div class="flex flex-col text-white mt-2">
+                                <label for="name" class="text-yellow-500">* Nombre completo</label>
+                                <input type="text" v-model="contact.name" name="name" class="p-1 rounded-lg bg-transparent border-2 border-white">
+                            </div>
+                            <div class="flex flex-col text-white mt-2">
+                                <label for="telephone" class="text-yellow-500">* Número de teléfono</label>
+                                <input type="text" v-model="contact.telephone" name="telephone" class="p-1 rounded-lg bg-transparent border-2 border-white">
+                            </div>
+                            <div class="flex flex-col text-white mt-2">
+                                <label for="city" class="text-yellow-500">Ciudad de residencia</label>
+                                <input type="text" v-model="contact.city" name="city" class="p-1 rounded-lg bg-transparent border-2 border-white">
+                            </div>
+                            <div class="flex flex-col mt-2">
+                                <label for="type" class="text-yellow-500">Tipo de producto</label>
+                                <select name="type" v-model="contact.optionSelect" class="p-1 rounded-lg border-2 text-white bg-transparent border-white">
+                                    <option class="text-black" value="VIP Allianz: Planes personalizados de ahorro e inversión">VIP Allianz: Planes personalizados de ahorro e inversión.</option>
+                                    <option class="text-black" value="VIP Trading: En Forex, Crypto, índice y NFTs">VIP Trading: En Forex, Crypto, índice y NFTs.</option>
+                                    <option class="text-black" value="VIP Microlending: Recursos para créditos personales y pymes">VIP Microlending: Recursos para créditos personales y pymes.</option>
+                                    <option class="text-black" value="VIP Consultants: Experiencia en estrategias fiscales y asesoría legal. Seguros y fianzas">VIP Consultants: Experiencia en estrategias fiscales y asesoría legal. Seguros y fianzas.</option>
+                                </select>
+                            </div>
+                            <div class="grid grid-cols-12 gap-4 mt-2">
+                                <div class="col-span-6 flex flex-col text-white mt-2">
+                                    <label for="amount1" class="text-yellow-500">Monto inicial</label>
+                                    <input type="number" step="500" v-model="contact.amount1" name="amount1" class="p-1 rounded-lg bg-transparent border-2 border-white">
+                                </div>
+                                <div class="col-span-6 flex flex-col text-white mt-2">
+                                    <label for="amount2" class="text-yellow-500">Monto mensual</label>
+                                    <input type="number" step="500" v-model="contact.amount2" name="amount2" class="p-1 rounded-lg bg-transparent border-2 border-white">
+                                </div>
+                            </div>
+                            <div class="flex flex-col text-white mt-2">
+                                <label for="email" class="text-yellow-500">* Enviar información por correo electrónico a:</label>
+                                <input type="email" v-model="contact.email" name="email" class="p-1 rounded-lg bg-transparent border-2 border-white">
+                            </div>
+                            <p class="text-white mt-2">* Informacion necesaria</p>
+                            <div class="text-center mt-10">
+                                <button type="submit" class="rounded-full px-5 py-2 bg-yellow-500 text-white w-1/2">Enviar información</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="text-md" style="background-color: #011F5D;">
+                <div class="flex justify-center items-center flex-col pt-5">
+                    <p class="text-white">Únete a nuestro equipo de trabajo</p>
+                    <a href="./index.html#contacto" class="px-5 py-1 mt-5 bg-blue-500 rounded-full text-white ml-5">Aplicar</a>
+                </div>
+                <div class="grid grid-cols-12 gap-4 px-5 py-5">
+                    <div class="col-span-6">
+                        <img class="w-28" src="/assets/Diap 1/logo.png" alt="">
+                    </div>
+                    <div class="col-span-6 flex justify-center items-end flex-col">
+
+                        <div class="text-right text-md">
+                            <div class="text-white">
+                                <a href="https://www.facebook.com/vipcapitalmx" target="_blank" class="text-lg">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="https://instagram.com/vipcapitalmx?igshid=YTM0ZjI4ZDI=" target="_blank" class="ml-5 text-lg">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://api.whatsapp.com/send?phone=526142041558" target="_blank" class="ml-5 text-lg">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                            <p class="text-white">614 2 04 15 58</p>
+                            <p class="text-white">contacto@vipcapital.mx</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
     </div>
-    <script src="../js/index.js"></script>
+    <script src="./js/index.js"></script>
 
 </body>
 </html>

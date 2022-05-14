@@ -140,270 +140,469 @@
 </head>
 <body>
     <div id="app">
-        <header>
-            <nav class="header w-full flex justify-between items-center fixed z-50 active" style="padding: 15px;">
-                <img class="top-0 right-0 w-20 invisible" src="../assets/Diap 1/logo.png" alt="">
-                <ul id="menu" class="flex justify-center items-center">
-                    <li><a class="px-8 py-5 text-white text-lg" href="./index.html">Inicio</a>            
-                    </li>
-                    <li><a class="px-8 py-5 text-white text-lg" href="./comunidad-vip-cap.html">Comunidad VIP CAP</a>              
-                    </li>
-                    <li><a class="px-8 py-5 text-white text-lg" href="#productos">Productos</a><!-- Begin 5 columns Item -->
-                        <div class="drop_menu bg-white">
-                        <div class="grid grid-cols-12 gap-4 w-full">
-                            <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
-                                    <a href="./vip-allianz.html" class=" flex justify-center items-center flex-col">
-                                        <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono1.png" alt="">
-                                        <h3 class="font-bold text-2xl title blue-3">VIP Allianz</h3>
-                                        <p class="text-center">Planes personalizados
-                                            de ahorro e fondos de
-                                            inversión.</p>
-                                    </a>
+        <div class="web hidden sm:hidden md:block">
+            <header>
+                <nav class="header w-full flex justify-between items-center fixed z-50 active" style="padding: 15px;">
+                    <img class="top-0 right-0 w-20 invisible" src="../assets/Diap 1/logo.png" alt="">
+                    <ul id="menu" class="flex justify-center items-center">
+                        <li><a class="px-8 py-5 text-white text-lg" href="./index.html">Inicio</a>            
+                        </li>
+                        <li><a class="px-8 py-5 text-white text-lg" href="./comunidad-vip-cap.html">Comunidad VIP CAP</a>              
+                        </li>
+                        <li><a class="px-8 py-5 text-white text-lg" href="#productos">Productos</a><!-- Begin 5 columns Item -->
+                            <div class="drop_menu bg-white">
+                            <div class="grid grid-cols-12 gap-4 w-full">
+                                <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                                        <a href="./vip-allianz.html" class=" flex justify-center items-center flex-col">
+                                            <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono1.png" alt="">
+                                            <h3 class="font-bold text-2xl title blue-3">VIP Allianz</h3>
+                                            <p class="text-center">Planes personalizados
+                                                de ahorro e fondos de
+                                                inversión.</p>
+                                        </a>
+                                </div>
+                                <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                                        <a href="./vip-gestion-de-activos.html" class=" flex justify-center items-center flex-col">
+                                            <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 2.png" alt="">
+                                            <h3 class="font-bold text-2xl title text-center blue-3">VIP Trading</h3>
+                                                <p class="text-center">En Forex, Crypto, índices y NFTs.</p>
+                                        </a>
+                                    </div>
+                                    <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                                        <a href="./vip-microlending.html" class=" flex justify-center items-center flex-col">
+                                            <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 3.png" alt="">
+                                            <h3 class="font-bold text-2xl title blue-3">VIP Microlending</h3>
+                                            <p class="text-center">Recursos para créditos personales y PyMEs.</p>
+                                        </a>
+                                    </div>
+                                    <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                                        <a href="./vip-consultas.html" class=" flex justify-center items-center flex-col">
+                                            <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 4.png" alt="">
+                                            <h3 class="font-bold text-2xl title blue-3">VIP Consultants</h3>
+                                            <p class="text-center">Experiencia en
+                                                estrategias fiscales y
+                                                asesoría legal. Seguros
+                                                y fianzas.</p>
+                                        </a>
+                                    </div>
                             </div>
-                            <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
-                                    <a href="./vip-gestion-de-activos.html" class=" flex justify-center items-center flex-col">
-                                        <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 2.png" alt="">
-                                        <h3 class="font-bold text-2xl title text-center blue-3">VIP Trading</h3>
-                                            <p class="text-center">En Forex, Crypto, índices y NFTs.</p>
-                                    </a>
-                                </div>
-                                <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
-                                    <a href="./vip-microlending.html" class=" flex justify-center items-center flex-col">
-                                        <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 3.png" alt="">
-                                        <h3 class="font-bold text-2xl title blue-3">VIP Microlending</h3>
-                                        <p class="text-center">Recursos para créditos personales y PyMEs.</p>
-                                    </a>
-                                </div>
-                                <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
-                                    <a href="./vip-consultas.html" class=" flex justify-center items-center flex-col">
-                                        <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 4.png" alt="">
-                                        <h3 class="font-bold text-2xl title blue-3">VIP Consultants</h3>
-                                        <p class="text-center">Experiencia en
-                                            estrategias fiscales y
-                                            asesoría legal. Seguros
-                                            y fianzas.</p>
-                                    </a>
-                                </div>
+                            </div>
+                        </li>
+                        <li><a class="px-8 py-5 text-white text-lg" href="./index.html#contacto">Contacto</a>              
+                        </li>
+                    </ul>
+                    <a href="./index.html" class="absolute top-0 right-0 mt-2" style="margin-right: 8%;">
+                        <img class="top-0 right-0 mr-5" style="width: 95px;" src="../assets/Diap 1/logo.png" alt="">
+                    </a>
+                </nav>
+            </header>
+            <div class="h-screen section-2 bg-yellow-500 yellow-1">
+                <div class="grid grid-cols-12 gap-4 h-screen">
+                    <div class="col-span-5 flex justify-center items-end relative">
+                        <img class="w-2/3" src="../assets/02/foto celular.png" alt="">
+                        <a href="./index.html#contacto" class="absolute bg-blue-600 px-8 py-2 text-white rounded-full ml-96 mb-40 text-lg">Quiero invertir</a>
+                    </div>
+                    <div class="col-span-7 flex justify-start items-center relative">
+                        <div style="width: 80%;" class="">
+                            <div class="text-left">
+                                <p class="text-white text-7xl title-2">¿Quieres invertir<br>
+                                    pero no sabes por <br>
+                                    dónde empezar?</p>
+                            </div>
+                            <div class="mt-10" style="display: flex; justify-content: flex-end; align-items: center; margin-right: 2rem;">
+                                <img src="/assets/01/rayita decorativa azul.png" alt="">
+                            </div>
+                            <div class="mt-10">
+                                <p class="text-white text-2xl font-bold">Somos expertos en temas de inversión y queremos ayudarte a crecer tu capital, mediante la mejor estrategia y de manera fácil sin que  demande tanto tiempo, pero si generando atractivas ganancias. Empieza hoy.</p>
+                            </div>
                         </div>
-                        </div>
-                    </li>
-                    <li><a class="px-8 py-5 text-white text-lg" href="./index.html#contacto">Contacto</a>              
-                    </li>
-                </ul>
-                <a href="./index.html" class="absolute top-0 right-0 mt-2" style="margin-right: 8%;">
-                    <img class="top-0 right-0 mr-5" style="width: 95px;" src="../assets/Diap 1/logo.png" alt="">
-                </a>
-            </nav>
-        </header>
-        <div class="h-screen section-2 bg-yellow-500 yellow-1">
-            <div class="grid grid-cols-12 gap-4 h-screen">
-                <div class="col-span-5 flex justify-center items-end relative">
-                    <img class="w-2/3" src="../assets/02/foto celular.png" alt="">
-                    <a href="./index.html#contacto" class="absolute bg-blue-600 px-8 py-2 text-white rounded-full ml-96 mb-40 text-lg">Quiero invertir</a>
+
+                        <img src="/assets/02/vip gestion de activos decorativo.png" style="margin-right: 5%;" class="absolute bottom-0 right-0 mb-10 w-40" alt="">
+                    </div>
                 </div>
-                <div class="col-span-7 flex justify-start items-center relative">
-                    <div style="width: 80%;" class="">
-                        <div class="text-left">
-                            <p class="text-white text-7xl title-2">¿Quieres invertir<br>
-                                pero no sabes por <br>
-                                dónde empezar?</p>
+            </div>
+            <div class="h-screen section-2 bg-white">
+                <div class="grid grid-cols-12 gap-4 h-screen relative">
+                    <div class="col-span-6 flex justify-center items-center relative">
+                        <div style="width: 80%;" class="">
+                            <div class="text-left flex">
+                                <h2 class="text-9xl font-bold text-yellow-500 title" style="margin-left: -5px; opacity: 0.9;">02.</h2>
+                                <p class="text-5xl font-bold title" style="color: #002C75;">VIP Trading <br>
+                                    En Forex, Crypto, <br>
+                                    índices y NFTs</p>
+                            </div>
+            
+                            <div class="mt-10">
+                                <p class="text-2xl font-bold text-blue-500 blue-2">Queremos gestionar el manejo de tus activos financieros de la
+                                    mejor manera con asesoría personalizada y enfocada en el
+                                    crecimiento de tu patrimonio, en donde los rendimientos que
+                                    generamos serán sobre tu capital y serán adaptados 100% a tus
+                                    objetivos y tu perfil.</p>
+                            </div>
                         </div>
-                        <div class="mt-10" style="display: flex; justify-content: flex-end; align-items: center; margin-right: 2rem;">
+                    </div>
+                    <div class="col-span-6 flex justify-left items-center relative">
+                        <img class="top-0 left-0 absolute w-7/12 mt-20" src="/assets/02/foto graficas.png" alt="">
+                        <div class="bg-blue-600" style="width: 80%; height: 500px; margin-left: 20%;"></div>
+                        <img src="/assets/02/icono blanco.png" class="absolute" style="margin-left: 45%; margin-top: -10%;" alt="">
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="section-2 h-screen bg-white relative flex flex-col justify-center items-center">
+                <div class="z-20">
+                    <h2 class="text-7xl text-center text-blue-800 font-bold title-2 blue-3">Queremos brindarte seguridad y confianza</h2>
+                </div>
+                <div class="grid grid-cols-12 gap-4 mt-24">
+                    <div class="col-span-4 text-center flex justify-center items-center flex-col">
+                        
+                    </div>
+                    <div class="col-span-4 text-center flex justify-center items-center flex-col">
+                        <div class="mt-2">
+                            <p class="text-blue-500 text-xl blue-2">Pon a trabajar tu dinero de manera confiable, sin invertir tanto
+                                tiempo y obtén la mejor ganancia. Contacta a uno de nuestros
+                                asesores y recibe la información que necesitas para iniciar tu plan
+                                
+                                de inversión con nosotros.</p>
+
+                                <a href="./index.html#contacto" class="bg-yellow-500 px-8 py-2 text-white rounded-full text-lg mt-10 inline-block" style="margin-top: 2rem; margin-bottom: 6rem; display: inline-block;">Contactar asesor</a>
+                        </div>
+                    </div>
+                    <div class="col-span-4 text-center flex justify-center items-center flex-col">
+                        
+                    </div>
+                </div>
+
+                <img src="/assets/02/sello transparente vipcap gris.png" class="top-0 left-0 absolute z-10" alt="" style="width: 40%;">
+            </div>
+            <div class="h-screen section-2 bg-white relative pt-40">
+                <div class="ml-40">
+                    <h2 class="text-8xl text-left text-yellow-500 title-2">Inviertes de</h2>
+                    <h2 class="text-8xl text-left text-yellow-500 title-2">manera segura.</h2>
+                </div>
+                <div class="grid grid-cols-12 gap-4 mt-24">
+                    <div class="col-span-4 text-center flex justify-start items-center flex-col">
+                        <div style="width: 150px; height: 150px;" class="flex justify-center items-center">
+                            <img src="/assets/02/icono 1.png" class="w-10/12" alt="">
+                        </div>
+                        <div class="mt-5 flex justify-center items-center">
+                            <p class="text-blue-500 text-lg text-justify w-7/12">Nuestra asesoría es personalizada y siempre nos enfocamos en tu crecimiento.</p>
+                        </div>
+                    </div>
+                    <div class="col-span-4 text-center flex justify-start items-center flex-col">
+                        <div style="width: 150px; height: 150px;" class="flex justify-center items-center">
+                            <img src="/assets/02/icono 2.png" class="w-10/12" alt="">
+                        </div>
+                        <div class="mt-5 flex justify-center items-center">
+                            <p class="text-blue-500 text-lg text-justify w-7/12">Contamos con las estrategias adecuadas para conseguir el mejor rendimiento y los mejores beneficios.</p>
+                        </div>
+                    </div>
+                    <div class="col-span-4 text-center flex justify-start items-center flex-col">
+                        <div style="width: 150px; height: 150px;" class="flex justify-center items-center">
+                            <img src="/assets/02/icono 3.png" class="w-10/12" alt="">
+                        </div>
+                        <div class="mt-5 flex justify-center items-center">
+                            <p class="text-blue-500 text-lg text-justify w-7/12">Trabajamos con un portafolio diversificado en activos de capital.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <img src="/assets/Diap 5/trading.png" style="margin-right: 2%;" class="absolute top-0 right-0 mt-10 w-40" alt="">
+                <img src="/assets/01/rayita decorativa amarilla.png" class="absolute top-0 right-0" alt="" style="margin-right: 5%; margin-top: 6rem;">
+
+            </div>
+            <div class="section-2 bg-blue-600 relative">
+                <img src="/assets/01/rayita decorativa amarilla.png" class="absolute top-0 left-0 mt-24 ml-10" alt="">
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-6 pt-52 px-10 relative">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <div class="col-span-6 pt-40">
+                        <h2 class="text-8xl text-left text-white">Calcula tu</h2>
+                        <h2 class="text-8xl text-left text-white">rendimiento.</h2>
+
+                        <div class=" w-10/12">
+                            <div class="p-10">
+                                <div class="flex justify-between items-center">
+                                    <p class="text-yellow-500 text-lg">Monto inicial</p>
+                                    <p class="font-bold text-white text-lg">MX $ {{ amount1 }}</p>
+                                </div>
+                                <input min="10000" step="10000" max="5000000" type="range" v-model="amount1" class="w-full">
+                            </div>
+                            <div class="p-10">
+                                <div class="flex justify-between items-center">
+                                    <p class="text-yellow-500 text-lg">Plazo de inversión</p>
+                                    <p class="font-bold text-white text-lg">{{ amount2 }} Años</p>
+                                </div>
+                                <input min="1" step="1" max="50" type="range" v-model="amount2" class="w-full">
+                            </div>
+                            <div class="p-10 text-center">
+                                <div class="grid grid-cols-12 gap-4">
+                                    <div class="col-span-5 text-right">
+                                        <p class="text-yellow-500 font-bold text-xl">MX ${{ total }}</p>
+                                    </div>
+                                    <div class="col-span-2 flex justify-center items-center">
+                                        <div class="bg-yellow-500" style="width: 10px; height: 10px;"></div>
+                                    </div>
+                                    <div class="col-span-5 text-left">
+                                        <p class="text-white text-xl">Inversión VIP CAP</p>
+                                    </div>
+                                </div>
+                                <div class="flex justify-center items-center mt-5">
+                                    <button class="bg-yellow-500 text-white px-5 py-2 rounded-full" v-on:click="generateChart">Calcular graficamente</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-40 py-10">
+                    <p class="text-white">* Los datos se calculan de acuerdo a la estimación de datos que solicitaste, sin embargo VIP CAP no garantiza que los resultados de este
+                        simulador sean exactamente igual ya que los resultados se generan mediante estimaciones y existe una dependencia con la volatilidad
+                        de los mercados.</p>
+                </div>
+                <img src="/assets/02/vip gestion de activos decorativo.png" class="absolute w-40 top-0 left-0 mt-10 ml-10" alt="">
+            </div>
+            <footer class="text-lg" style="background-color: #011F5D;">
+                <div class="grid grid-cols-12 gap-4 py-10 px-40">
+                    <div class="col-span-4">
+                        <img class="w-1/3" src="/assets/Diap 1/logo.png" alt="">
+                    </div>
+                    <div class="col-span-4 flex justify-center items-center">
+                        <p class="text-white">Únete a nuestro equipo de trabajo</p>
+                        <a href="./index.html#contacto" class="px-5 py-1 bg-blue-500 rounded-full text-white ml-5">Aplicar</a>
+                    </div>
+                    <div class="col-span-4 flex justify-center items-end flex-col">
+                        
+                        <div class="text-right text-md">
+                            <div class="text-white">
+                                <a href="https://www.facebook.com/vipcapitalmx" target="_blank" class="text-lg">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="https://instagram.com/vipcapitalmx?igshid=YTM0ZjI4ZDI=" target="_blank" class="ml-5 text-lg">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://api.whatsapp.com/send?phone=526142041558" target="_blank" class="ml-5 text-lg">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                            <p class="text-white">614 2 04 15 58</p>
+                            <p class="text-white">contacto@vipcapital.mx</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div class="movil block sm:block md:hidden">
+            <header class="fixed h-20 w-full z-50 flex justify-between items-center px-5" style="background-color: #011F5D;">
+                <i @click="openMenu" class="fa-solid fa-bars text-white text-3xl"></i>
+                <img class="w-20" src="./assets/Diap 1/logo.png" alt="">
+    
+                <nav :class="[menu == false ? 'hidden' : 'fixed']" class="h-screen top-0 left-0 z-50 w-3/4 flex justify-center items-start flex-col px-5" style="background-color: #011F5D;">
+                    <a class="text-white text-2xl my-2" href="./index.html#inicio-movil">Inicio</a>
+                    <a class="text-white text-2xl my-2" href="./comunidad-vip-cap.html">Comunidad VIP CAP</a>
+                    <a class="text-white text-2xl my-2" href="./vip-allianz.html">Vip Allianz</a>
+                    <a class="text-white text-2xl my-2" href="./vip-gestion-de-activos.html">Vip Trading</a>
+                    <a class="text-white text-2xl my-2" href="./vip-microlending.html">Vip Microlending</a>
+                    <a class="text-white text-2xl my-2" href="./vip-consultas.html">Vip Consultants</a>
+                    <a class="text-white text-2xl my-2" href="./index.html#contacto-movil">Contacto</a>
+    
+                    <button @click="openMenu" class="absolute top-0 right-0 mt-5 mr-5 text-white">
+                        <i class="fa-solid fa-xmark text-4xl"></i>
+                    </button>
+                </nav>
+            </header>
+            <div class="min-h-screen section-2 bg-yellow-500">
+                <div class="relative pt-24 px-5">
+                    <img src="/assets/02/vip gestion de activos decorativo.png" class="absolute top-0 right-0 mt-32 mr-5" alt="">
+                    <img src="./assets/movil/Recurso 20.png" alt="">
+                    <div class="">
+                        <div class="text-left">
+                            <h2 class="text-white text-5xl title-2 -mt-28">¿Quieres invertir
+                                pero no sabes por
+                                dónde empezar?
+                        </div>
+                        <div class="mt-10">
                             <img src="/assets/01/rayita decorativa azul.png" alt="">
                         </div>
+    
                         <div class="mt-10">
-                            <p class="text-white text-2xl font-bold">Somos expertos en temas de inversión y queremos ayudarte a crecer tu capital, mediante la mejor estrategia y de manera fácil sin que  demande tanto tiempo, pero si generando atractivas ganancias. Empieza hoy.</p>
+                            <p class="text-white text-2xl">Somos expertos en temas de inversión y queremos ayudarte a crecer tu capital, mediante la mejor estrategia y de manera fácil sin que demande tanto tiempo, pero si generando atractivas ganancias. Empieza hoy.</p>
                         </div>
                     </div>
-
-                    <img src="/assets/02/vip gestion de activos decorativo.png" style="margin-right: 5%;" class="absolute bottom-0 right-0 mb-10 w-40" alt="">
+                    <div class="flex justify-center items-center mt-10 pb-10">
+                        <a href="./index.html#contacto" class="absolute bg-blue-600 px-8 py-2 text-white rounded-full text-lg">Quiero invertir</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="h-screen section-2 bg-white">
-            <div class="grid grid-cols-12 gap-4 h-screen relative">
-                <div class="col-span-6 flex justify-center items-center relative">
-                    <div style="width: 80%;" class="">
-                        <div class="text-left flex">
-                            <h2 class="text-9xl font-bold text-yellow-500 title" style="margin-left: -5px; opacity: 0.9;">02.</h2>
-                            <p class="text-5xl font-bold title" style="color: #002C75;">VIP Trading <br>
-                                En Forex, Crypto, <br>
-                                índices y NFTs</p>
-                        </div>
-        
-                        <div class="mt-10">
-                            <p class="text-2xl font-bold text-blue-500 blue-2">Queremos gestionar el manejo de tus activos financieros de la
-                                mejor manera con asesoría personalizada y enfocada en el
-                                crecimiento de tu patrimonio, en donde los rendimientos que
-                                generamos serán sobre tu capital y serán adaptados 100% a tus
-                                objetivos y tu perfil.</p>
+            <div class="min-h-screen pb-20 section-2 bg-white">
+                <div class="grid grid-cols-12 gap-4 h-screen relative mt-10">
+                    <div class="col-span-12 flex justify-left items-center relative">
+                        <img class="top-0 left-0 absolute w-8/12 mt-5 ml-10" src="/assets/02/foto graficas.png" alt="">
+                        <div class="bg-blue-600 w-10/12 h-80" style="margin-left: 20%;"></div>
+                        <img src="/assets/02/icono blanco.png" class="absolute w-20" style="margin-left: 65%; margin-top: -10%;" alt="">
+                    </div>
+                    <div class="col-span-12 flex justify-center items-center relative px-5">
+                        <div class="">
+                            <div class="text-left flex">
+                                <h2 class="text-6xl font-bold text-yellow-500 title" style="margin-left: -5px; opacity: 0.9;">02.</h2>
+                                <p class="text-4xl font-bold title" style="color: #002C75;">VIP Trading <br>
+                                    En Forex, Crypto, <br>
+                                    índices y NFTs</p>
+                            </div>
+            
+                            <div class="mt-10">
+                                <p class="text-2xl font-bold text-blue-500 blue-2">Queremos gestionar el manejo de tus activos financieros de la
+                                    mejor manera con asesoría personalizada y enfocada en el
+                                    crecimiento de tu patrimonio, en donde los rendimientos que
+                                    generamos serán sobre tu capital y serán adaptados 100% a tus
+                                    objetivos y tu perfil.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-span-6 flex justify-left items-center relative">
-                    <img class="top-0 left-0 absolute w-7/12 mt-20" src="/assets/02/foto graficas.png" alt="">
-                    <div class="bg-blue-600" style="width: 80%; height: 500px; margin-left: 20%;"></div>
-                    <img src="/assets/02/icono blanco.png" class="absolute" style="margin-left: 45%; margin-top: -10%;" alt="">
+            </div>
+            <div class="section-2 bg-white relative">
+                <div class="mt-2 px-5 flex justify-center items-center flex-col">
+                    <h2 class="text-5xl text-center text-blue-800 font-bold title-2 blue-3">Queremos brindarte seguridad y confianza</h2>
+                    <p class="text-blue-500 text-xl blue-2 text-justify mt-10">Pon a trabajar tu dinero de manera confiable, sin invertir tanto
+                        tiempo y obtén la mejor ganancia. Contacta a uno de nuestros
+                        asesores y recibe la información que necesitas para iniciar tu plan
+                        
+                        de inversión con nosotros.</p>
+
+                        <a href="./index.html#contacto" class="bg-yellow-500 px-8 py-2 text-white rounded-full text-lg mt-10 inline-block" style="margin-top: 2rem; margin-bottom: 6rem; display: inline-block;">Contactar asesor</a>
+                        <img src="/assets/Diap 5/trading.png" class="mt-5 w-40" alt="">
+                    </div>
+                
+                <!-- <img src="/assets/02/sello transparente vipcap gris.png" class="top-0 left-0 absolute z-10" alt="" style="width: 40%;"> -->
+            </div>
+            <div class="min-h-screen section-2 pb-20 bg-white relative mt-14">
+                <div class="px-5">
+                    <h2 class="text-5xl text-left text-yellow-500 title-2">Inviertes de</h2>
+                    <h2 class="text-5xl text-left text-yellow-500 title-2">manera segura.</h2>
+                </div>
+                <div class="grid grid-cols-12 gap-4 mt-24">
+                    <div class="col-span-12 text-center flex justify-start items-center flex-col">
+                        <div style="width: 150px; height: 150px;" class="flex justify-center items-center">
+                            <img src="/assets/02/icono 1.png" class="w-10/12" alt="">
+                        </div>
+                        <div class="mt-5 flex justify-center items-center">
+                            <p class="text-blue-500 text-lg text-justify w-7/12">Nuestra asesoría es personalizada y siempre nos enfocamos en tu crecimiento.</p>
+                        </div>
+                    </div>
+                    <div class="col-span-12 text-center flex justify-start items-center flex-col">
+                        <div style="width: 150px; height: 150px;" class="flex justify-center items-center">
+                            <img src="/assets/02/icono 2.png" class="w-10/12" alt="">
+                        </div>
+                        <div class="mt-5 flex justify-center items-center">
+                            <p class="text-blue-500 text-lg text-justify w-7/12">Contamos con las estrategias adecuadas para conseguir el mejor rendimiento y los mejores beneficios.</p>
+                        </div>
+                    </div>
+                    <div class="col-span-12 text-center flex justify-start items-center flex-col">
+                        <div style="width: 150px; height: 150px;" class="flex justify-center items-center">
+                            <img src="/assets/02/icono 3.png" class="w-10/12" alt="">
+                        </div>
+                        <div class="mt-5 flex justify-center items-center">
+                            <p class="text-blue-500 text-lg text-justify w-7/12">Trabajamos con un portafolio diversificado en activos de capital.</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+            <div class="section-2 bg-blue-800 relative">
+                <img src="/assets/01/vip alliance decoracion 1.png" class="absolute top-0 left-0 mt-10 ml-10" alt="">
+                <img src="/assets/01/rayita decorativa amarilla.png" class="absolute top-0 left-0 mt-24 ml-10" alt="">
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-12 px-10 mt-56">
+                        <!-- <canvas id="myChart2"></canvas> -->
+    
+                    </div>
+                    <div class="col-span-12 px-5">
+                        <h2 class="text-5xl text-left text-white">Calcula tu</h2>
+                        <h2 class="text-5xl text-left text-white">rendimiento.</h2>
+    
+                        <div class="">
+                            <div class="p-10">
+                                <div class="flex justify-between items-center">
+                                    <p class="text-yellow-500 text-lg">Monto inicial</p>
+                                    <p class="font-bold text-white text-lg">MX $ {{ amount1 }}</p>
+                                </div>
+                                <input min="10000" step="10000" max="5000000" type="range" v-model="amount1" class="w-full">
+                            </div>
+                            <div class="p-10">
+                                <div class="flex justify-between items-center">
+                                    <p class="text-yellow-500 text-lg">Plazo de inversión</p>
+                                    <p class="font-bold text-white text-lg">{{ amount2 }} Años</p>
+                                </div>
+                                <input min="1" step="1" max="50" type="range" v-model="amount2" class="w-full">
+                            </div>
+                            <div class="text-center">
+                                <div class="grid grid-cols-12">
+                                    <div class="col-span-5 text-right">
+                                        <p class="text-yellow-500 font-bold text-xl">MX ${{ total }}</p>
+                                    </div>
+                                    <div class="col-span-2 flex justify-center items-center">
+                                        <div class="bg-yellow-500" style="width: 10px; height: 10px;"></div>
+                                    </div>
+                                    <div class="col-span-5 text-left">
+                                        <p class="text-white text-md">Inversión VIP CAP</p>
+                                    </div>
+                                </div>
+                                <div class="flex justify-center items-center mt-5">
+                                    <button class="bg-yellow-500 text-white px-5 py-2 rounded-full" v-on:click="generateChart">Calcular graficamente</button>
+                                </div>
+    
+                            </div>
+                        </div>
+    
+                        <div class="my-10">
+                            <p class="text-white">* Los datos se calculan de acuerdo a la estimación de datos que solicitaste, sin embargo VIP CAP no garantiza que los resultados de este
+                                simulador sean exactamente igual ya que los resultados se generan mediante estimaciones y existe una dependencia con la volatilidad
+                                de los mercados.</p>
+                        </div>
+                    </div>
                 </div>
                 
-                
+                <img src="/assets/01/vip alliance decoracion 1.png" class="absolute top-0 left-0 mt-10 ml-10" alt="">
             </div>
-        </div>
-        <div class="section-2 h-screen bg-white relative flex flex-col justify-center items-center">
-            <div class="z-20">
-                <h2 class="text-7xl text-center text-blue-800 font-bold title-2 blue-3">Queremos brindarte seguridad y confianza</h2>
-            </div>
-            <div class="grid grid-cols-12 gap-4 mt-24">
-                <div class="col-span-4 text-center flex justify-center items-center flex-col">
-                    
-                </div>
-                <div class="col-span-4 text-center flex justify-center items-center flex-col">
-                    <div class="mt-2">
-                        <p class="text-blue-500 text-xl blue-2">Pon a trabajar tu dinero de manera confiable, sin invertir tanto
-                            tiempo y obtén la mejor ganancia. Contacta a uno de nuestros
-                            asesores y recibe la información que necesitas para iniciar tu plan
-                            
-                            de inversión con nosotros.</p>
-
-                            <a href="./index.html#contacto" class="bg-yellow-500 px-8 py-2 text-white rounded-full text-lg mt-10 inline-block" style="margin-top: 2rem; margin-bottom: 6rem; display: inline-block;">Contactar asesor</a>
-                    </div>
-                </div>
-                <div class="col-span-4 text-center flex justify-center items-center flex-col">
-                    
-                </div>
-            </div>
-
-            <img src="/assets/02/sello transparente vipcap gris.png" class="top-0 left-0 absolute z-10" alt="" style="width: 40%;">
-        </div>
-        <div class="h-screen section-2 bg-white relative pt-40">
-            <div class="ml-40">
-                <h2 class="text-8xl text-left text-yellow-500 title-2">Inviertes de</h2>
-                <h2 class="text-8xl text-left text-yellow-500 title-2">manera segura.</h2>
-            </div>
-            <div class="grid grid-cols-12 gap-4 mt-24">
-                <div class="col-span-4 text-center flex justify-start items-center flex-col">
-                    <div style="width: 150px; height: 150px;" class="flex justify-center items-center">
-                        <img src="/assets/02/icono 1.png" class="w-10/12" alt="">
-                    </div>
-                    <div class="mt-5 flex justify-center items-center">
-                        <p class="text-blue-500 text-lg text-justify w-7/12">Nuestra asesoría es personalizada y siempre nos enfocamos en tu crecimiento.</p>
-                    </div>
-                </div>
-                <div class="col-span-4 text-center flex justify-start items-center flex-col">
-                    <div style="width: 150px; height: 150px;" class="flex justify-center items-center">
-                        <img src="/assets/02/icono 2.png" class="w-10/12" alt="">
-                    </div>
-                    <div class="mt-5 flex justify-center items-center">
-                        <p class="text-blue-500 text-lg text-justify w-7/12">Contamos con las estrategias adecuadas para conseguir el mejor rendimiento y los mejores beneficios.</p>
-                    </div>
-                </div>
-                <div class="col-span-4 text-center flex justify-start items-center flex-col">
-                    <div style="width: 150px; height: 150px;" class="flex justify-center items-center">
-                        <img src="/assets/02/icono 3.png" class="w-10/12" alt="">
-                    </div>
-                    <div class="mt-5 flex justify-center items-center">
-                        <p class="text-blue-500 text-lg text-justify w-7/12">Trabajamos con un portafolio diversificado en activos de capital.</p>
-                    </div>
-                </div>
-            </div>
-
-            <img src="/assets/Diap 5/trading.png" style="margin-right: 2%;" class="absolute top-0 right-0 mt-10 w-40" alt="">
-            <img src="/assets/01/rayita decorativa amarilla.png" class="absolute top-0 right-0" alt="" style="margin-right: 5%; margin-top: 6rem;">
-
-        </div>
-        <div class="section-2 bg-blue-600 relative">
-            <img src="/assets/01/rayita decorativa amarilla.png" class="absolute top-0 left-0 mt-24 ml-10" alt="">
-            <div class="grid grid-cols-12 gap-4">
-                <div class="col-span-6 pt-52 px-10 relative">
-                    <canvas id="myChart"></canvas>
-                </div>
-                <div class="col-span-6 pt-40">
-                    <h2 class="text-8xl text-left text-white">Calcula tu</h2>
-                    <h2 class="text-8xl text-left text-white">rendimiento.</h2>
-
-                    <div class=" w-10/12">
-                        <div class="p-10">
-                            <div class="flex justify-between items-center">
-                                <p class="text-yellow-500 text-lg">Monto inicial</p>
-                                <p class="font-bold text-white text-lg">MX $ {{ amount1 }}</p>
-                            </div>
-                            <input min="10000" step="10000" max="5000000" type="range" v-model="amount1" class="w-full">
-                        </div>
-                        <div class="p-10">
-                            <div class="flex justify-between items-center">
-                                <p class="text-yellow-500 text-lg">Plazo de inversión</p>
-                                <p class="font-bold text-white text-lg">{{ amount2 }} Años</p>
-                            </div>
-                            <input min="1" step="1" max="50" type="range" v-model="amount2" class="w-full">
-                        </div>
-                        <div class="p-10 text-center">
-                            <div class="grid grid-cols-12 gap-4">
-                                <div class="col-span-5 text-right">
-                                    <p class="text-yellow-500 font-bold text-xl">MX ${{ total }}</p>
-                                </div>
-                                <div class="col-span-2 flex justify-center items-center">
-                                    <div class="bg-yellow-500" style="width: 10px; height: 10px;"></div>
-                                </div>
-                                <div class="col-span-5 text-left">
-                                    <p class="text-white text-xl">Inversión VIP CAP</p>
-                                </div>
-                            </div>
-                            <div class="flex justify-center items-center mt-5">
-                                <button class="bg-yellow-500 text-white px-5 py-2 rounded-full" v-on:click="generateChart">Calcular graficamente</button>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="px-40 py-10">
-                <p class="text-white">* Los datos se calculan de acuerdo a la estimación de datos que solicitaste, sin embargo VIP CAP no garantiza que los resultados de este
-                    simulador sean exactamente igual ya que los resultados se generan mediante estimaciones y existe una dependencia con la volatilidad
-                    de los mercados.</p>
-            </div>
-            <img src="/assets/02/vip gestion de activos decorativo.png" class="absolute w-40 top-0 left-0 mt-10 ml-10" alt="">
-        </div>
-        <footer class="text-lg" style="background-color: #011F5D;">
-            <div class="grid grid-cols-12 gap-4 py-10 px-40">
-                <div class="col-span-4">
-                    <img class="w-1/3" src="/assets/Diap 1/logo.png" alt="">
-                </div>
-                <div class="col-span-4 flex justify-center items-center">
+            
+            <footer class="text-md" style="background-color: #011F5D;">
+                <div class="flex justify-center items-center flex-col pt-5">
                     <p class="text-white">Únete a nuestro equipo de trabajo</p>
-                    <a href="./index.html#contacto" class="px-5 py-1 bg-blue-500 rounded-full text-white ml-5">Aplicar</a>
+                    <a href="./index.html#contacto" class="px-5 py-1 mt-5 bg-blue-500 rounded-full text-white ml-5">Aplicar</a>
                 </div>
-                <div class="col-span-4 flex justify-center items-end flex-col">
-                    
-                    <div class="text-right text-md">
-                        <div class="text-white">
-                            <a href="https://www.facebook.com/vipcapitalmx" target="_blank" class="text-lg">
-                                <i class="fa-brands fa-facebook"></i>
-                            </a>
-                            <a href="https://instagram.com/vipcapitalmx?igshid=YTM0ZjI4ZDI=" target="_blank" class="ml-5 text-lg">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="https://api.whatsapp.com/send?phone=526142041558" target="_blank" class="ml-5 text-lg">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </a>
+                <div class="grid grid-cols-12 gap-4 px-5 py-5">
+                    <div class="col-span-6">
+                        <img class="w-28" src="/assets/Diap 1/logo.png" alt="">
+                    </div>
+                    <div class="col-span-6 flex justify-center items-end flex-col">
+    
+                        <div class="text-right text-md">
+                            <div class="text-white">
+                                <a href="https://www.facebook.com/vipcapitalmx" target="_blank" class="text-lg">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="https://instagram.com/vipcapitalmx?igshid=YTM0ZjI4ZDI=" target="_blank" class="ml-5 text-lg">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://api.whatsapp.com/send?phone=526142041558" target="_blank" class="ml-5 text-lg">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                            <p class="text-white">614 2 04 15 58</p>
+                            <p class="text-white">contacto@vipcapital.mx</p>
                         </div>
-                        <p class="text-white">614 2 04 15 58</p>
-                        <p class="text-white">contacto@vipcapital.mx</p>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
+        </div>
+    
     </div>
-    <!-- <script>
-        $(window).on("scroll", function() {
-            console.log('ola');
-            if($(window).scrollTop() > 100) {
-                $(".header").addClass("active");
-            } else {
-            $(".header").removeClass("active");
-            }
-        });
-    </script> -->
-
+    
     <script>
         Vue.createApp({
             data() {
@@ -413,6 +612,7 @@
                     values: [],
                     labels: [],
                     myChart: null,
+                    menu: false,
                 }
             },
 
@@ -441,6 +641,8 @@
             // },
 
             computed: {
+                
+
                 total(){
                     this.values = []
                     let total = parseInt(this.amount1)
@@ -468,6 +670,10 @@
             },
 
             methods: {
+                openMenu(){
+                    this.menu = !this.menu
+                },
+
                 generateChart(){
                     this.labels = []
 
