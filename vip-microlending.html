@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="output.css" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" referrerpolicy="no-referrer" />
     <style>
         @font-face {
@@ -140,212 +142,353 @@
     </style>
 </head>
 <body>
-    <header>
-        <nav class="header w-full flex justify-between items-center fixed z-50" style="padding: 15px;">
-            <img class="top-0 right-0 w-20 invisible" src="../assets/Diap 1/logo.png" alt="">
-            <ul id="menu" class="flex justify-center items-center">
-                <li><a class="px-8 py-5 text-white text-lg" href="./index.html">Inicio</a>            
-                </li>
-                <li><a class="px-8 py-5 text-white text-lg" href="./comunidad-vip-cap.html">Comunidad VIP CAP</a>              
-                </li>
-                <li><a class="px-8 py-5 text-white text-lg" href="#productos">Productos</a><!-- Begin 5 columns Item -->
-                    <div class="drop_menu bg-white">
-                    <div class="grid grid-cols-12 gap-4 w-full">
-                        <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
-                                <a href="./vip-allianz.html" class=" flex justify-center items-center flex-col">
-                                    <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono1.png" alt="">
-                                    <h3 class="font-bold text-2xl title blue-3">VIP Allianz</h3>
-                                    <p class="text-center">Planes personalizados
-                                        de ahorro e fondos de
-                                        inversión.</p>
-                                </a>
-                        </div>
-                        <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
-                                <a href="./vip-gestion-de-activos.html" class=" flex justify-center items-center flex-col">
-                                    <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 2.png" alt="">
-                                    <h3 class="font-bold text-2xl title text-center blue-3">VIP Trading</h3>
-                                        <p class="text-center">En Forex, Crypto, índices y NFTs.</p>
-                                </a>
+    <div id="app">
+        <div class="web hidden sm:hidden md:block">
+            <header>
+                <nav class="header w-full flex justify-between items-center fixed z-50" style="padding: 15px;">
+                    <img class="top-0 right-0 w-20 invisible" src="../assets/Diap 1/logo.png" alt="">
+                    <ul id="menu" class="flex justify-center items-center">
+                        <li><a class="px-8 py-5 text-white text-lg" href="./index.html">Inicio</a>            
+                        </li>
+                        <li><a class="px-8 py-5 text-white text-lg" href="./comunidad-vip-cap.html">Comunidad VIP CAP</a>              
+                        </li>
+                        <li><a class="px-8 py-5 text-white text-lg" href="#productos">Productos</a><!-- Begin 5 columns Item -->
+                            <div class="drop_menu bg-white">
+                            <div class="grid grid-cols-12 gap-4 w-full">
+                                <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                                        <a href="./vip-allianz.html" class=" flex justify-center items-center flex-col">
+                                            <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono1.png" alt="">
+                                            <h3 class="font-bold text-2xl title blue-3">VIP Allianz</h3>
+                                            <p class="text-center">Planes personalizados
+                                                de ahorro e fondos de
+                                                inversión.</p>
+                                        </a>
+                                </div>
+                                <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                                        <a href="./vip-gestion-de-activos.html" class=" flex justify-center items-center flex-col">
+                                            <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 2.png" alt="">
+                                            <h3 class="font-bold text-2xl title text-center blue-3">VIP Trading</h3>
+                                                <p class="text-center">En Forex, Crypto, índices y NFTs.</p>
+                                        </a>
+                                    </div>
+                                    <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                                        <a href="./vip-microlending.html" class=" flex justify-center items-center flex-col">
+                                            <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 3.png" alt="">
+                                            <h3 class="font-bold text-2xl title blue-3">VIP Microlending</h3>
+                                            <p class="text-center">Recursos para créditos personales y PyMEs.</p>
+                                        </a>
+                                    </div>
+                                    <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
+                                        <a href="./vip-consultas.html" class=" flex justify-center items-center flex-col">
+                                            <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 4.png" alt="">
+                                            <h3 class="font-bold text-2xl title blue-3">VIP Consultants</h3>
+                                            <p class="text-center">Experiencia en
+                                                estrategias fiscales y
+                                                asesoría legal. Seguros
+                                                y fianzas.</p>
+                                        </a>
+                                    </div>
                             </div>
-                            <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
-                                <a href="./vip-microlending.html" class=" flex justify-center items-center flex-col">
-                                    <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 3.png" alt="">
-                                    <h3 class="font-bold text-2xl title blue-3">VIP Microlending</h3>
-                                    <p class="text-center">Recursos para créditos personales y PyMEs.</p>
-                                </a>
                             </div>
-                            <div style="padding: 15px;" class="col-span-3 flex justify-center items-center flex-col">
-                                <a href="./vip-consultas.html" class=" flex justify-center items-center flex-col">
-                                    <img class="top-0 right-0" style="width: 70px;" src="../assets/Diap 3/icono 4.png" alt="">
-                                    <h3 class="font-bold text-2xl title blue-3">VIP Consultants</h3>
-                                    <p class="text-center">Experiencia en
-                                        estrategias fiscales y
-                                        asesoría legal. Seguros
-                                        y fianzas.</p>
-                                </a>
+                        </li>
+                        <li><a class="px-8 py-5 text-white text-lg" href="./index.html#contacto">Contacto</a>              
+                        </li>
+                    </ul>
+                    <a href="./index.html" class="absolute top-0 right-0 mt-2" style="margin-right: 8%;">
+                        <img class="top-0 right-0 mr-5" style="width: 95px;" src="../assets/Diap 1/logo.png" alt="">
+                    </a>
+                </nav>
+            </header>
+            <div class="h-screen section-2 bg-blue-1">
+                <div class="grid grid-cols-12 gap-4 h-screen">
+                    <div class="col-span-7 flex justify-center items-center relative">
+                        <div style="width: 80%;" class="">
+                            <div class="text-left">
+                                <h2 class="text-white text-7xl font-bold title-2">Queremos que tu <br>
+                                    proyecto crezca, por <br>
+                                    eso tenemos la mejor <br>
+                                    solución.</h2>
                             </div>
-                    </div>
-                    </div>
-                </li>
-                <li><a class="px-8 py-5 text-white text-lg" href="./index.html#contacto">Contacto</a>              
-                </li>
-            </ul>
-            <a href="./index.html" class="absolute top-0 right-0 mt-2" style="margin-right: 8%;">
-                <img class="top-0 right-0 mr-5" style="width: 95px;" src="../assets/Diap 1/logo.png" alt="">
-            </a>
-        </nav>
-    </header>
-    <div class="h-screen section-2 bg-blue-1">
-        <div class="grid grid-cols-12 gap-4 h-screen">
-            <div class="col-span-7 flex justify-center items-center relative">
-                <div style="width: 80%;" class="">
-                    <div class="text-left">
-                        <h2 class="text-white text-7xl font-bold title-2">Queremos que tu <br>
-                            proyecto crezca, por <br>
-                            eso tenemos la mejor <br>
-                            solución.</h2>
-                    </div>
 
-                    <div class="mt-10">
-                        <img src="/assets/01/rayita decorativa amarilla.png" alt="">
-                    </div>
-    
-                    <div class="mt-10">
-                        <p class="text-white text-2xl font-bold">Somos un equipo altamente capacitado para satisfacer y resolver tus necesidades financieras y las de tu empresa, ayudándote a tener el crecimiento que tanto deseas.</p>
-                    </div>
-                </div>
-
-                <img src="/assets/03/vip microlending decoracion 2.png" class="absolute bottom-0 left-0 mb-10 ml-10 w-40" alt="">
-            </div>
-            <div class="col-span-5 flex justify-center items-end relative">
-                <img style="width: 80%; margin-right: 10%;" src="../assets/03/foto compus.png" alt="">
-                <a href="./index.html#contacto" style="margin-left: -70%;" class="absolute bg-yellow-500 px-8 py-2 text-white rounded-full -ml-96 mb-40 text-lg">Más información</a>
-            </div>
+                            <div class="mt-10">
+                                <img src="/assets/01/rayita decorativa amarilla.png" alt="">
+                            </div>
             
-            <img src="/assets/03/vip microlending decoracion 2.png" class="absolute bottom-0 left-0 ml-10 mb-10 w-40" alt="">
-        </div>
-    </div>
-    <div class="h-screen section-2 bg-white">
-        <div class="grid grid-cols-12 gap-4 h-screen relative">
-            <div class="col-span-6 flex justify-left items-center relative">
-                <img class="top-0 right-0 absolute w-7/12 mt-20" src="/assets/03/foto amarilla.png" alt="">
-                <div class="bg-blue-800" style="width: 80%; height: 500px;"></div>
-                <img src="/assets/03/icono blanco.png" class="absolute w-40" style="margin-left: 33%; margin-top: -10%;" alt="">
-            </div>
-            <div class="col-span-6 flex justify-center items-center relative">
-                <div style="width: 80%;" class="">
-                    <div class="text-left">
-                        <img src="/assets/03/03. vip microlending.png" alt="">
+                            <div class="mt-10">
+                                <p class="text-white text-2xl font-bold">Somos un equipo altamente capacitado para satisfacer y resolver tus necesidades financieras y las de tu empresa, ayudándote a tener el crecimiento que tanto deseas.</p>
+                            </div>
+                        </div>
+
+                        <img src="/assets/03/vip microlending decoracion 2.png" class="absolute bottom-0 left-0 mb-10 ml-10 w-40" alt="">
                     </div>
-    
-                    <div class="mt-10">
-                        <p class="text-2xl font-bold text-blue-500 blue-2">Tu proyecto nos importa y por eso te ayudamos con las mejores estrategias brindándote el préstamo que necesitas para crecer y hacer realidad lo que deseas. Y por que queremos satisfacer las necesidades que tienen tú o tu empresa trabajamos de la mano contigo.</p>
+                    <div class="col-span-5 flex justify-center items-end relative">
+                        <img style="width: 80%; margin-right: 10%;" src="../assets/03/foto compus.png" alt="">
+                        <a href="./index.html#contacto" style="margin-left: -70%;" class="absolute bg-yellow-500 px-8 py-2 text-white rounded-full -ml-96 mb-40 text-lg">Más información</a>
+                    </div>
+                    
+                    <img src="/assets/03/vip microlending decoracion 2.png" class="absolute bottom-0 left-0 ml-10 mb-10 w-40" alt="">
+                </div>
+            </div>
+            <div class="h-screen section-2 bg-white">
+                <div class="grid grid-cols-12 gap-4 h-screen relative">
+                    <div class="col-span-6 flex justify-left items-center relative">
+                        <img class="top-0 right-0 absolute w-7/12 mt-20" src="/assets/03/foto amarilla.png" alt="">
+                        <div class="bg-blue-800" style="width: 80%; height: 500px;"></div>
+                        <img src="/assets/03/icono blanco.png" class="absolute w-40" style="margin-left: 33%; margin-top: -10%;" alt="">
+                    </div>
+                    <div class="col-span-6 flex justify-center items-center relative">
+                        <div style="width: 80%;" class="">
+                            <div class="text-left">
+                                <img src="/assets/03/03. vip microlending.png" alt="">
+                            </div>
+            
+                            <div class="mt-10">
+                                <p class="text-2xl font-bold text-blue-500 blue-2">Tu proyecto nos importa y por eso te ayudamos con las mejores estrategias brindándote el préstamo que necesitas para crecer y hacer realidad lo que deseas. Y por que queremos satisfacer las necesidades que tienen tú o tu empresa trabajamos de la mano contigo.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="section-2 h-screen bg-white relative flex flex-col justify-center items-center">
-        <div class="z-20">
-            <h2 class="text-7xl text-center text-blue-800 title-2">Te brindamos la seguridad</h2>
-            <h2 class="text-7xl text-center text-blue-800 title-2">para hacer crecer tu empresa.</h2>
-        </div>
-        <div class="grid grid-cols-12 gap-4 mt-10">
-            <div class="col-span-4 text-center flex justify-center items-center flex-col">
-                
+            <div class="section-2 h-screen bg-white relative flex flex-col justify-center items-center">
+                <div class="z-20">
+                    <h2 class="text-7xl text-center text-blue-800 title-2">Te brindamos la seguridad</h2>
+                    <h2 class="text-7xl text-center text-blue-800 title-2">para hacer crecer tu empresa.</h2>
+                </div>
+                <div class="grid grid-cols-12 gap-4 mt-10">
+                    <div class="col-span-4 text-center flex justify-center items-center flex-col">
+                        
+                    </div>
+                    <div class="col-span-4 text-center flex justify-center items-center flex-col">
+                        <div class="mt-2">
+                            <p class="text-blue-500 text-xl">Te apoyamos con los recursos para desarrollar el proyecto que tienes en mente o a
+                                tener el crecimiento que tu empresa necesita, por eso te auxiliamos con el capital para
+                                que puedas ejecutar tus planes dándoles forma y materializándolos. Consulta a uno de
+                                
+                                nuestros asesores para que conozcas más acerca del producto.</p>
+
+                                <a href="./index.html#contacto" class="bg-yellow-500 px-8 py-2 text-white rounded-full text-lg mt-10 inline-block"  style="margin-top: 2rem; margin-bottom: 6rem; display: inline-block;">Más información</a>
+                        </div>
+                    </div>
+                    <div class="col-span-4 text-center flex justify-center items-center flex-col">
+                        
+                    </div>
+                </div>
+                <img src="/assets/03/vip microlending decoracion 1.png" class="absolute top-0 left-0 ml-10 mb-10 w-40" alt="">
+                <img src="/assets/02/sello transparente vipcap gris.png" class="top-0 right-0 absolute w-5/12 z-10" alt="" style="width: 35%; margin-top: -25%;">
             </div>
-            <div class="col-span-4 text-center flex justify-center items-center flex-col">
-                <div class="mt-2">
-                    <p class="text-blue-500 text-xl">Te apoyamos con los recursos para desarrollar el proyecto que tienes en mente o a
+            <div class="h-screen section-2 bg-white relative pt-20">
+                <div class="z-20">
+                    <h2 class="text-7xl text-center text-blue-800 font-bold">Elige VIP CAP para tener el crecimiento</h2>
+                    <h2 class="text-7xl text-center text-blue-800">que tu empresa necesita.</h2>
+                </div>
+                <div class="grid grid-cols-12 gap-4 mt-24">
+                    <div class="col-span-4 text-center flex justify-center items-center flex-col">
+                        <img src="/assets/03/icono 1.png" class="w-32" alt="">
+                        <div class="mt-5 flex justify-center items-center">
+                            <p class="text-blue-500 text-lg text-justify w-7/12">Encontramos soluciones a tus
+                                necesidades ya que los planes
+                                se adaptan a ti.</p>
+                        </div>
+                    </div>
+                    <div class="col-span-4 text-center flex justify-center items-center flex-col">
+                        <img src="/assets/03/icono 2.png" class="w-32" alt="">
+                        <div class="mt-5 flex justify-center items-center">
+                            <p class="text-blue-500 text-lg text-justify w-7/12">Reinventa tu negocio de una manera
+                                rápida, y hazlo crecer gracias a los
+                                insumos que tendrás disponibles.</p>
+                        </div>
+                    </div>
+                    <div class="col-span-4 text-center flex justify-center items-center flex-col">
+                        <img src="/assets/03/icono 3.png" class="w-32" alt="">
+                        <div class="mt-5 flex justify-center items-center">
+                            <p class="text-blue-500 text-lg text-justify w-7/12">Tendrás liquidez a corto plazo y
+                                podrás proyectar un crecimiento
+                                para ampliar tu negocio o tu
+                                nuevo proyecto.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <img src="/assets/03/vip microlending decoracion 1.png" style="margin-right: 5%;" class="absolute bottom-0 right-0 mb-10 w-40" alt="">
+            </div>
+            <footer class="text-lg" style="background-color: #011F5D;">
+                <div class="grid grid-cols-12 gap-4 py-10 px-40">
+                    <div class="col-span-4">
+                        <img class="w-1/3" src="/assets/Diap 1/logo.png" alt="">
+                    </div>
+                    <div class="col-span-4 flex justify-center items-center">
+                        <p class="text-white">Únete a nuestro equipo de trabajo</p>
+                        <a href="./index.html#contacto" class="px-5 py-1 bg-blue-500 rounded-full text-white ml-5">Aplicar</a>
+                    </div>
+                    <div class="col-span-4 flex justify-center items-end flex-col">
+                        
+                        <div class="text-right text-md">
+                            <div class="text-white">
+                                <a href="https://www.facebook.com/vipcapitalmx" target="_blank" class="text-lg">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="https://instagram.com/vipcapitalmx?igshid=YTM0ZjI4ZDI=" target="_blank" class="ml-5 text-lg">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://api.whatsapp.com/send?phone=526142041558" target="_blank" class="ml-5 text-lg">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                            <p class="text-white">614 2 04 15 58</p>
+                            <p class="text-white">contacto@vipcapital.mx</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div class="movil block sm:block md:hidden">
+            <header class="fixed h-20 w-full z-50 flex justify-between items-center px-5" style="background-color: #011F5D;">
+                <i @click="openMenu" class="fa-solid fa-bars text-white text-3xl"></i>
+                <img class="w-20" src="./assets/Diap 1/logo.png" alt="">
+    
+                <nav :class="[menu == false ? 'hidden' : 'fixed']" class="h-screen top-0 left-0 z-50 w-3/4 flex justify-center items-start flex-col px-5" style="background-color: #011F5D;">
+                    <a class="text-white text-2xl my-2" href="./index.html#inicio-movil">Inicio</a>
+                    <a class="text-white text-2xl my-2" href="./comunidad-vip-cap.html">Comunidad VIP CAP</a>
+                    <a class="text-white text-2xl my-2" href="./vip-allianz.html">Vip Allianz</a>
+                    <a class="text-white text-2xl my-2" href="./vip-gestion-de-activos.html">Vip Trading</a>
+                    <a class="text-white text-2xl my-2" href="./vip-microlending.html">Vip Microlending</a>
+                    <a class="text-white text-2xl my-2" href="./vip-consultas.html">Vip Consultants</a>
+                    <a class="text-white text-2xl my-2" href="./index.html#contacto-movil">Contacto</a>
+    
+                    <button @click="openMenu" class="absolute top-0 right-0 mt-5 mr-5 text-white">
+                        <i class="fa-solid fa-xmark text-4xl"></i>
+                    </button>
+                </nav>
+            </header>
+            <div class="min-h-screen section-2 bg-blue-1">
+                <div class="relative pt-24 px-5">
+                    <img src="/assets/03/vip microlending decoracion 2.png" class="absolute w-48 top-0 right-0 mt-32 mr-5" alt="">
+                    <img src="./assets/movil/Recurso 30.png" alt="">
+                    <div class="">
+                        <div>
+                            <h2 class="text-white text-5xl title-2 text-left">Queremos que tu
+                                proyecto crezca, por
+                                eso tenemos la mejor
+                                solución.
+                                </h2>
+                        </div>
+                        <div class="mt-10">
+                            <img src="/assets/01/rayita decorativa azul.png" alt="">
+                        </div>
+                        <img src="/assets/01/rayita decorativa amarilla.png" alt="">
+                        <div class="mt-10">
+                            <p class="text-white text-2xl text-justify">Somos un equipo altamente capacitado para satisfacer y resolver tus necesidades financieras y las de tu empresa, ayudándote a tener el crecimiento que tanto deseas.</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center mt-10 pb-10">
+                        <a href="./index.html#contacto" class="absolute bg-yellow-500 px-8 py-2 text-white rounded-full text-lg">Más información</a>
+                    </div>
+                </div>
+            </div>
+            <div class="min-h-screen section-2 bg-white">
+                <div class="grid grid-cols-12 gap-4 h-screen relative">
+
+                    <div class="col-span-12 flex justify-left items-center relative mt-5">
+                        <img class="top-0 right-0 absolute w-8/12 mr-10" src="/assets/03/foto amarilla.png" alt="">
+                        <div class="bg-blue-800 w-10/12 h-80"></div>
+                        <img src="/assets/03/icono blanco.png" class="absolute w-20" style="margin-left: 10%; margin-bottom: 10%;" alt="">
+                    </div>
+                    <div class="col-span-12 flex justify-center items-center relative">
+                        <div style="width: 80%;" class="">
+                            <div class="text-left">
+                                <img src="/assets/03/03. vip microlending.png" alt="">
+                            </div>
+            
+                            <div class="mt-10">
+                                <p class="text-2xl font-bold text-blue-500 blue-2 text-justify">Tu proyecto nos importa y por eso te ayudamos con las mejores estrategias brindándote el préstamo que necesitas para crecer y hacer realidad lo que deseas. Y por que queremos satisfacer las necesidades que tienen tú o tu empresa trabajamos de la mano contigo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-2 min-h-screen bg-white relative px-5 flex justify-center items-center flex-col">
+                <img src="/assets/03/vip microlending decoracion 1.png" class="w-40" alt="">
+
+                <div class="mt-10">
+                    <h2 class="text-5xl text-center text-blue-800 title-2">Te brindamos la seguridad</h2>
+                    <h2 class="text-5xl text-center text-blue-800 title-2">para hacer crecer tu empresa.</h2>
+                </div>
+                <div class="mt-10">
+                    <p class="text-blue-500 text-xl text-justify">Te apoyamos con los recursos para desarrollar el proyecto que tienes en mente o a
                         tener el crecimiento que tu empresa necesita, por eso te auxiliamos con el capital para
                         que puedas ejecutar tus planes dándoles forma y materializándolos. Consulta a uno de
                         
                         nuestros asesores para que conozcas más acerca del producto.</p>
-
-                        <a href="./index.html#contacto" class="bg-yellow-500 px-8 py-2 text-white rounded-full text-lg mt-10 inline-block"  style="margin-top: 2rem; margin-bottom: 6rem; display: inline-block;">Más información</a>
+                        
                 </div>
-            </div>
-            <div class="col-span-4 text-center flex justify-center items-center flex-col">
+                <a href="./index.html#contacto" class="bg-yellow-500 px-8 py-2 text-white rounded-full text-lg mt-10 inline-block"  style="margin-top: 2rem; margin-bottom: 6rem; display: inline-block;">Más información</a>
                 
             </div>
-        </div>
-        <img src="/assets/03/vip microlending decoracion 1.png" class="absolute top-0 left-0 ml-10 mb-10 w-40" alt="">
-        <img src="/assets/02/sello transparente vipcap gris.png" class="top-0 right-0 absolute w-5/12 z-10" alt="" style="width: 35%; margin-top: -25%;">
-    </div>
-    <div class="h-screen section-2 bg-white relative pt-20">
-        <div class="z-20">
-            <h2 class="text-7xl text-center text-blue-800 font-bold">Elige VIP CAP para tener el crecimiento</h2>
-            <h2 class="text-7xl text-center text-blue-800">que tu empresa necesita.</h2>
-        </div>
-        <div class="grid grid-cols-12 gap-4 mt-24">
-            <div class="col-span-4 text-center flex justify-center items-center flex-col">
-                <img src="/assets/03/icono 1.png" class="w-32" alt="">
-                <div class="mt-5 flex justify-center items-center">
-                    <p class="text-blue-500 text-lg text-justify w-7/12">Encontramos soluciones a tus
-                        necesidades ya que los planes
-                        se adaptan a ti.</p>
+            <div class="min-h-screen section-2 bg-white relative pb-10">
+                <div class="z-20">
+                    <h2 class="text-5xl text-center text-blue-800 title-2">Elige VIP CAP para tener el crecimiento</h2>
+                    <h2 class="text-5xl text-center text-blue-800 title-2">que tu empresa necesita.</h2>
                 </div>
-            </div>
-            <div class="col-span-4 text-center flex justify-center items-center flex-col">
-                <img src="/assets/03/icono 2.png" class="w-32" alt="">
-                <div class="mt-5 flex justify-center items-center">
-                    <p class="text-blue-500 text-lg text-justify w-7/12">Reinventa tu negocio de una manera
-                        rápida, y hazlo crecer gracias a los
-                        insumos que tendrás disponibles.</p>
-                </div>
-            </div>
-            <div class="col-span-4 text-center flex justify-center items-center flex-col">
-                <img src="/assets/03/icono 3.png" class="w-32" alt="">
-                <div class="mt-5 flex justify-center items-center">
-                    <p class="text-blue-500 text-lg text-justify w-7/12">Tendrás liquidez a corto plazo y
-                        podrás proyectar un crecimiento
-                        para ampliar tu negocio o tu
-                        nuevo proyecto.</p>
-                </div>
-            </div>
-        </div>
-
-        <img src="/assets/03/vip microlending decoracion 1.png" style="margin-right: 5%;" class="absolute bottom-0 right-0 mb-10 w-40" alt="">
-    </div>
-    <footer class="text-lg" style="background-color: #011F5D;">
-        <div class="grid grid-cols-12 gap-4 py-10 px-40">
-            <div class="col-span-4">
-                <img class="w-1/3" src="/assets/Diap 1/logo.png" alt="">
-            </div>
-            <div class="col-span-4 flex justify-center items-center">
-                <p class="text-white">Únete a nuestro equipo de trabajo</p>
-                <a href="./index.html#contacto" class="px-5 py-1 bg-blue-500 rounded-full text-white ml-5">Aplicar</a>
-            </div>
-            <div class="col-span-4 flex justify-center items-end flex-col">
-                
-                <div class="text-right text-md">
-                    <div class="text-white">
-                        <a href="https://www.facebook.com/vipcapitalmx" target="_blank" class="text-lg">
-                            <i class="fa-brands fa-facebook"></i>
-                        </a>
-                        <a href="https://instagram.com/vipcapitalmx?igshid=YTM0ZjI4ZDI=" target="_blank" class="ml-5 text-lg">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="https://api.whatsapp.com/send?phone=526142041558" target="_blank" class="ml-5 text-lg">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
+                <div class="grid grid-cols-12 gap-4 mt-24">
+                    <div class="col-span-12 text-center flex justify-center items-center flex-col">
+                        <img src="/assets/03/icono 1.png" class="w-32" alt="">
+                        <div class="mt-5 flex justify-center items-center">
+                            <p class="text-blue-500 text-lg text-justify w-7/12">Encontramos soluciones a tus
+                                necesidades ya que los planes
+                                se adaptan a ti.</p>
+                        </div>
                     </div>
-                    <p class="text-white">614 2 04 15 58</p>
-                    <p class="text-white">contacto@vipcapital.mx</p>
+                    <div class="col-span-12 text-center flex justify-center items-center flex-col">
+                        <img src="/assets/03/icono 2.png" class="w-32" alt="">
+                        <div class="mt-5 flex justify-center items-center">
+                            <p class="text-blue-500 text-lg text-justify w-7/12">Reinventa tu negocio de una manera
+                                rápida, y hazlo crecer gracias a los
+                                insumos que tendrás disponibles.</p>
+                        </div>
+                    </div>
+                    <div class="col-span-12 text-center flex justify-center items-center flex-col">
+                        <img src="/assets/03/icono 3.png" class="w-32" alt="">
+                        <div class="mt-5 flex justify-center items-center">
+                            <p class="text-blue-500 text-lg text-justify w-7/12">Tendrás liquidez a corto plazo y
+                                podrás proyectar un crecimiento
+                                para ampliar tu negocio o tu
+                                nuevo proyecto.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <footer class="text-md" style="background-color: #011F5D;">
+                <div class="flex justify-center items-center flex-col pt-5">
+                    <p class="text-white">Únete a nuestro equipo de trabajo</p>
+                    <a href="./index.html#contacto" class="px-5 py-1 mt-5 bg-blue-500 rounded-full text-white ml-5">Aplicar</a>
+                </div>
+                <div class="grid grid-cols-12 gap-4 px-5 py-5">
+                    <div class="col-span-6">
+                        <img class="w-28" src="/assets/Diap 1/logo.png" alt="">
+                    </div>
+                    <div class="col-span-6 flex justify-center items-end flex-col">
+    
+                        <div class="text-right text-md">
+                            <div class="text-white">
+                                <a href="https://www.facebook.com/vipcapitalmx" target="_blank" class="text-lg">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="https://instagram.com/vipcapitalmx?igshid=YTM0ZjI4ZDI=" target="_blank" class="ml-5 text-lg">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://api.whatsapp.com/send?phone=526142041558" target="_blank" class="ml-5 text-lg">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </div>
+                            <p class="text-white">614 2 04 15 58</p>
+                            <p class="text-white">contacto@vipcapital.mx</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
-    </footer>
-    <script>
-        $(window).on("scroll", function() {
-            console.log('ola');
-            if($(window).scrollTop() > 100) {
-                $(".header").addClass("active");
-            } else {
-                //remove the background property so it comes transparent again (defined in your css)
-            $(".header").removeClass("active");
-            }
-        });
-    </script>
+    </div>
+
+    <script src="./js/index.js"></script>
 </body>
 </html>
