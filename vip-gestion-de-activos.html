@@ -517,8 +517,8 @@
                 <img src="/assets/01/vip alliance decoracion 1.png" class="absolute top-0 left-0 mt-10 ml-10" alt="">
                 <img src="/assets/01/rayita decorativa amarilla.png" class="absolute top-0 left-0 mt-24 ml-10" alt="">
                 <div class="grid grid-cols-12 gap-4">
-                    <div class="col-span-12 px-10 mt-56">
-                        <!-- <canvas id="myChart2"></canvas> -->
+                    <div class="col-span-12 px-10 mt-32 relative">
+                        <canvas id="myChart2"></canvas>
     
                     </div>
                     <div class="col-span-12 px-5">
@@ -553,7 +553,7 @@
                                     </div>
                                 </div>
                                 <div class="flex justify-center items-center mt-5">
-                                    <button class="bg-yellow-500 text-white px-5 py-2 rounded-full" v-on:click="generateChart">Calcular graficamente</button>
+                                    <button class="bg-yellow-500 text-white px-5 py-2 rounded-full" v-on:click="generateChart2">Calcular graficamente</button>
                                 </div>
     
                             </div>
@@ -612,6 +612,7 @@
                     values: [],
                     labels: [],
                     myChart: null,
+                    myChart2: null,
                     menu: false,
                 }
             },
@@ -624,6 +625,7 @@
 
             mounted(){
                 this.generateChart()
+                this.generateChart2()
             },
 
             // watch: {
@@ -672,6 +674,76 @@
             methods: {
                 openMenu(){
                     this.menu = !this.menu
+                },
+
+                generateChart2(){
+                    this.labels = []
+
+                    for (let index = 1; index <= this.amount2; index++) {
+                        this.labels.push(index + ' Años')
+                    }
+
+                    const labels = this.labels;
+
+                    const data = {
+                        labels: labels,
+
+                        datasets: [{
+                            label: 'Inversión VIP CAP',
+                            borderColor: '#F59E0B',
+                            backgroundColor: '#F59F0B6B',
+                            data: this.values,
+                            borderWidth: 2,
+                            borderRadius: Number.MAX_VALUE,
+                            borderSkipped: false,
+                        }]
+                    };
+
+                    const config = {
+                        type: 'bar',
+                        data: data,
+                        options: {
+                            plugins: {
+                                legend: {
+                                    labels: {
+                                        color: "white",
+                                        font: {
+                                            size: 18
+                                        }
+                                    }
+                                }
+                            },
+                            scales: {
+                                y: {
+                                    ticks: {
+                                        color: "white",
+                                        font: {
+                                            size: 14,
+                                        },
+                                        stepSize: 10000,
+                                        beginAtZero: false
+                                    }
+                                },
+                                x: {
+                                    ticks: {
+                                        color: "white",
+                                        font: {
+                                            size: 14
+                                        },
+                                        stepSize: 1,
+                                        beginAtZero: false
+                                    }
+                                }
+                                }
+                        },
+                    };
+
+                    const ctx = document.getElementById(`myChart2`);
+                    if (this.myChart2) {
+                        this.myChart2.destroy();
+                    }
+
+                    this.myChart2 = new Chart(ctx, config)
                 },
 
                 generateChart(){
